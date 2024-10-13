@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body, html {
+    height: 100%;
+    background: linear-gradient(to bottom, red, black);
+}
+
+.fondo {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Overlay para el título y los botones */
+.overlay {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para centrar perfectamente */
+    text-align: center; /* Centra el texto */
+    color: white; /* Color del texto */
+    z-index: 2; /* Asegura que esté por encima de las fotos */
+}
+
+h1 {
+    font-size: 3rem; /* Tamaño del título */
+    margin-bottom: 0.5rem; /* Espacio debajo del título */
+    background-color: rgba(255, 0, 0, 0.5); /* Fondo semi-transparente */
+    border: black solid 2.5px;
+    border-radius: 100vh;
+    color: rgba(14, 181, 232, 0.884);
+}
+
+h2 {
+    font-size: 2rem; /* Tamaño del subtítulo */
+    margin-bottom: 1.5rem; /* Espacio debajo del subtítulo */
+    background-color: rgba(255, 0, 0, 0.5); /* Fondo semi-transparente */
+    border: black solid 2.5px;
+    border-radius: 100vh;
+    color: rgba(14, 181, 232, 0.884);
+}
+
+.botones {
+    display: flex;
+    flex-direction: column; /* Disposición vertical */
+    gap: 1rem; /* Espacio entre botones */
+}
+
+.btn {
+    padding: 0.75rem 1.5rem; /* Espaciado interno de los botones */
+    font-size: 1.2rem; /* Tamaño de la fuente de los botones */
+    color: white; /* Color del texto de los botones */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición para el hover */
+}
+
+.btn:hover {
+    background-color: rgba(255, 0, 0, 0.8); /* Cambia a rojo al pasar el ratón */
+}
+
+/* Estilo general de las fotos */
+.foto {
+    width: 25vw; /* Cada foto ocupa el 25% del ancho */
+    height: 100vh; /* Altura completa */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Clip-path solo para la primera y última foto */
+.foto1 {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.foto2,
+.foto3 {
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.foto4 {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Sustitución de imágenes */
+.foto1 {
+    background-image: url('img/imagen1.JPG');
+}
+
+.foto2 {
+    background-image: url('img/imagen2.JPG');
+}
+
+.foto3 {
+    background-image: url('img/imagen3.JPG');
+}
+
+.foto4 {
+    background-image: url('img/imagen4.JPG');
+}
+
+/* No queremos línea en la última foto */
+.foto:last-child::after {
+    display: none;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .foto {
+        width: 50vw; /* Cambia el ancho en pantallas pequeñas */
+    }
+    
+    h1 {
+        font-size: 2.5rem; /* Tamaño reducido para el título */
+    }
+    
+    h2 {
+        font-size: 1.5rem; /* Tamaño reducido para el subtítulo */
+    }
+
+    .btn {
+        font-size: 1rem; /* Tamaño reducido para los botones */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Tamaño aún más reducido para pantallas muy pequeñas */
+    }
+    
+    h2 {
+        font-size: 1.2rem; /* Tamaño aún más reducido para pantallas muy pequeñas */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Tamaño aún más reducido para botones en pantallas muy pequeñas */
+    }
+}
