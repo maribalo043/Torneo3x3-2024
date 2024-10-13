@@ -33,7 +33,7 @@ h1 {
     background-color: rgba(255, 0, 0, 0.5); /* Fondo semi-transparente */
     border: black solid 2.5px;
     border-radius: 100vh;
-    color: rgba(14, 181, 232, 0.884);
+    color: rgba(255,255,255, 0.884);
 }
 
 h2 {
@@ -42,7 +42,7 @@ h2 {
     background-color: rgba(255, 0, 0, 0.5); /* Fondo semi-transparente */
     border: black solid 2.5px;
     border-radius: 100vh;
-    color: rgba(14, 181, 232, 0.884);
+    color: rgba(255,255,255, 0.884);
 }
 
 .botones {
