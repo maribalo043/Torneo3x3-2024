@@ -91,19 +91,19 @@ h2 {
 
 /* Sustitución de imágenes */
 .foto1 {
-    background-image: url('img/imagen1.JPG');
+    background-image: url('../img/imagen1.JPG');
 }
 
 .foto2 {
-    background-image: url('img/imagen2.JPG');
+    background-image: url('../img/imagen2.JPG');
 }
 
 .foto3 {
-    background-image: url('img/imagen3.JPG');
+    background-image: url('../img/imagen3.JPG');
 }
 
 .foto4 {
-    background-image: url('img/imagen4.JPG');
+    background-image: url('../img/imagen4.JPG');
 }
 
 /* No queremos línea en la última foto */
