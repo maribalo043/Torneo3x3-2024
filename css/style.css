@@ -1,3 +1,4 @@
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
 body, html {
     height: 100%;
     background: linear-gradient(to bottom, red, black);
+    font-family: 'Arial', sans-serif;
 }
 
 .fondo {
@@ -16,72 +18,112 @@ body, html {
     position: relative;
 }
 
-/* Overlay para el título y los botones */
+/* Overlay mejorado para el título y los botones */
 .overlay {
     position: absolute;
     top: 50%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta para centrar perfectamente */
-    text-align: center; /* Centra el texto */
-    color: white; /* Color del texto */
-    z-index: 2; /* Asegura que esté por encima de las fotos */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out; /* Animación suave de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
 
 h1 {
-    font-size: 3rem; /* Tamaño del título */
-    margin-bottom: 0.5rem; /* Espacio debajo del título */
-    background-color: rgba(255, 0, 0, 0.5); /* Fondo semi-transparente */
-    border: black solid 2.5px;
-    border-radius: 100vh;
-    color: rgba(255,255,255, 0.884);
+    font-size: 3.5rem;
+    margin-bottom: 0.75rem;
+    background-color: rgba(255, 0, 0, 0.6);
+    border: 2.5px solid black;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover en el título */
+h1:hover {
+    transform: scale(1.05); /* Efecto de ampliación */
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 h2 {
-    font-size: 2rem; /* Tamaño del subtítulo */
-    margin-bottom: 1.5rem; /* Espacio debajo del subtítulo */
-    background-color: rgba(255, 0, 0, 0.5); /* Fondo semi-transparente */
-    border: black solid 2.5px;
-    border-radius: 100vh;
-    color: rgba(255,255,255, 0.884);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(255, 0, 0, 0.6);
+    border: 2.5px solid black;
+    border-radius: 50px;
+    padding: 8px 16px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+/* Efecto hover en el subtítulo */
+h2:hover {
+    transform: scale(1.05); /* Efecto de ampliación */
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+/* Botones mejorados */
 .botones {
     display: flex;
-    flex-direction: column; /* Disposición vertical */
-    gap: 1rem; /* Espacio entre botones */
+    flex-direction: column;
+    gap: 1.5rem; /* Mayor espacio entre botones */
+    align-items: center; /* Centrar los botones */
 }
 
 .btn {
-    padding: 0.75rem 1.5rem; /* Espaciado interno de los botones */
-    font-size: 1.2rem; /* Tamaño de la fuente de los botones */
-    color: white; /* Color del texto de los botones */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
-    transition: background-color 0.3s; /* Transición para el hover */
+    padding: 0.75rem 2rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 10px; /* Bordes más redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Efecto hover para los botones */
 .btn:hover {
-    background-color: rgba(255, 0, 0, 0.8); /* Cambia a rojo al pasar el ratón */
+    background-color: rgba(255, 0, 0, 0.9);
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Efecto para el clic en el botón */
+.btn:active {
+    transform: translateY(-2px);
 }
 
 /* Estilo general de las fotos */
 .foto {
-    width: 25vw; /* Cada foto ocupa el 25% del ancho */
-    height: 100vh; /* Altura completa */
+    width: 25vw;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
-/* Clip-path solo para la primera y última foto */
+/* Clip-path para las fotos */
 .foto1 {
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
 
-.foto2,
-.foto3 {
+.foto2, .foto3 {
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 }
 
@@ -89,7 +131,7 @@ h2 {
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-/* Sustitución de imágenes */
+/* Imágenes */
 .foto1 {
     background-image: url('../img/imagen1.JPG');
 }
@@ -106,40 +148,35 @@ h2 {
     background-image: url('../img/imagen4.JPG');
 }
 
-/* No queremos línea en la última foto */
-.foto:last-child::after {
-    display: none;
-}
-
-/* Media query para dispositivos móviles */
+/* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
     .foto {
-        width: 50vw; /* Cambia el ancho en pantallas pequeñas */
+        width: 50vw;
     }
-    
+
     h1 {
-        font-size: 2.5rem; /* Tamaño reducido para el título */
+        font-size: 2.5rem;
     }
-    
+
     h2 {
-        font-size: 1.5rem; /* Tamaño reducido para el subtítulo */
+        font-size: 2rem;
     }
 
     .btn {
-        font-size: 1rem; /* Tamaño reducido para los botones */
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2rem; /* Tamaño aún más reducido para pantallas muy pequeñas */
+        font-size: 2rem;
     }
-    
+
     h2 {
-        font-size: 1.2rem; /* Tamaño aún más reducido para pantallas muy pequeñas */
+        font-size: 1.5rem;
     }
 
     .btn {
-        font-size: 0.9rem; /* Tamaño aún más reducido para botones en pantallas muy pequeñas */
+        font-size: 1rem;
     }
 }
