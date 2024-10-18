@@ -12,7 +12,7 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
+  
       gtag("config", "G-0BJTZ337EV");
     </script>
     <meta charset="UTF-8" />
@@ -29,27 +29,58 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-
+  
     <script type="text/javascript">
       // Inicializa el servicio EmailJS con tu USER_ID
       (function () {
         emailjs.init("q7MqNuJMx_TcESL1i");
       })();
-
+  
       // Manejar el envío del formulario
       window.onload = function () {
         document
           .getElementById("team-form")
           .addEventListener("submit", function (event) {
             event.preventDefault(); // Evita que el formulario recargue la página
-
+  
             // Recoge los datos del formulario
             const teamName = document.getElementById("team_name").value;
             const category = document.getElementById("category").value;
             const phone = document.getElementById("phone").value;
             const email = document.getElementById("email").value;
-
-            // Envía los datos a EmailJS
+            const contactName = document.getElementById("nombreContacto").value;
+            const players = [
+              {
+                name: document.getElementById("player_name_1").value,
+                surname: document.getElementById("player_surname_1").value,
+                insurance: document.getElementById("insurance_number_1").value,
+                birthdate: document.getElementById("nacimiento_1").value,
+                size: document.getElementById("camiseta").value,
+              },
+              {
+                name: document.getElementById("player_name_2").value,
+                surname: document.getElementById("player_surname_2").value,
+                insurance: document.getElementById("insurance_number_2").value,
+                birthdate: document.getElementById("nacimiento_2").value,
+                size: document.getElementById("camiseta").value,
+              },
+              {
+                name: document.getElementById("player_name_3").value,
+                surname: document.getElementById("player_surname_3").value,
+                insurance: document.getElementById("insurance_number_3").value,
+                birthdate: document.getElementById("nacimiento_3").value,
+                size: document.getElementById("camiseta").value,
+              },
+              {
+                name: document.getElementById("player_name_4").value,
+                surname: document.getElementById("player_surname_4").value,
+                insurance: document.getElementById("insurance_number_4").value,
+                birthdate: document.getElementById("nacimiento_4").value,
+                size: document.getElementById("camiseta").value,
+              },
+            ];
+  
+            // Envía el primer correo
             emailjs
               .send("service_8s73heh", "template_SaraRoces", {
                 from_name: teamName,
@@ -58,22 +89,43 @@
               .then(
                 function (response) {
                   console.log(
-                    "Correo enviado con éxito!",
+                    "Primer correo enviado con éxito!",
                     response.status,
                     response.text
                   );
-                  // window.location.href = "finalFormulario.html";
+  
+                  // Envía el segundo correo
+                  return emailjs.send("service_8s73heh", "template_inscripcion", {
+                    team_name: teamName,
+                    category: category,
+                    contact_name: contactName,
+                    phone: phone,
+                    players: JSON.stringify(players), // o formatea como desees
+                  });
                 },
                 function (error) {
-                  console.log("Error al enviar el correo.", error);
-                  alert("Hubo un error al enviar el correo.");
+                  console.log("Error al enviar el primer correo.", error);
+                  alert("Hubo un error al enviar el primer correo.");
+                }
+              )
+              .then(
+                function (response) {
+                  console.log(
+                    "Segundo correo enviado con éxito!",
+                    response.status,
+                    response.text
+                  );
+                },
+                function (error) {
+                  console.log("Error al enviar el segundo correo.", error);
+                  alert("Hubo un error al enviar el segundo correo.");
                 }
               );
           });
       };
     </script>
   </head>
-
+  
   <body>
     <div class="fondo">
       <div class="overlay">
