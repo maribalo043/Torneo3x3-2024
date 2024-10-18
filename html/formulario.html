@@ -1,505 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-0BJTZ337EV"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-0BJTZ337EV");
-    </script>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario Inscripción</title>
     <link rel="stylesheet" href="../css/styleFormulario.css" />
-    <!-- Incluir la librería de EmailJS -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-    <!-- Incluir Bootstrap para el estilo (opcional) -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-    <script type="text/javascript">
-      // Inicializa el servicio EmailJS con tu USER_ID
-      (function () {
-        emailjs.init("q7MqNuJMx_TcESL1i");
-      })();
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        // Inicializa EmailJS con tu USER_ID
+        (function () {
+            emailjs.init("q7MqNuJMx_TcESL1i");
+        })();
 
-      // Manejar el envío del formulario
-      window.onload = function () {
-        document
-          .getElementById("team-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault(); // Evita que el formulario recargue la página
+        window.onload = function () {
+            document.getElementById("team-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Evita que el formulario recargue la página
 
-            // Recoge los datos del formulario
-            const teamName = document.getElementById("team_name").value;
-            const category = document.getElementById("category").value;
-            const phone = document.getElementById("phone").value;
-            const email = document.getElementById("email").value;
+                // Recoge los datos del formulario
+                const teamName = document.getElementById("team_name").value;
+                const category = document.getElementById("category").value;
+                const phone = document.getElementById("phone").value;
+                const email = document.getElementById("email").value;
 
-            // Envía los datos a EmailJS
-            emailjs
-              .send("service_8s73heh", "template_SaraRoces", {
-                from_name: teamName,
-                to_email: email,
-              })
-              .then(
-                function (response) {
-                  console.log(
-                    "Correo enviado con éxito!",
-                    response.status,
-                    response.text
-                  );
-                  // window.location.href = "finalFormulario.html";
-                },
-                function (error) {
-                  console.log("Error al enviar el correo.", error);
-                  alert("Hubo un error al enviar el correo.");
+                const players = [];
+                players.push({
+                    name: document.getElementById(`player_name_1`).value,
+                    surname: document.getElementById(`player_surname_1`).value,
+                    insurance_number: document.getElementById(`insurance_number_1`).value,
+                    dni: document.getElementById(`dni_1`).value,
+                    main_team: document.getElementById(`main_team_1`).value,
+                    goalkeeper: document.getElementById(`goalkeeper_2`).checked,
+                });
+
+                for (let i = 2; i <= 4; i++) {
+                    players.push({
+                        name: document.getElementById(`player_name_${i}`).value,
+                        surname: document.getElementById(`player_surname_${i}`).value,
+                        insurance_number: document.getElementById(`insurance_number_${i}`).value,
+                        dni: document.getElementById(`dni_${i}`).value,
+                        main_team: document.getElementById(`main_team_${i}`)?.value || "",
+                    });
                 }
-              );
-          });
-      };
+
+                // Crea un mensaje para enviar a EmailJS
+                const message = `
+                    Nombre del Equipo: ${teamName}
+                    Categoría: ${category}
+                    Número de Teléfono: ${phone}
+                    Correo Electrónico: ${email}
+                    Jugadores: ${players
+                        .map((player, index) => `
+                        Jugador ${index + 1}:
+                        Nombre: ${player.name}, 
+                        Apellidos: ${player.surname}, 
+                        Número de Seguro: ${player.insurance_number}, 
+                        DNI: ${player.dni}, 
+                        Equipo Principal: ${player.main_team}, 
+                        ¿Es Portero?: ${player.goalkeeper ? "Sí" : "No"}
+                    `)
+                    .join("")}
+                `;
+
+                // Envía los datos a EmailJS
+                emailjs.send("service_8s73heh", "template_SaraRoces", {
+                    from_name: teamName,
+                    to_email: email,
+                    message: message,
+                })
+                .then(function (response) {
+                    console.log("Correo enviado con éxito!", response.status, response.text);
+                    // Redirige a la página final después de enviar el correo
+                    window.location.href = "finalFormulario.html";
+                }, function (error) {
+                    console.log("Error al enviar el correo.", error);
+                    alert("Hubo un error al enviar el correo.");
+                });
+
+                // El formulario se envía a Netlify automáticamente debido a la acción y método
+            });
+        };
     </script>
-  </head>
+</head>
 
-  <body>
-    <div class="fondo">
-      <div class="overlay">
-        <div class="container mt-5">
-          <h2>Formulario de Inscripción del Equipo</h2>
-          <form id="team-form" action="https://torneo3x3.netlify.app/html/finalformulario" method="POST" netlify>
-            <!-- Campo para el nombre del equipo -->
+<body>
+    <div class="container mt-5">
+        <h2>Formulario de Inscripción del Equipo</h2>
+        <form id="team-form" action="https://your-netlify-site.netlify.app/" method="POST" netlify>
+            <input type="hidden" name="form-name" value="team-form" />
             <div class="form-group">
-              <label for="team_name">Nombre del Equipo:</label>
-              <input
-                type="text"
-                class="form-control"
-                id="team_name"
-                name="team_name"
-                required
-              />
+                <label for="team_name">Nombre del Equipo:</label>
+                <input type="text" class="form-control" id="team_name" name="team_name" required />
+            </div>
+            <div class="form-group">
+                <label for="category">Categoría:</label>
+                <select class="form-control" id="category" name="category" required>
+                    <option value="" disabled selected>Seleccione una categoría</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Guajes">Guajes</option>
+                    <option value="Promesas">Promesas</option>
+                    <option value="Estrellas">Estrellas</option>
+                    <option value="OK Masters">OK Masters</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone">Número de Teléfono de la persona de contacto:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico de la persona de contacto:</label>
+                <input type="email" class="form-control" id="email" name="email" required />
             </div>
 
-            <!-- Campo para la categoría -->
-            <div class="form-group">
-              <label for="category">Categoría:</label>
-              <select
-                class="form-control"
-                id="category"
-                name="category"
-                required
-              >
-                <option value="" disabled selected>
-                  Seleccione una categoría
-                </option>
-                <option value="Mini">Mini</option>
-                <option value="Guajes">Guajes</option>
-                <option value="Promesas">Promesas</option>
-                <option value="Estrellas">Estrellas</option>
-                <option value="OK Masters">OK Masters</option>
-              </select>
-            </div>
-
-            <!-- Campo para el nombre de la persona de contacto-->
-            <div class="form-group">
-              <label for="nombreContacto">Nombre de Persona de contacto:</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="nombreContacto"
-                name="nombreContacto"
-                required
-              />
-            </div>
-
-            <!-- Campo para el número de teléfono -->
-            <div class="form-group">
-              <label for="phone"
-                >Número de Teléfono de la persona de contacto:</label
-              >
-              <input
-                type="tel"
-                class="form-control"
-                id="phone"
-                name="phone"
-                required
-              />
-            </div>
-
-            <!-- Campo para el correo electrónico -->
-            <div class="form-group">
-              <label for="email"
-                >Correo Electrónico de la persona de contacto:</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                required
-              />
-            </div>
-
-            <!-- Datos de los cuatro jugadores -->
             <h4>Datos de los Jugadores</h4>
-            <div
-              id="players-container"
-              class="d-flex flex-wrap justify-content-center"
-            >
-              <!-- Sección para los jugadores -->
-              <fieldset
-                class="border p-3 mb-3 m-2"
-                style="width: calc(45% - 1rem)"
-              >
+            <fieldset class="border p-3 mb-3">
                 <legend class="w-auto">Portero</legend>
                 <div class="form-group">
-                  <label for="player_name_1">Nombre:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="player_name_1"
-                    name="player_name_1"
-                    required
-                  />
+                    <label for="player_name_1">Nombre:</label>
+                    <input type="text" class="form-control" id="player_name_1" name="player_name_1" required />
                 </div>
                 <div class="form-group">
-                  <label for="player_surname_1">Apellidos:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="player_surname_1"
-                    name="player_surname_1"
-                    required
-                  />
+                    <label for="player_surname_1">Apellidos:</label>
+                    <input type="text" class="form-control" id="player_surname_1" name="player_surname_1" required />
                 </div>
                 <div class="form-group">
-                  <label for="insurance_number_1">Número de Licencia:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="insurance_number_1"
-                    name="insurance_number_1"
-                    required
-                  />
+                    <label for="insurance_number_1">Número de Licencia:</label>
+                    <input type="text" class="form-control" id="insurance_number_1" name="insurance_number_1" required />
                 </div>
                 <div class="form-group">
-                  <label for="nacimiento_1">Fecha de nacimiento:</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="nacimiento_1"
-                    name="nacimiento_1"
-                    required
-                  />
+                    <label for="goalkeeper_2">¿Juegas en dos equipos?</label>
+                    <input type="checkbox" id="goalkeeper_2" name="goalkeeper_2" />
                 </div>
-                <div class="form-group">
-                  <label for="camiseta">Talla camiseta:</label>
-                  <select
-                    class="form-control"
-                    id="camiseta"
-                    name="camiseta"
-                    required
-                  >
-                    <option value="" disabled selected>
-                      Seleccione una talla
-                    </option>
-                    <option value="Mini">Talla 10</option>
-                    <option value="Guajes">S</option>
-                    <option value="Promesas">M</option>
-                    <option value="Estrellas">L</option>
-                    <option value="OK Masters">XL</option>
-                  </select>
+                <div class="form-group" id="main_team_container" style="display: none;">
+                    <label for="main_team_1">Equipo Principal:</label>
+                    <input type="text" class="form-control" id="main_team_1" name="main_team_1" />
                 </div>
-                <div class="form-group">
-                  <label for="goalkeeper_2">¿Juegas en dos equipos?</label>
-                  <input
-                    type="checkbox"
-                    id="goalkeeper_2"
-                    name="goalkeeper_2"
-                  />
-                </div>
-                <div
-                  class="form-group equipoPrincipal"
-                  id="main_team_container"
-                  style="display: none"
-                >
-                  <p style="color: red; font-weight: bold">
-                    Por favor indiquenos el equipo principal en el que juega:
-                  </p>
-                  <label for="main_team_1">Equipo Principal:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="main_team_1"
-                    name="main_team_1"
-                  />
-                </div>
-              </fieldset>
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const checkbox = document.getElementById("goalkeeper_2");
-                  const mainTeamContainer = document.getElementById(
-                    "main_team_container"
-                  );
+            </fieldset>
 
-                  // Agrega un evento para cuando se cambia el estado del checkbox
-                  checkbox.addEventListener("change", function () {
-                    if (checkbox.checked) {
-                      // Mostrar el campo "Equipo Principal"
-                      mainTeamContainer.style.display = "block";
-                      document
-                        .getElementById("main_team_1")
-                        .setAttribute("required", "required");
-                    } else {
-                      // Ocultar el campo "Equipo Principal"
-                      mainTeamContainer.style.display = "none";
-                      document
-                        .getElementById("main_team_1")
-                        .removeAttribute("required");
-                    }
-                  });
-                });
-              </script>
+            <!-- Repite campos para Jugador 1, Jugador 2 y Jugador 3 aquí... -->
 
-              <fieldset
-                class="border p-3 mb-3 m-2"
-                style="width: calc(45% - 1rem)"
-              >
-                <legend class="w-auto">Jugador 1</legend>
-                <div class="form-group">
-                  <label for="player_name_2">Nombre:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="player_name_2"
-                    name="player_name_2"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="player_surname_2">Apellidos:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="player_surname_2"
-                    name="player_surname_2"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="insurance_number_2">Número de Licencia:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="insurance_number_2"
-                    name="insurance_number_2"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="nacimiento_2">Fecha de nacimiento:</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="nacimiento_2"
-                    name="nacimiento_2"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="camiseta">Talla camiseta:</label>
-                  <select
-                    class="form-control"
-                    id="camiseta"
-                    name="camiseta"
-                    required
-                  >
-                    <option value="" disabled selected>
-                      Seleccione una talla
-                    </option>
-                    <option value="Mini">Talla 10</option>
-                    <option value="Guajes">S</option>
-                    <option value="Promesas">M</option>
-                    <option value="Estrellas">L</option>
-                    <option value="OK Masters">XL</option>
-                  </select>
-                </div>
-              </fieldset>
-
-              <fieldset
-                class="border p-3 mb-3 m-2"
-                style="width: calc(45% - 1rem)"
-              >
-                <legend class="w-auto">Jugador 2</legend>
-                <div class="form-group">
-                  <label for="player_name_3">Nombre:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="player_name_3"
-                    name="player_name_3"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="player_surname_3">Apellidos:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="player_surname_3"
-                    name="player_surname_3"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="insurance_number_3">Número de Licencia:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="insurance_number_3"
-                    name="insurance_number_3"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="nacimiento_3">Fecha de nacimiento:</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="nacimiento_3"
-                    name="nacimiento_3"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="camiseta">Talla camiseta:</label>
-                  <select
-                    class="form-control"
-                    id="camiseta"
-                    name="camiseta"
-                    required
-                  >
-                    <option value="" disabled selected>
-                      Seleccione una talla
-                    </option>
-                    <option value="Mini">Talla 10</option>
-                    <option value="Guajes">S</option>
-                    <option value="Promesas">M</option>
-                    <option value="Estrellas">L</option>
-                    <option value="OK Masters">XL</option>
-                  </select>
-                </div>
-              </fieldset>
-
-              <fieldset
-                class="border p-3 mb-3 m-2"
-                style="width: calc(45% - 1rem)"
-              >
-                <legend class="w-auto">Jugador 3</legend>
-                <div class="form-group">
-                  <label for="player_name_4">Nombre:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="player_name_4"
-                    name="player_name_4"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="player_surname_4">Apellidos:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="player_surname_4"
-                    name="player_surname_4"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="insurance_number_4">Número de Licencia:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="insurance_number_4"
-                    name="insurance_number_4"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="nacimiento_4">Fecha de nacimiento:</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="nacimiento_4"
-                    name="nacimiento_4"
-                    required
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="camiseta">Talla camiseta:</label>
-                  <select
-                    class="form-control"
-                    id="camiseta"
-                    name="camiseta"
-                    required
-                  >
-                    <option value="" disabled selected>
-                      Seleccione una talla
-                    </option>
-                    <option value="Mini">Talla 10</option>
-                    <option value="Guajes">S</option>
-                    <option value="Promesas">M</option>
-                    <option value="Estrellas">L</option>
-                    <option value="OK Masters">XL</option>
-                  </select>
-                </div>
-              </fieldset>
-            </div>
-
-            <!-- Checkbox de aceptación -->
             <div class="form-check mb-3">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="accept_terms"
-                required
-              />
-              <label class="form-check-label" for="accept_terms"
-                >He leído y acepto los términos y condiciones.</label
-              >
+                <input type="checkbox" class="form-check-input" id="accept_terms" required />
+                <label class="form-check-label" for="accept_terms">He leído y acepto los términos y condiciones.</label>
             </div>
-
-            <!-- Botones -->
-            <button type="submit" class="btn btn-primary">
-              Enviar Formulario
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              onclick="window.history.back();"
-            >
-              Volver Atrás
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="foto foto1"></div>
-      <div class="foto foto2"></div>
-      <div class="foto foto3"></div>
-      <div class="foto foto4"></div>
+            <button type="submit" class="btn btn-primary">Enviar Formulario</button>
+            <button type="button" class="btn btn-secondary" onclick="window.history.back();">Volver Atrás</button>
+        </form>
     </div>
-  </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkbox = document.getElementById("goalkeeper_2");
+            const mainTeamContainer = document.getElementById("main_team_container");
+            checkbox.addEventListener("change", function () {
+                if (checkbox.checked) {
+                    mainTeamContainer.style.display = "block";
+                    document.getElementById("main_team_1").setAttribute("required", "required");
+                } else {
+                    mainTeamContainer.style.display = "none";
+                    document.getElementById("main_team_1").removeAttribute("required");
+                }
+            });
+        });
+    </script>
+</body>
 </html>
