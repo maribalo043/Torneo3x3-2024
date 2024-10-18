@@ -49,58 +49,11 @@
             const phone = document.getElementById("phone").value;
             const email = document.getElementById("email").value;
 
-            const players = [];
-            // Asumiendo que solo el primer jugador (portero) tiene el campo goalkeeper
-            players.push({
-              name: document.getElementById(`player_name_1`).value,
-              surname: document.getElementById(`player_surname_1`).value,
-              insurance_number:
-                document.getElementById(`insurance_number_1`).value,
-              dni: document.getElementById(`dni_1`).value,
-              main_team: document.getElementById(`main_team_1`).value,
-              goalkeeper: document.getElementById(`goalkeeper_2`).checked,
-            });
-
-            for (let i = 2; i <= 4; i++) {
-              players.push({
-                name: document.getElementById(`player_name_${i}`).value,
-                surname: document.getElementById(`player_surname_${i}`).value,
-                insurance_number: document.getElementById(
-                  `insurance_number_${i}`
-                ).value,
-                dni: document.getElementById(`dni_${i}`).value,
-                main_team:
-                  document.getElementById(`main_team_${i}`)?.value || "", // No todos tienen equipo principal
-              });
-            }
-
-            // Crea un mensaje para enviar a EmailJS
-            const message = `
-                    Nombre del Equipo: ${teamName}
-                    Categoría: ${category}
-                    Número de Teléfono: ${phone}
-                    Correo Electrónico: ${email}
-                    Jugadores: ${players
-                      .map(
-                        (player, index) => `
-                        Jugador ${index + 1}:
-                        Nombre: ${player.name}, 
-                        Apellidos: ${player.surname}, 
-                        Número de Seguro: ${player.insurance_number}, 
-                        DNI: ${player.dni}, 
-                        Equipo Principal: ${player.main_team}, 
-                        ¿Es Portero?: ${player.goalkeeper ? "Sí" : "No"}
-                    `
-                      )
-                      .join("")}
-                `;
-
             // Envía los datos a EmailJS
             emailjs
               .send("service_8s73heh", "template_SaraRoces", {
                 from_name: teamName,
                 to_email: email,
-                message: message,
               })
               .then(
                 function (response) {
