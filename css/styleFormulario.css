@@ -11,10 +11,10 @@
     background: rgba(255, 255, 255, 1); /* Fondo blanco sólido */
     border-radius: 10px; /* Bordes redondeados */
     border: solid rgb(118, 118, 118, 0.8) 7.25px;
-    padding: 20px;
+    padding: 0px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 1); /* Sombra más profunda */
     max-width: 800px; /* Aumenta el máximo ancho del formulario */
-    width: 90%; /* Para mejor responsividad */
+    width: 80%; /* Para mejor responsividad */
     max-height: 90vh; /* Altura máxima de la tarjeta */
     overflow-y: auto; /* Habilitar scroll si el contenido es más alto */
 }
@@ -81,6 +81,7 @@ fieldset {
     border-radius: 10px; /* Bordes redondeados */
     margin-bottom: 20px; /* Espaciado inferior */
     padding: 15px; /* Espaciado interno */
+    width: 50%;
 }
 
 legend {
@@ -232,5 +233,19 @@ body, html {
 
     .btn {
         font-size: 0.9rem; /* Tamaño aún más reducido para botones en pantallas muy pequeñas */
+    }
+}
+/* Vista para móviles: fieldset en columna */
+@media screen and (max-width: 768px) {
+    #players-container {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los fieldset en columna */
+        padding: 0;
+    }
+
+    fieldset {
+        width: 100vw; /* Asegura que ocupen todo el ancho disponible */
+        margin-bottom: 1rem; /* Espaciado entre los fieldset */
     }
 }
