@@ -18,7 +18,7 @@
     <h1>Formulario de Prueba</h1>
 
     <!-- Formulario -->
-    <form id="test-form">
+    <form id="test-form" method="POST" action="/success" data-netlify="true">
         <!-- Campo Nombre -->
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="nombre" required>
@@ -40,17 +40,33 @@
 
           // Captura los datos del formulario
           const formData = new FormData(form);
-          const name = formData.get("nombre") || "Sin nombre";
-          const email = formData.get("email") || "Sin email";
 
-          // Envía el correo de confirmación
-          emailjs.send("service_8s73heh", "template_SaraRoces", {
-            from_name: name,
-            to_email: email, // Enviarlo al email ingresado
+          // Enviar datos a Netlify
+          fetch(form.action, {
+            method: "POST",
+            body: formData,
+          })
+          .then(function (response) {
+            if (response.ok) {
+              console.log("Formulario enviado a Netlify con éxito");
+
+              // Datos para el correo de confirmación
+              const name = formData.get("nombre") || "Sin nombre";
+              const email = formData.get("email") || "Sin email";
+
+              // Envía el correo de confirmación
+              return emailjs.send("service_8s73heh", "template_SaraRoces", {
+                from_name: name,
+                to_email: email, // Enviarlo al email ingresado
+              });
+            } else {
+              console.error("Error al enviar el formulario a Netlify");
+              alert("Hubo un error al enviar el formulario a Netlify.");
+            }
           })
           .then(function (response) {
             console.log("Correo de confirmación enviado con éxito!", response.status, response.text);
-            alert("Correo de confirmación enviado correctamente!");
+            alert("Formulario enviado correctamente y correo de confirmación enviado!");
             form.reset(); // Resetea el formulario
           })
           .catch(function (error) {
