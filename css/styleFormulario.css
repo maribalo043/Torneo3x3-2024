@@ -82,6 +82,7 @@ fieldset {
     margin-bottom: 20px; /* Espaciado inferior */
     padding: 15px; /* Espaciado interno */
     width: 50%;
+    width: calc(45% - 1rem)
 }
 
 legend {
@@ -245,7 +246,7 @@ body, html {
     }
 
     fieldset {
-        width: 100vw; /* Asegura que ocupen todo el ancho disponible */
+        width: 60vw; /* Asegura que ocupen todo el ancho disponible */
         margin-bottom: 1rem; /* Espaciado entre los fieldset */
     }
 }
