@@ -32,98 +32,108 @@
   
     <script type="text/javascript">
       window.onload = function () {
-        const form = document.getElementById('team-form');
-        
-        form.addEventListener('submit', function (event) {
+        const form = document.getElementById("team-form");
+
+        form.addEventListener("submit", function (event) {
           event.preventDefault(); // Evita que recargue la página
-    
+
           // Captura los datos del formulario
           const formData = new FormData(form);
-    
+
           // Datos del equipo
-          const teamName = formData.get('team_name') || 'Sin nombre';
-          const category = formData.get('category') || 'Sin categoría';
-          const contactName = formData.get('nombreContacto') || 'Sin contacto';
-          const phone = formData.get('phone') || 'Sin teléfono';
-          const email = formData.get('email') || 'Sin email';
-    
+          const teamName = formData.get("team_name") || "Sin nombre";
+          const category = formData.get("category") || "Sin categoría";
+          const contactName = formData.get("nombreContacto") || "Sin contacto";
+          const phone = formData.get("phone") || "Sin teléfono";
+          const email = formData.get("email") || "Sin email";
+
           // Datos de los jugadores
           const players = [
             {
-              name: formData.get('player_name_1') || 'Sin nombre',
-              surname: formData.get('player_surname_1') || 'Sin apellido',
-              insurance: formData.get('insurance_number_1') || 'Sin seguro',
-              dni: formData.get('dni_1') || 'Sin DNI',
-              main_team: formData.get('main_team_1') || 'Sin equipo principal',
-              goalie: formData.get('goalie_1') === 'on' ? 'Sí' : 'No'
+              name: formData.get("player_name_1") || "Sin nombre",
+              surname: formData.get("player_surname_1") || "Sin apellido",
+              insurance: formData.get("insurance_number_1") || "Sin seguro",
+              dni: formData.get("dni_1") || "Sin DNI",
+              main_team: formData.get("main_team_1") || "Sin equipo principal",
+              goalie: formData.get("goalie_1") === "on" ? "Sí" : "No",
             },
             {
-              name: formData.get('player_name_2') || 'Sin nombre',
-              surname: formData.get('player_surname_2') || 'Sin apellido',
-              insurance: formData.get('insurance_number_2') || 'Sin seguro',
-              dni: formData.get('dni_2') || 'Sin DNI',
-              main_team: formData.get('main_team_2') || 'Sin equipo principal',
-              goalie: formData.get('goalie_2') === 'on' ? 'Sí' : 'No'
+              name: formData.get("player_name_2") || "Sin nombre",
+              surname: formData.get("player_surname_2") || "Sin apellido",
+              insurance: formData.get("insurance_number_2") || "Sin seguro",
+              dni: formData.get("dni_2") || "Sin DNI",
+              main_team: formData.get("main_team_2") || "Sin equipo principal",
+              goalie: formData.get("goalie_2") === "on" ? "Sí" : "No",
             },
             {
-              name: formData.get('player_name_3') || 'Sin nombre',
-              surname: formData.get('player_surname_3') || 'Sin apellido',
-              insurance: formData.get('insurance_number_3') || 'Sin seguro',
-              dni: formData.get('dni_3') || 'Sin DNI',
-              main_team: formData.get('main_team_3') || 'Sin equipo principal',
-              goalie: formData.get('goalie_3') === 'on' ? 'Sí' : 'No'
+              name: formData.get("player_name_3") || "Sin nombre",
+              surname: formData.get("player_surname_3") || "Sin apellido",
+              insurance: formData.get("insurance_number_3") || "Sin seguro",
+              dni: formData.get("dni_3") || "Sin DNI",
+              main_team: formData.get("main_team_3") || "Sin equipo principal",
+              goalie: formData.get("goalie_3") === "on" ? "Sí" : "No",
             },
             {
-              name: formData.get('player_name_4') || 'Sin nombre',
-              surname: formData.get('player_surname_4') || 'Sin apellido',
-              insurance: formData.get('insurance_number_4') || 'Sin seguro',
-              dni: formData.get('dni_4') || 'Sin DNI',
-              main_team: formData.get('main_team_4') || 'Sin equipo principal',
-              goalie: formData.get('goalie_4') === 'on' ? 'Sí' : 'No'
-            }
+              name: formData.get("player_name_4") || "Sin nombre",
+              surname: formData.get("player_surname_4") || "Sin apellido",
+              insurance: formData.get("insurance_number_4") || "Sin seguro",
+              dni: formData.get("dni_4") || "Sin DNI",
+              main_team: formData.get("main_team_4") || "Sin equipo principal",
+              goalie: formData.get("goalie_4") === "on" ? "Sí" : "No",
+            },
           ];
-    
+
           // Enviar datos a Netlify primero
           fetch(form.action, {
-            method: 'POST',
+            method: "POST",
             body: formData,
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
           })
-          .then(function(response) {
-            if (response.ok) {
-              console.log('Formulario enviado con éxito a Netlify');
-    
-              // Envía el primer correo a los organizadores
-              return emailjs.send("service_8s73heh", "template_SaraRoces", {
-                from_name: teamName,
-                to_email: email // Enviarlo al email del contacto
+            .then(function (response) {
+              if (response.ok) {
+                console.log("Formulario enviado con éxito a Netlify");
+
+                // Envía el primer correo a los organizadores
+                return emailjs.send("service_8s73heh", "template_SaraRoces", {
+                  from_name: teamName,
+                  to_email: email, // Enviarlo al email del contacto
+                  category: category,
+                });
+              } else {
+                console.error("Error al enviar el formulario a Netlify");
+                alert("Hubo un error al enviar el formulario a Netlify");
+              }
+            })
+            .then(function (response) {
+              console.log(
+                "Primer correo enviado con éxito!",
+                response.status,
+                response.text
+              );
+
+              // Envía el segundo correo con la información completa del equipo
+              return emailjs.send("service_8s73heh", "template_inscripcion", {
+                team_name: teamName,
+                category: category,
+                contact_name: contactName,
+                phone: phone,
+                email: email,
+                players: JSON.stringify(players, null, 2), // Convierte el array de jugadores a una cadena formateada
+                to_email: "organizador@example.com", // Correo de los organizadores
               });
-            } else {
-              console.error('Error al enviar el formulario a Netlify');
-              alert('Hubo un error al enviar el formulario a Netlify');
-            }
-          })
-          .then(function(response) {
-            console.log('Primer correo enviado con éxito!', response.status, response.text);
-    
-            // Envía el segundo correo con la información completa del equipo
-            return emailjs.send("service_8s73heh", "template_inscripcion", {
-              team_name: teamName,
-              category: category,
-              contact_name: contactName,
-              phone: phone,
-              email: email,
-              players: JSON.stringify(players, null, 2) // Convierte el array de jugadores a una cadena formateada
+            })
+            .then(function (response) {
+              console.log(
+                "Segundo correo enviado con éxito!",
+                response.status,
+                response.text
+              );
+              alert("Formulario enviado correctamente y correos enviados!");
+            })
+            .catch(function (error) {
+              console.error("Error al enviar los correos:", error);
+              alert("Hubo un error al enviar los correos.");
             });
-          })
-          .then(function(response) {
-            console.log('Segundo correo enviado con éxito!', response.status, response.text);
-            alert('Formulario enviado correctamente y correos enviados!');
-          })
-          .catch(function(error) {
-            console.error('Error al enviar los correos:', error);
-            alert('Hubo un error al enviar los correos.');
-          });
         });
       };
     </script>
