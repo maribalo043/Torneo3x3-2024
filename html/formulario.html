@@ -478,10 +478,12 @@
                     // Datos para el correo de confirmación
                     const name = formData.get("nombreContacto") || "Sin nombre";
                     const email = formData.get("email") || "Sin email";
+                    const team = formData.get("team_name") || "Equipo Erroneo"
       
                     // Envía el correo de confirmación
                     return emailjs.send("service_8s73heh", "template_SaraRoces", {
                       name: name,
+                      team: team,
                       to_email: email, // Enviarlo al email ingresado
                     });
                   } else {
