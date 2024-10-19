@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Prueba</title>
+</head>
+<body>
+    <h1>Formulario de Prueba</h1>
+
+    <!-- Formulario -->
+    <form name="test-form" method="POST" action="/finalformulario" data-netlify="true" netlify>
+        <!-- Campo Nombre -->
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="nombre" required>
+
+        <!-- Campo Correo Electrónico -->
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Botón de Envío -->
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Netlify Form Hidden Input -->
+    <input type="hidden" name="form-name" value="test-form">
+    
+</body>
+</html>
