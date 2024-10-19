@@ -8,11 +8,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
-    <script type="text/javascript">
-      (function() {
-        emailjs.init("q7MqNuJMx_TcESL1i"); // Reemplaza con tu User ID de EmailJS
-      })();
-    </script>
+    
 </head>
 <body>
     <h1>Formulario de Prueba</h1>
@@ -30,51 +26,5 @@
         <!-- Botón de Envío -->
         <button type="submit">Enviar</button>
     </form>
-
-    <script type="text/javascript">
-      window.onload = function () {
-        const form = document.getElementById("test-form");
-
-        form.addEventListener("submit", function (event) {
-          event.preventDefault(); // Evita que recargue la página
-
-          // Captura los datos del formulario
-          const formData = new FormData(form);
-
-          // Enviar datos a Netlify
-          fetch(form.action, {
-            method: "POST",
-            body: formData,
-          })
-          .then(function (response) {
-            if (response.ok) {
-              console.log("Formulario enviado a Netlify con éxito");
-
-              // Datos para el correo de confirmación
-              const name = formData.get("nombre") || "Sin nombre";
-              const email = formData.get("email") || "Sin email";
-
-              // Envía el correo de confirmación
-              return emailjs.send("service_8s73heh", "template_SaraRoces", {
-                from_name: name,
-                to_email: email, // Enviarlo al email ingresado
-              });
-            } else {
-              console.error("Error al enviar el formulario a Netlify");
-              alert("Hubo un error al enviar el formulario a Netlify.");
-            }
-          })
-          .then(function (response) {
-            console.log("Correo de confirmación enviado con éxito!", response.status, response.text);
-            alert("Formulario enviado correctamente y correo de confirmación enviado!");
-            form.reset(); // Resetea el formulario
-          })
-          .catch(function (error) {
-            console.error("Error al enviar el correo:", error);
-            alert("Hubo un error al enviar el correo.");
-          });
-        });
-      };
-    </script>
 </body>
 </html>

@@ -34,33 +34,6 @@
       (function() {
         emailjs.init("q7MqNuJMx_TcESL1i"); // Reemplaza con tu User ID de EmailJS
       })();
-      
-      window.onload = function () {
-        const form = document.getElementById("team-form");
-    
-        form.addEventListener("submit", function (event) {
-          event.preventDefault(); // Evita que recargue la página
-    
-          // Captura los datos del formulario
-          const formData = new FormData(form);
-          const teamName = formData.get("team_name") || "Sin nombre";
-          const email = formData.get("email") || "Sin email";
-
-          // Envía el correo de confirmación
-          emailjs.send("service_8s73heh", "template_SaraRoces", {
-            from_name: teamName,
-            to_email: email, // Enviarlo al email del contacto
-          })
-          .then(function (response) {
-            console.log("Correo de confirmación enviado con éxito!", response.status, response.text);
-            alert("Formulario enviado correctamente y correo de confirmación enviado!");
-          })
-          .catch(function (error) {
-            console.error("Error al enviar el correo:", error);
-            alert("Hubo un error al enviar el correo.");
-          });
-        });
-      };
     </script>
   </head>
   <body>
@@ -483,6 +456,51 @@
               Volver Atrás
             </button>
           </form>
+          <script type="text/javascript">
+            window.onload = function () {
+              const form = document.getElementById("test-form");
+      
+              form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Evita que recargue la página
+      
+                // Captura los datos del formulario
+                const formData = new FormData(form);
+      
+                // Enviar datos a Netlify
+                fetch(form.action, {
+                  method: "POST",
+                  body: formData,
+                })
+                .then(function (response) {
+                  if (response.ok) {
+                    console.log("Formulario enviado a Netlify con éxito");
+      
+                    // Datos para el correo de confirmación
+                    const name = formData.get("nombreContacto") || "Sin nombre";
+                    const email = formData.get("email") || "Sin email";
+      
+                    // Envía el correo de confirmación
+                    return emailjs.send("service_8s73heh", "template_SaraRoces", {
+                      name: name,
+                      to_email: email, // Enviarlo al email ingresado
+                    });
+                  } else {
+                    console.error("Error al enviar el formulario a Netlify");
+                    alert("Hubo un error al enviar el formulario a Netlify.");
+                  }
+                })
+                .then(function (response) {
+                  console.log("Correo de confirmación enviado con éxito!", response.status, response.text);
+                  alert("Formulario enviado correctamente y correo de confirmación enviado!");
+                  form.reset(); // Resetea el formulario
+                })
+                .catch(function (error) {
+                  console.error("Error al enviar el correo:", error);
+                  alert("Hubo un error al enviar el correo.");
+                });
+              });
+            };
+          </script>
         </div>
       </div>
       <div class="foto foto1"></div>
