@@ -51,22 +51,22 @@
 }
 
 .coloridoMini {
-  background-color: yellow;
+  background-color: rgb(215, 119, 35);
   color: black;
   border: 2.5px solid black;
 }
 .coloridoGuajes {
-  background-color: yellow;
+  background-color: rgb(201, 201, 0);
   color: black;
   border: 2.5px solid black;
 }
 .coloridoPromesas {
-  background-color: yellow;
+  background-color: rgb(204, 0, 0);
   color: black;
   border: 2.5px solid black;
 }
 .coloridoEstrellas {
-  background-color: yellow;
+  background-color: rgb(25, 191, 0);
   color: black;
   border: 2.5px solid black;
 }
