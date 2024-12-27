@@ -165,8 +165,8 @@ var Trasgos = new Equipo("Tragos");
 /*Partidos VIERNES 27 Diciembre*/
 var partido11 = new Partido(Colorinchis,Trastolillos,'17-1',"10:30 - 11:00","Pista 1"); 
 var partido12 = new Partido(CorreRoller,Trasgos,'10-1',"10:30 - 11:00","Pista 2");
-var partido13 = new Partido(Internationals,CorreRoller,null,"17:00 - 17:30","Pista 1");
-var partido14 = new Partido(Trastolillos,Trasgos,null,"17:00 - 17:30","Pista 2");
+var partido13 = new Partido(Internationals,CorreRoller,'17-5',"17:00 - 17:30","Pista 1");
+var partido14 = new Partido(Trastolillos,Trasgos,'2-13',"17:00 - 17:30","Pista 2");
 var partido15 = new Partido(CorreRoller,Colorinchis,null,"20:00 - 20:30","Pista 1");
 var partido16 = new Partido(Internationals,Trasgos,null,"20:00 - 20:30","Pista 2"); 
 /*Partidos SABADO 28 Diciembre*/
