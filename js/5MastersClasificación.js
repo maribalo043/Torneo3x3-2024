@@ -173,13 +173,13 @@ var Fallen = new Equipo("The Fallen");
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partido11 = new Partido(Corredoria,Supernenas,null,"9:00 - 9:30","Pista 1"); 
+var partido11 = new Partido(Corredoria,Supernenas,'3-1',"9:00 - 9:30","Pista 1"); 
 var partido12 = new Partido(Galacticos,Calientabanquillos,null,"11:30 - 12:00","Pista 1");
 var partido13 = new Partido(Supernenas,Parrales,null,"15:00 - 15:30","Pista 1");
 var partido14 = new Partido(Calientabanquillos,Corredoria,null,"18:00 - 18:30","Pista 1");
 var partido15 = new Partido(Parrales,Galacticos,null,"20:30 - 21:00","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partido21 = new Partido(Merli,Nalgon,null,"9:00 - 9:30","Pista 2");
+var partido21 = new Partido(Merli,Nalgon,'7-5',"9:00 - 9:30","Pista 2");
 var partido22 = new Partido(Merli,Caleyo,null,"11:00 - 11:30","Pista 2");
 var partido23 = new Partido(NDHL,Fallen,null,"11:30 - 12:00","Pista 2"); 
 var partido24 = new Partido(Nalgon,NDHL,null,"14:30 - 15:00","Pista 2");
