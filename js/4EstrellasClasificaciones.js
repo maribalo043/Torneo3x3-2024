@@ -183,7 +183,7 @@ var partido14 = new Partido(Gladiators,Boola,'1-10',"13:00 - 13:30","Pista 1");
 var partido15 = new Partido(Cuenca,Albamakoy,''5-11,"15:30 - 16:00","Pista 1");
 var partido16 = new Partido(Katxopo,BlackIce,'1-7',"16:00 - 16:30","Pista 1"); 
 var partido17 = new Partido(Getxoko,Boola,'1-6',"18:30 - 19:00","Pista 1");
-var partido18 = new Partido(Gladiators,Cuenca,null,"19:00 - 19:30","Pista 1");
+var partido18 = new Partido(Gladiators,Cuenca,'5-10',"19:00 - 19:30","Pista 1");
 var partido19 = new Partido(Albamakoy,Katxopo,null,"21:00 - 21:30","Pista 1");
 var partido110 = new Partido(Getxoko,BlackIce,null,"21:30 - 22:00","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
@@ -194,7 +194,7 @@ var partido24 = new Partido(Compostolos,Patinazos,'10-0',"13:00 - 13:30","Pista 
 var partido25 = new Partido(Jotake,Chulis,'2-16',"15:30 - 16:00","Pista 2");
 var partido26 = new Partido(Fanj,Chiquis,'1-8',"16:00 - 16:30","Pista 2"); 
 var partido27 = new Partido(Tortugas,Patinazos,'5-7',"18:30 - 19:00","Pista 2");
-var partido28 = new Partido(Compostolos,Jotake,null,"19:00 - 19:30","Pista 2");
+var partido28 = new Partido(Compostolos,Jotake,'9-0',"19:00 - 19:30","Pista 2");
 var partido29 = new Partido(Chulis,Fanj,null,"21:00 - 21:30","Pista 2");
 var partido210 = new Partido(Chiquis,Tortugas,null,"21:30 - 22:00","Pista 2");
 /*Partidos SABADO 28 Diciembre*/
