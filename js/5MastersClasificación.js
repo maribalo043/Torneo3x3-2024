@@ -176,7 +176,7 @@ var Fallen = new Equipo("The Fallen");
 var partido11 = new Partido(Corredoria,Supernenas,'3-1',"9:00 - 9:30","Pista 1"); 
 var partido12 = new Partido(Galacticos,Calientabanquillos,'2-4',"11:30 - 12:00","Pista 1");
 var partido13 = new Partido(Supernenas,Parrales,'4-4',"15:00 - 15:30","Pista 1");
-var partido14 = new Partido(Calientabanquillos,Corredoria,null,"18:00 - 18:30","Pista 1");
+var partido14 = new Partido(Calientabanquillos,Corredoria,'3-9',"18:00 - 18:30","Pista 1");
 var partido15 = new Partido(Parrales,Galacticos,null,"20:30 - 21:00","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido21 = new Partido(Merli,Nalgon,'7-5',"9:00 - 9:30","Pista 2");
@@ -185,7 +185,7 @@ var partido23 = new Partido(NDHL,Fallen,'1-6',"11:30 - 12:00","Pista 2");
 var partido24 = new Partido(Nalgon,NDHL,'12-2',"14:30 - 15:00","Pista 2");
 var partido25 = new Partido(Caleyo,Getxokolate,'8-4',"15:00 - 15:30","Pista 2");
 var partido26 = new Partido(NDHL,Merli,'6-7',"17:30 - 18:00","Pista 2");
-var partido27 = new Partido(Nalgon,Fallen,null,"18:00 - 18:30","Pista 2");
+var partido27 = new Partido(Nalgon,Fallen,'6-8',"18:00 - 18:30","Pista 2");
 var partido28 = new Partido(Getxokolate,NDHL,null,"20:30 - 21:00","Pista 2");
 
 /*Partidos SABADO 28 Diciembre*/
