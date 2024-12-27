@@ -177,7 +177,7 @@ var Fanj = new Equipo("FANJ");
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 var partido11 = new Partido(Albamakoy,Gladiators,'15-2',"9:30 - 10:00","Pista 1"); 
-var partido12 = new Partido(BlackIce,Cuenca,null,"10:00 - 10:30","Pista 1");
+var partido12 = new Partido(BlackIce,Cuenca,'8-3',"10:00 - 10:30","Pista 1");
 var partido13 = new Partido(Getxoko,Katxopo,null,"12:30 - 13:00","Pista 1");
 var partido14 = new Partido(Gladiators,Boola,null,"13:00 - 13:30","Pista 1");
 var partido15 = new Partido(Cuenca,Albamakoy,null,"15:30 - 16:00","Pista 1");
@@ -188,7 +188,7 @@ var partido19 = new Partido(Albamakoy,Katxopo,null,"21:00 - 21:30","Pista 1");
 var partido110 = new Partido(Getxoko,BlackIce,null,"21:30 - 22:00","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido21 = new Partido(Chulis,Tortugas,'8-2',"9:30 - 10:00","Pista 2"); 
-var partido22 = new Partido(Patinazos,Chiquis,null,"10:00 - 10:30","Pista 2");
+var partido22 = new Partido(Patinazos,Chiquis,'2-9',"10:00 - 10:30","Pista 2");
 var partido23 = new Partido(Tortugas,Fanj,null,"12:30 - 13:00","Pista 2");
 var partido24 = new Partido(Compostolos,Patinazos,null,"13:00 - 13:30","Pista 2");
 var partido25 = new Partido(Jotake,Chulis,null,"15:30 - 16:00","Pista 2");
