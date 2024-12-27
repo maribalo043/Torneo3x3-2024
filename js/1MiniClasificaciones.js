@@ -162,7 +162,7 @@ var Canastu = new Equipo("Canastu");
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
 var partido11 = new Partido(Squad,Sticks,'7-2',"11:00 - 11:30","Pista 1"); 
-var partido12 = new Partido(Canastu,Squad,null,"14:30 - 15:00","Pista 1");
+var partido12 = new Partido(Canastu,Squad,'1-9',"14:30 - 15:00","Pista 1");
 var partido13 = new Partido(Sticks,Canastu,null,"17:30 - 18:00","Pista 1");
 /*Partidos SABADO 28 Diciembre*/
 var partido14 = new Partido(Squad,Sticks,null,"10:00 - 10:30","Pista 1"); 
