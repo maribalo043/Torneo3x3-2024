@@ -170,12 +170,12 @@ var Picheleiros = new Equipo("Picheleiros");
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partido11 = new Partido(Chupipandi,Denok,null,"16:30 - 17:00","Pista 1");
+var partido11 = new Partido(Chupipandi,Denok,'4-3',"16:30 - 17:00","Pista 1");
 var partido12 = new Partido(Caballucos,Guerreros,null,"19:30 - 20:00","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido21 = new Partido(Bartolos,Tenis,'10-1',"12:00 - 12:30","Pista 1");
 var partido22 = new Partido(Trentis,Picheleiros,'0-14',"12:00 - 12:30","Pista 2"); 
-var partido23 = new Partido(Tenis,Trentis,null,"16:30 - 17:00","Pista 2");
+var partido23 = new Partido(Tenis,Trentis,'4-1',"16:30 - 17:00","Pista 2");
 var partido24 = new Partido(Morochas,Picheleiros,null,"19:30 - 20:00","Pista 2");
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
