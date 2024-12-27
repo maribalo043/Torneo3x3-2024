@@ -184,7 +184,7 @@ var partido22 = new Partido(Merli,Caleyo,'5-6',"11:00 - 11:30","Pista 2");
 var partido23 = new Partido(NDHL,Fallen,'1-6',"11:30 - 12:00","Pista 2"); 
 var partido24 = new Partido(Nalgon,NDHL,'12-2',"14:30 - 15:00","Pista 2");
 var partido25 = new Partido(Caleyo,Getxokolate,'8-4',"15:00 - 15:30","Pista 2");
-var partido26 = new Partido(NDHL,Merli,null,"17:30 - 18:00","Pista 2");
+var partido26 = new Partido(NDHL,Merli,'6-7',"17:30 - 18:00","Pista 2");
 var partido27 = new Partido(Nalgon,Fallen,null,"18:00 - 18:30","Pista 2");
 var partido28 = new Partido(Getxokolate,NDHL,null,"20:30 - 21:00","Pista 2");
 
