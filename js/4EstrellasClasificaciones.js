@@ -180,12 +180,12 @@ var partido11 = new Partido(Albamakoy,Gladiators,'15-2',"9:30 - 10:00","Pista 1"
 var partido12 = new Partido(BlackIce,Cuenca,'8-3',"10:00 - 10:30","Pista 1");
 var partido13 = new Partido(Getxoko,Katxopo,'7-0',"12:30 - 13:00","Pista 1");
 var partido14 = new Partido(Gladiators,Boola,'1-10',"13:00 - 13:30","Pista 1");
-var partido15 = new Partido(Cuenca,Albamakoy,''5-11,"15:30 - 16:00","Pista 1");
+var partido15 = new Partido(Cuenca,Albamakoy,'5-11',"15:30 - 16:00","Pista 1");
 var partido16 = new Partido(Katxopo,BlackIce,'1-7',"16:00 - 16:30","Pista 1"); 
 var partido17 = new Partido(Getxoko,Boola,'1-6',"18:30 - 19:00","Pista 1");
 var partido18 = new Partido(Gladiators,Cuenca,'5-10',"19:00 - 19:30","Pista 1");
-var partido19 = new Partido(Albamakoy,Katxopo,null,"21:00 - 21:30","Pista 1");
-var partido110 = new Partido(Getxoko,BlackIce,null,"21:30 - 22:00","Pista 1");
+var partido19 = new Partido(Albamakoy,Katxopo,'3-3',"21:00 - 21:30","Pista 1");
+var partido110 = new Partido(Getxoko,BlackIce,'10-2',"21:30 - 22:00","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido21 = new Partido(Chulis,Tortugas,'8-2',"9:30 - 10:00","Pista 2"); 
 var partido22 = new Partido(Patinazos,Chiquis,'2-9',"10:00 - 10:30","Pista 2");
@@ -195,8 +195,8 @@ var partido25 = new Partido(Jotake,Chulis,'2-16',"15:30 - 16:00","Pista 2");
 var partido26 = new Partido(Fanj,Chiquis,'1-8',"16:00 - 16:30","Pista 2"); 
 var partido27 = new Partido(Tortugas,Patinazos,'5-7',"18:30 - 19:00","Pista 2");
 var partido28 = new Partido(Compostolos,Jotake,'9-0',"19:00 - 19:30","Pista 2");
-var partido29 = new Partido(Chulis,Fanj,null,"21:00 - 21:30","Pista 2");
-var partido210 = new Partido(Chiquis,Tortugas,null,"21:30 - 22:00","Pista 2");
+var partido29 = new Partido(Chulis,Fanj,'1-1',"21:00 - 21:30","Pista 2");
+var partido210 = new Partido(Chiquis,Tortugas,'8-1',"21:30 - 22:00","Pista 2");
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 var partido111 = new Partido(Cuenca,Boola,null,"9:00 - 9:30","Pista 1"); 
