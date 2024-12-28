@@ -167,7 +167,7 @@ var partido13 = new Partido(Sticks,Canastu,'6-6',"17:30 - 18:00","Pista 1");
 /*Partidos SABADO 28 Diciembre*/
 var partido14 = new Partido(Squad,Sticks,'12-2',"10:00 - 10:30","Pista 1"); 
 var partido15 = new Partido(Canastu,Squad,'1-13',"13:30 - 14:00","Pista 1");
-var partido16 = new Partido(Sticks,Canastu,null,"16:00 - 16:30","Pista 1");
+var partido16 = new Partido(Sticks,Canastu,'8-9',"16:00 - 16:30","Pista 1");
 /*Partidos DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var partido17 = new Partido(Squad,Sticks,null,"9:00 - 9:30","Pista 1"); 
 var partido18 = new Partido(Canastu,Squad,null,"10:00 - 10:30","Pista 1");
