@@ -204,8 +204,8 @@ var partido213 = new Partido(Fallen,Caleyo,'4-4',"16:00 - 16:30","Pista 2");
 var partido214 = new Partido(Caleyo,Nalgon,'8-6',"20:30 - 21:00","Pista 2");
 var partido215 = new Partido(Fallen,Merli,'5-2',"21:00 - 21:30","Pista 2");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var partidoSemi1 = new PartidoFinal('Semifinal 1ºA', 'Semifinal 2ºB',null, 'Semifinal: 12:00 - 12:30','Pista 1');
-var partidoSemi2 = new PartidoFinal('Semifinal 2ºA', 'Semifinal 1ºB',null, 'Semifinal: 12:00 - 12:30','Pista 2');
+var partidoSemi1 = new PartidoFinal(Corredoria, Caleyo,null, 'Semifinal: 12:00 - 12:30','Pista 1');
+var partidoSemi2 = new PartidoFinal(Fallen, Parrales,null, 'Semifinal: 12:00 - 12:30','Pista 2');
 var tercerCuarto = new PartidoFinal('unthefined','unthefined',null, 'Tercer y Cuarto: 14:00 - 14:30','Pista 2');
 var partidoFinal = new PartidoFinal('unthefined','unthefined',null, 'Final: 14:00 - 14:30','Pista 1');
 
@@ -237,7 +237,7 @@ function mostrarTablas() {
             dia2: [partido29,partido210,partido211,partido212,partido213,partido214,partido215],
         },
         finales: {
-            dia1: [partidoSemi1, partidoSemi2,tercerCuarto,partidoFinal],
+            finales: [partidoSemi1, partidoSemi2,tercerCuarto,partidoFinal],
         },
     };
 
@@ -303,17 +303,20 @@ function mostrarTablas() {
             llenarClasificacion(clasificacion);
             break;
 
-        case "finales":
-            grupoNombre.textContent = "Finales";
-            tablaClasificaciones.style.visibility = 'hidden';
-            tituloClasif.textContent = "Premios a las 14:30";
-
-            const partidosFinales = partidosPorDia.finales?.[dia] || [];
-            llenarPartidos(partidosFinales);
-
-            const clasificacionFinales = clasificacionPorGrupo.finales || [];
-            llenarClasificacion(clasificacionFinales);
-            break;
+            case "finales":
+                grupoNombre.textContent = "Finales"; // Configura el título de la sección
+                tablaClasificaciones.style.visibility = 'hidden'; // Oculta la tabla de clasificaciones
+                tituloClasif.textContent = "Premios a las 14:30"; // Configura el subtítulo
+            
+                // Accede directamente a la lista de partidos de finales
+                const partidosFinales = partidosPorDia.finales?.finales || []; // Asegura que se accede sin errores
+                llenarPartidos(partidosFinales); // Llenar la tabla de partidos
+            
+                // Obtiene la clasificación general de finales
+                const clasificacionFinales = clasificacionPorGrupo.finales || []; // Asegura una lista vacía si no existe
+                llenarClasificacion(clasificacionFinales); // Llenar la tabla de clasificación
+                break;
+            
 
         default:
             grupoNombre.textContent = "Selecciona un grupo";
