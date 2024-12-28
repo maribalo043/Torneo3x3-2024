@@ -172,8 +172,8 @@ var partido16 = new Partido(Internationals,Trasgos,'23-2',"20:00 - 20:30","Pista
 /*Partidos SABADO 28 Diciembre*/
 var partido17 = new Partido(Trastolillos,CorreRoller,'5-10',"13:00 - 13:30","Pista 1"); 
 var partido18 = new Partido(Colorinchis,Internationals,'16-4',"13:00 - 13:30","Pista 2"); 
-var partido19 = new Partido(Internationals,Trastolillos,null,"19:30 - 20:00","Pista 1"); 
-var partido110 = new Partido(Trasgos,Colorinchis,null,"19:30 - 20:00","Pista 1");
+var partido19 = new Partido(Internationals,Trastolillos,'16-4',"19:30 - 20:00","Pista 1"); 
+var partido110 = new Partido(Trasgos,Colorinchis,'1-15',"19:30 - 20:00","Pista 1");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var partidoSemi1 = new PartidoFinal('Semifinal 1ºA', 'Semifinal 2ºB',null, 'Semifinal: 9:30 - 10:00','Pista 1');
 var partidoSemi2 = new PartidoFinal('Semifinal 2ºA', 'Semifinal 1ºB',null, 'Semifinal: 9:30 - 10:00','Pista 2');
