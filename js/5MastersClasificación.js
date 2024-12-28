@@ -190,14 +190,14 @@ var partido28 = new Partido(Getxokolate,NDHL,'5-6',"20:30 - 21:00","Pista 2");
 
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partido16 = new Partido(Parrales,Calientabanquillos,null,"11:00 - 11:30","Pista 1"); 
-var partido17 = new Partido(Supernenas,Galacticos,null,"12:00 - 12:30","Pista 1");
+var partido16 = new Partido(Parrales,Calientabanquillos,'7-3',"11:00 - 11:30","Pista 1"); 
+var partido17 = new Partido(Supernenas,Galacticos,'2-3',"12:00 - 12:30","Pista 1");
 var partido18 = new Partido(Corredoria,Parrales,null,"15:00 - 15:30","Pista 1");
 var partido19 = new Partido(Supernenas,Calientabanquillos,null,"20:30 - 21:00","Pista 1");
 var partido110 = new Partido(Galacticos,Corredoria,null,"21:00 - 21:30","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partido29 = new Partido(Caleyo, NDHL,null,"11:30 - 12:00","Pista 2");
-var partido210 = new Partido(Merli,Getxokolate,null,"12:00 - 12:30","Pista 2");
+var partido29 = new Partido(Caleyo, NDHL,'5-2',"11:30 - 12:00","Pista 2");
+var partido210 = new Partido(Merli,Getxokolate,'9-7',"12:00 - 12:30","Pista 2");
 var partido211 = new Partido(Fallen,Getxokolate,null,"13:30 - 14:00","Pista 2"); 
 var partido212 = new Partido(Getxokolate,Nalgon,null,"15:00 - 15:30","Pista 2");
 var partido213 = new Partido(Fallen,Caleyo,null,"16:00 - 16:30","Pista 2");
