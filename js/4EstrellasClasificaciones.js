@@ -199,7 +199,7 @@ var partido29 = new Partido(Chulis,Fanj,'1-1',"21:00 - 21:30","Pista 2");
 var partido210 = new Partido(Chiquis,Tortugas,'8-1',"21:30 - 22:00","Pista 2");
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partido111 = new Partido(Cuenca,Boola,null,"9:00 - 9:30","Pista 1"); 
+var partido111 = new Partido(Cuenca,Boola,'2-10',"9:00 - 9:30","Pista 1"); 
 var partido112 = new Partido(Katxopo,Gladiators,null,"9:30 - 10:00","Pista 1");
 var partido113 = new Partido(Albamakoy,Getxoko,null,"10:30 - 11:00","Pista 1");
 var partido114 = new Partido(Cuenca,Katxopo,null,"11:00 - 11:30","Pista 1");
@@ -211,7 +211,7 @@ var partido119 = new Partido(Cuenca,Getxoko,null,"18:30 - 19:00","Pista 1");
 var partido120 = new Partido(Gladiators,BlackIce,null,"19:00 - 19:30","Pista 1");
 var partido121 = new Partido(Albamakoy,Boola,null,"21:30 - 22:00","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partido211 = new Partido(Jotake,Patinazos,null,"9:00 - 9:30","Pista 2"); 
+var partido211 = new Partido(Jotake,Patinazos,'1-10',"9:00 - 9:30","Pista 2"); 
 var partido212 = new Partido(Fanj,Compostolos,null,"9:30 - 10:00","Pista 2");
 var partido213 = new Partido(Chulis,Compostolos,null,"10:30 - 11:00","Pista 2");
 var partido214 = new Partido(Chiquis,Jotake,null,"11:00 - 11:30","Pista 2");
