@@ -181,7 +181,7 @@ var partido24 = new Partido(Morochas,Picheleiros,'0-7',"19:30 - 20:00","Pista 2"
 /*GRUPO A--------------------------------------------------------------------------------------*/
 var partido13 = new Partido(Denok,Caballucos,'9-2',"12:30 - 13:00","Pista 1"); 
 var partido14 = new Partido(Guerreros,Chupipandi,'7-4',"15:30 - 16:00","Pista 1");
-var partido15 = new Partido(Guerreros,Denok,null,"18:00 - 18:30","Pista 1");
+var partido15 = new Partido(Guerreros,Denok,'11-3',"18:00 - 18:30","Pista 1");
 var partido16 = new Partido(Chupipandi,Caballucos,null,"20:00 - 20:30","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido25 = new Partido(Morochas,Bartolos,'6-8',"10:00 - 10:30","Pista 2"); 
