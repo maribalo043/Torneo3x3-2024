@@ -160,7 +160,7 @@ function mensajePartido() {
 var Guerreros = new Equipo("Guerreros");
 var Chupipandi = new Equipo("Chupipandi");
 var Denok = new Equipo("Denok Batera");
-var Caballucos = new Equipo("Caballucos del Diablo");
+var Caballucos = new Equipo("Caballucus del Diablo");
 /*GRUPO B----------------------------------------------------*/
 var Trentis = new Equipo("Trentis");
 var Bartolos = new Equipo("Los Bartolos");
