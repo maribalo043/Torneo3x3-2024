@@ -200,7 +200,7 @@ var partido29 = new Partido(Caleyo, NDHL,'5-2',"11:30 - 12:00","Pista 2");
 var partido210 = new Partido(Merli,Getxokolate,'9-7',"12:00 - 12:30","Pista 2");
 var partido211 = new Partido(Fallen,Getxokolate,'8-6',"13:30 - 14:00","Pista 2"); 
 var partido212 = new Partido(Getxokolate,Nalgon,'6-8',"15:00 - 15:30","Pista 2");
-var partido213 = new Partido(Fallen,Caleyo,null,"16:00 - 16:30","Pista 2");
+var partido213 = new Partido(Fallen,Caleyo,'4-4',"16:00 - 16:30","Pista 2");
 var partido214 = new Partido(Caleyo,Nalgon,null,"20:30 - 21:00","Pista 2");
 var partido215 = new Partido(Fallen,Merli,null,"21:00 - 21:30","Pista 2");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
