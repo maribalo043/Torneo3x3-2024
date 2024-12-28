@@ -187,8 +187,8 @@ var partido16 = new Partido(Chupipandi,Caballucos,null,"20:00 - 20:30","Pista 1"
 var partido25 = new Partido(Morochas,Bartolos,'6-8',"10:00 - 10:30","Pista 2"); 
 var partido26 = new Partido(Picheleiros,Bartolos,'8-3',"12:30 - 13:00","Pista 2");
 var partido27 = new Partido(Morochas,Tenis,'0-3',"15:30 - 16:00","Pista 2");
-var partido28 = new Partido(Picheleiros,Tenis,null,"17:30 - 18:00","Pista 2");
-/**/var partido29 = new Partido(Bartolos,Trentis,null,"17:30 - 18:00","Pista 1");
+var partido28 = new Partido(Picheleiros,Tenis,'10-1',"17:30 - 18:00","Pista 2");
+/**/var partido29 = new Partido(Bartolos,Trentis,'10-8',"17:30 - 18:00","Pista 1");
 var partido210 = new Partido(Trentis,Morochas,null,"20:00 - 20:30","Pista 2");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var partidoSemi1 = new PartidoFinal('Semifinal 1ºA', 'Semifinal 2ºB',null, 'Semifinal: 10:30 - 11:00','Pista 1');
