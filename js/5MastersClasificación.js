@@ -198,7 +198,7 @@ var partido110 = new Partido(Galacticos,Corredoria,null,"21:00 - 21:30","Pista 1
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido29 = new Partido(Caleyo, NDHL,'5-2',"11:30 - 12:00","Pista 2");
 var partido210 = new Partido(Merli,Getxokolate,'9-7',"12:00 - 12:30","Pista 2");
-var partido211 = new Partido(Fallen,Getxokolate,null,"13:30 - 14:00","Pista 2"); 
+var partido211 = new Partido(Fallen,Getxokolate,'8-6',"13:30 - 14:00","Pista 2"); 
 var partido212 = new Partido(Getxokolate,Nalgon,null,"15:00 - 15:30","Pista 2");
 var partido213 = new Partido(Fallen,Caleyo,null,"16:00 - 16:30","Pista 2");
 var partido214 = new Partido(Caleyo,Nalgon,null,"20:30 - 21:00","Pista 2");
@@ -234,7 +234,7 @@ function mostrarTablas() {
         },
         grupo2: {
             dia1: [partido21,partido22,partido23,partido24,partido25,partido26,partido27,partido28],
-            dia2: [partido29,partido210,partido211,partido213,partido214,partido15],
+            dia2: [partido29,partido210,partido211,partido212,partido213,partido214,partido215],
         },
         finales: {
             dia1: [partidoSemi1, partidoSemi2,tercerCuarto,partidoFinal],
