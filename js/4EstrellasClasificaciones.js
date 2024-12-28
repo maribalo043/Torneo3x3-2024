@@ -207,8 +207,8 @@ var partido115 = new Partido(Boola,BlackIce,'11-0',"14:00 - 14:30","Pista 1");
 var partido116 = new Partido(Getxoko,Gladiators,'12-2',"14:30 - 15:00","Pista 1"); 
 var partido117 = new Partido(Boola,Katxopo,'8-0',"16:30 - 17:00","Pista 1");
 var partido118 = new Partido(BlackIce,Albamakoy,'1-9',"17:00 - 17:30","Pista 1");
-var partido119 = new Partido(Cuenca,Getxoko,null,"18:30 - 19:00","Pista 1");
-var partido120 = new Partido(Gladiators,BlackIce,null,"19:00 - 19:30","Pista 1");
+var partido119 = new Partido(Cuenca,Getxoko,'1-8',"18:30 - 19:00","Pista 1");
+var partido120 = new Partido(Gladiators,BlackIce,'6-6',"19:00 - 19:30","Pista 1");
 var partido121 = new Partido(Albamakoy,Boola,null,"21:30 - 22:00","Pista 1");
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido211 = new Partido(Jotake,Patinazos,'1-10',"9:00 - 9:30","Pista 2"); 
@@ -219,8 +219,8 @@ var partido215 = new Partido(Jotake,Fanj,'2-8',"14:00 - 14:30","Pista 2");
 var partido216 = new Partido(Tortugas,Compostolos,'0-4',"14:30 - 15:00","Pista 2"); 
 var partido217 = new Partido(Patinazos,Fanj,'5-6',"16:30 - 17:00","Pista 2");
 var partido218 = new Partido(Chiquis,Chulis,'3-0',"17:00 - 17:30","Pista 2");
-var partido219 = new Partido(Jotake,Tortugas,null,"18:30 - 19:00","Pista 2");
-var partido220 = new Partido(Compostolos,Chiquis,null,"19:00 - 19:30","Pista 2");
+var partido219 = new Partido(Jotake,Tortugas,'0-1',"18:30 - 19:00","Pista 2");
+var partido220 = new Partido(Compostolos,Chiquis,'4-1',"19:00 - 19:30","Pista 2");
 var partido221 = new Partido(Chulis,Patinazos,null,"21:30 - 22:00","Pista 2");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var partidoSemi1 = new PartidoFinal('Semifinal 1ºA', 'Semifinal 2ºB',null, 'Semifinal: 11:30 - 12:00','Pista 1');
