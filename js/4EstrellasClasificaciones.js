@@ -225,8 +225,8 @@ var partido221 = new Partido(Chulis,Patinazos,'7-3',"21:30 - 22:00","Pista 2");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var partidoSemi1 = new PartidoFinal(Boola, Chiquis,'3-0', 'Semifinal: 11:30 - 12:00','Pista 1');
 var partidoSemi2 = new PartidoFinal(Compostolos, Getxoko,'1-8', 'Semifinal: 11:30 - 12:00','Pista 2');
-var tercerCuarto = new PartidoFinal(Chiquis,Compostolos,null, 'Tercer y Cuarto: 13:30 - 14:00','Pista 2');
-var partidoFinal = new PartidoFinal(Getxoko,Boola,null, 'Final: 13:30 - 14:00','Pista 1');
+var tercerCuarto = new PartidoFinal(Chiquis,Compostolos,'7-3', 'Tercer y Cuarto: 13:30 - 14:00','Pista 2');
+var partidoFinal = new PartidoFinal(Getxoko,Boola,'1-2', 'Final: 13:30 - 14:00','Pista 1');
 
 
 var ordenGrupo1 = [Albamakoy, BlackIce ,Getxoko, Boola, Gladiators, Katxopo, Cuenca];
