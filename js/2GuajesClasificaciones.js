@@ -12,13 +12,13 @@ function actualizarResultadosConPartido(partido) {
 function actualizarResultados(golesAFavor, golesEnContra, ganado, perdido) {
     this.golesAFavor += golesAFavor;
     this.golesEnContra += golesEnContra;
-
+    
     if (ganado) {
         this.puntos += 3;
         this.partidosGanados++;
     } else if (perdido) {
         this.partidosPerdidos++;
-    } else {
+    } else {f
         this.puntos += 1;
         this.partidosEmpatados++;
     }
@@ -177,8 +177,8 @@ var partido110 = new Partido(Trasgos,Colorinchis,'1-15',"19:30 - 20:00","Pista 1
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var partidoSemi1 = new PartidoFinal(Colorinchis, Trastolillos,'12-2', 'Semifinal: 9:30 - 10:00','Pista 1');
 var partidoSemi2 = new PartidoFinal(Internationals, CorreRoller,'13-2', 'Semifinal: 9:30 - 10:00','Pista 2');
-var tercerCuarto = new PartidoFinal('unthefined','unthefined',null, 'Tercer y Cuarto: 12:30 - 13:00','Pista 2');
-var partidoFinal = new PartidoFinal('unthefined','unthefined',null, 'Final: 14:00 - 14:30','Pista 1');
+var tercerCuarto = new PartidoFinal(Trastolillos,CorreRoller,null, 'Tercer y Cuarto: 12:30 - 13:00','Pista 2');
+var partidoFinal = new PartidoFinal(Colorinchis,Internationals,null, 'Final: 14:00 - 14:30','Pista 1');
 
 
 var ordenGrupo = [Colorinchis, Internationals, CorreRoller, Trasgos, Trastolillos];
