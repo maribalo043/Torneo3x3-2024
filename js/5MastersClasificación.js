@@ -204,10 +204,10 @@ var partido213 = new Partido(Fallen,Caleyo,'4-4',"16:00 - 16:30","Pista 2");
 var partido214 = new Partido(Caleyo,Nalgon,'8-6',"20:30 - 21:00","Pista 2");
 var partido215 = new Partido(Fallen,Merli,'5-2',"21:00 - 21:30","Pista 2");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var partidoSemi1 = new PartidoFinal(Corredoria, Caleyo,null, 'Semifinal: 12:00 - 12:30','Pista 1');
-var partidoSemi2 = new PartidoFinal(Fallen, Parrales,null, 'Semifinal: 12:00 - 12:30','Pista 2');
-var tercerCuarto = new PartidoFinal('unthefined','unthefined',null, 'Tercer y Cuarto: 14:00 - 14:30','Pista 2');
-var partidoFinal = new PartidoFinal('unthefined','unthefined',null, 'Final: 14:00 - 14:30','Pista 1');
+var partidoSemi1 = new PartidoFinal(Corredoria, Caleyo,'3-2', 'Semifinal: 12:00 - 12:30','Pista 1');
+var partidoSemi2 = new PartidoFinal(Fallen, Parrales,'6-5', 'Semifinal: 12:00 - 12:30','Pista 2');
+var tercerCuarto = new PartidoFinal(Parrales,Caleyo,null, 'Tercer y Cuarto: 14:00 - 14:30','Pista 2');
+var partidoFinal = new PartidoFinal(Corredoria,Fallen,null, 'Final: 14:00 - 14:30','Pista 1');
 
 
 var ordenGrupo1 = [Corredoria,Galacticos,Calientabanquillos,Parrales,Supernenas];
