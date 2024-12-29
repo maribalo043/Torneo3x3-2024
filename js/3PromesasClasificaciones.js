@@ -191,10 +191,10 @@ var partido28 = new Partido(Picheleiros,Tenis,'10-1',"17:30 - 18:00","Pista 2");
 /**/var partido29 = new Partido(Bartolos,Trentis,'10-8',"17:30 - 18:00","Pista 1");
 var partido210 = new Partido(Trentis,Morochas,'0-5',"20:00 - 20:30","Pista 2");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var partidoSemi1 = new PartidoFinal(Guerreros, Bartolos,null, 'Semifinal: 10:30 - 11:00','Pista 1');
-var partidoSemi2 = new PartidoFinal(Picheleiros, Chupipandi,null, 'Semifinal: 10:30 - 11:00','Pista 2');
-var tercerCuarto = new PartidoFinal('unthefined','unthefined',null, 'Tercer y Cuarto: 13:00 - 13:30','Pista 2');
-var partidoFinal = new PartidoFinal('unthefined','unthefined',null, 'Final: 13:00 - 13:30','Pista 1');
+var partidoSemi1 = new PartidoFinal(Guerreros, Bartolos,'9-7', 'Semifinal: 10:30 - 11:00','Pista 1');
+var partidoSemi2 = new PartidoFinal(Picheleiros, Chupipandi,'9-2', 'Semifinal: 10:30 - 11:00','Pista 2');
+var tercerCuarto = new PartidoFinal(Chupipandi,Bartolos,null, 'Tercer y Cuarto: 13:00 - 13:30','Pista 2');
+var partidoFinal = new PartidoFinal(Picheleiros,Guerreros,null, 'Final: 13:00 - 13:30','Pista 1');
 
 
 var ordenGrupo1 = [Guerreros,Caballucos,Chupipandi,Denok];
