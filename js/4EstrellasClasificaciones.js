@@ -223,10 +223,10 @@ var partido219 = new Partido(Jotake,Tortugas,'0-1',"18:30 - 19:00","Pista 2");
 var partido220 = new Partido(Compostolos,Chiquis,'4-1',"19:00 - 19:30","Pista 2");
 var partido221 = new Partido(Chulis,Patinazos,'7-3',"21:30 - 22:00","Pista 2");
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var partidoSemi1 = new PartidoFinal(Boola, Chiquis,null, 'Semifinal: 11:30 - 12:00','Pista 1');
-var partidoSemi2 = new PartidoFinal(Compostolos, Getxoko,null, 'Semifinal: 11:30 - 12:00','Pista 2');
-var tercerCuarto = new PartidoFinal('unthefined','unthefined',null, 'Tercer y Cuarto: 13:30 - 14:00','Pista 2');
-var partidoFinal = new PartidoFinal('unthefined','unthefined',null, 'Final: 13:30 - 14:00','Pista 1');
+var partidoSemi1 = new PartidoFinal(Boola, Chiquis,'3-0', 'Semifinal: 11:30 - 12:00','Pista 1');
+var partidoSemi2 = new PartidoFinal(Compostolos, Getxoko,'1-8', 'Semifinal: 11:30 - 12:00','Pista 2');
+var tercerCuarto = new PartidoFinal(Chiquis,Compostolos,null, 'Tercer y Cuarto: 13:30 - 14:00','Pista 2');
+var partidoFinal = new PartidoFinal(Getxoko,Boola,null, 'Final: 13:30 - 14:00','Pista 1');
 
 
 var ordenGrupo1 = [Albamakoy, BlackIce ,Getxoko, Boola, Gladiators, Katxopo, Cuenca];
