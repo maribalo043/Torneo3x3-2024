@@ -151,23 +151,23 @@
               <legend class="w-auto">Jugador 1</legend>
               <div class="form-group">
                 <label for="player_name_2">Nombre:</label>
-                <input type="text" class="form-control" id="player_name_2" name="player_name_2"  />
+                <input type="text" class="form-control" id="player_name_2" name="player_name_2" />
               </div>
               <div class="form-group">
                 <label for="player_surname_2">Apellidos:</label>
-                <input type="text" class="form-control" id="player_surname_2" name="player_surname_2"  />
+                <input type="text" class="form-control" id="player_surname_2" name="player_surname_2" />
               </div>
               <div class="form-group">
                 <label for="insurance_number_2">Número de Licencia:</label>
-                <input type="text" class="form-control" id="insurance_number_2" name="insurance_number_2"  />
+                <input type="text" class="form-control" id="insurance_number_2" name="insurance_number_2" />
               </div>
               <div class="form-group">
                 <label for="nacimiento_2">Fecha de nacimiento:</label>
-                <input type="date" class="form-control" id="nacimiento_2" name="nacimiento_2"  />
+                <input type="date" class="form-control" id="nacimiento_2" name="nacimiento_2" />
               </div>
               <div class="form-group">
                 <label for="camiseta_2">Talla camiseta:</label>
-                <select class="form-control" id="camiseta_2" name="camiseta_2" >
+                <select class="form-control" id="camiseta_2" name="camiseta_2">
                   <option value="" disabled selected>
                     Seleccione una talla
                   </option>
@@ -200,7 +200,7 @@
               </div>
               <div class="form-group">
                 <label for="camiseta_3">Talla camiseta:</label>
-                <select class="form-control" id="camiseta_3" name="camiseta_3" >
+                <select class="form-control" id="camiseta_3" name="camiseta_3">
                   <option value="" disabled selected>
                     Seleccione una talla
                   </option>
@@ -270,7 +270,6 @@
             form.addEventListener("submit", function (event) {
               event.preventDefault(); // Evita que recargue la página
 
-              // Captura los datos del formulario
               const formData = new FormData(form);
 
               // Enviar datos a Netlify
@@ -282,23 +281,23 @@
                   if (response.ok) {
                     console.log("Formulario enviado a Netlify con éxito");
 
-                    // Datos para el correo de confirmación
                     const name = formData.get("nombreContacto") || "Sin nombre";
                     const email = formData.get("email") || "Sin email";
-                    const team = formData.get("team_name") || "Equipo Erroneo"
+                    const team = formData.get("team_name") || "Equipo Erróneo";
 
                     // Envía el correo de confirmación
-                    return emailjs.send("service_8s73heh", "template_SaraRoces", {
+                    return emailjs.send("service_e5iwbs1", "template_SaraRoces", {
                       name: name,
                       team: team,
                       to_email: email, // Enviarlo al email ingresado
                     });
                   } else {
                     console.error("Error al enviar el formulario a Netlify");
+                    throw new Error("Error en el envío a Netlify");
                   }
                 })
                 .then(function (response) {
-                  console.log("Correo de confirmación enviado con éxito!", response.status, response.text);
+                  console.log("Correo de confirmación enviado con éxito!", response);
                   window.location.href = "../html/finalFormulario.html";
                 })
                 .catch(function (error) {
@@ -307,6 +306,7 @@
             });
           };
         </script>
+
       </div>
     </div>
     <div class="foto foto1"></div>
