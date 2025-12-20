@@ -155,33 +155,29 @@ function mensajePartido() {
 }
 
 // Crear instancias de equipos
-var Colorinchis = new Equipo("Colorinchis");
-var CorreRoller = new Equipo("Corre Roller");
-var Internationals = new Equipo("The Internationals");
-var Trastolillos = new Equipo("Trastolillos");
-var Trasgos = new Equipo("Tragos");
+var Delfines = new Equipo("Delfines en Patines");
+var Kinder = new Equipo("Las Kinder Buenas");
+var Sun = new Equipo("sun And Sea HC");
+var Sticks = new Equipo("Los Sticks de Oro");
+var Trasgos = new Equipo("Los Trasgos");
+var Minions = new Equipo("Los Minions");
+var Guerreros = new Equipo("Los Guerreros KPOP(G)");
+
 
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
-var partido11 = new Partido(Colorinchis,Trastolillos,'17-1',"10:30 - 11:00","Pista 1"); 
-var partido12 = new Partido(CorreRoller,Trasgos,'10-1',"10:30 - 11:00","Pista 2");
-var partido13 = new Partido(Internationals,CorreRoller,'17-5',"17:00 - 17:30","Pista 1");
-var partido14 = new Partido(Trastolillos,Trasgos,'13-2',"17:00 - 17:30","Pista 2");
-var partido15 = new Partido(CorreRoller,Colorinchis,'2-14',"20:00 - 20:30","Pista 1");
-var partido16 = new Partido(Internationals,Trasgos,'23-2',"20:00 - 20:30","Pista 2"); 
+//var partido11 = new Partido(Colorinchis,Trastolillos,'17-1',"10:30 - 11:00","Pista 1"); 
+
 /*Partidos SABADO 28 Diciembre*/
-var partido17 = new Partido(Trastolillos,CorreRoller,'5-10',"13:00 - 13:30","Pista 1"); 
-var partido18 = new Partido(Colorinchis,Internationals,'16-4',"13:00 - 13:30","Pista 2"); 
-var partido19 = new Partido(Internationals,Trastolillos,'16-4',"19:30 - 20:00","Pista 1"); 
-var partido110 = new Partido(Trasgos,Colorinchis,'1-15',"19:30 - 20:00","Pista 1");
+//var partido17 = new Partido(Trastolillos,CorreRoller,'5-10',"13:00 - 13:30","Pista 1"); 
+
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var partidoSemi1 = new PartidoFinal(Colorinchis, Trastolillos,'12-2', 'Semifinal: 9:30 - 10:00','Pista 1');
+/*var partidoSemi1 = new PartidoFinal(Colorinchis, Trastolillos,'12-2', 'Semifinal: 9:30 - 10:00','Pista 1');
 var partidoSemi2 = new PartidoFinal(Internationals, CorreRoller,'13-2', 'Semifinal: 9:30 - 10:00','Pista 2');
 var tercerCuarto = new PartidoFinal(Trastolillos,CorreRoller,'3-8', 'Tercer y Cuarto: 12:30 - 13:00','Pista 2');
-var partidoFinal = new PartidoFinal(Colorinchis,Internationals,'8-6', 'Final: 14:00 - 14:30','Pista 1');
+var partidoFinal = new PartidoFinal(Colorinchis,Internationals,'8-6', 'Final: 14:00 - 14:30','Pista 1');*/
 
-
-var ordenGrupo = [Colorinchis, Internationals, CorreRoller, Trasgos, Trastolillos];
+var ordenGrupo = [Delfines,Kinder,Sun,Sticks,Trasgos,Minions,Guerreros];
 // Ordenar grupos después de actualizar resultados
 ordenarGrupos(ordenGrupo);
 

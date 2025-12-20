@@ -157,52 +157,35 @@ function mensajePartido() {
 // Crear instancias de equipos
 
 /*GRUPO A----------------------------------------------------*/
-var Corredoria = new Equipo("Corredoria");
-var Galacticos = new Equipo("Los Galácticos de Montepinar");
 var Parrales = new Equipo("Hueverías Parrales");
-var Supernenas = new Equipo("Las Supernenas");
-var Calientabanquillos = new Equipo("Los CalientaBanquillos");
-/*GRUPO B----------------------------------------------------*/
+var ENRR = new Equipo("ENRR");
+var Failteam = new Equipo("Failteam");
+var Traviesos = new Equipo("Los Traviesos");
 var Merli = new Equipo("Merli y los Merlas");
-var NDHL = new Equipo("NDHL");
 var Getxokolate = new Equipo("Getxokolate");
-var Caleyo = new Equipo("El Caleyo");
-var Nalgon = new Equipo("Patín Nalgón");
-var Fallen = new Equipo("The Fallen");
+
+/*GRUPO B----------------------------------------------------*/
+var Rusticos = new Equipo("Rústicos HC");
+var Purys = new Equipo("Purys");
+var Resaca = new Equipo("Resaca United");
+var Black = new Equipo("Black Ice");
+var Ladys = new Equipo("Ladys");
 
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 var partido11 = new Partido(Corredoria,Supernenas,'3-1',"9:00 - 9:30","Pista 1"); 
-var partido12 = new Partido(Galacticos,Calientabanquillos,'2-4',"11:30 - 12:00","Pista 1");
-var partido13 = new Partido(Supernenas,Parrales,'4-4',"15:00 - 15:30","Pista 1");
-var partido14 = new Partido(Calientabanquillos,Corredoria,'3-9',"18:00 - 18:30","Pista 1");
-var partido15 = new Partido(Parrales,Galacticos,'2-2',"20:30 - 21:00","Pista 1");
+
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido21 = new Partido(Merli,Nalgon,'7-5',"9:00 - 9:30","Pista 2");
-var partido22 = new Partido(Merli,Caleyo,'5-6',"11:00 - 11:30","Pista 2");
-var partido23 = new Partido(NDHL,Fallen,'1-6',"11:30 - 12:00","Pista 2"); 
-var partido24 = new Partido(Nalgon,NDHL,'12-2',"14:30 - 15:00","Pista 2");
-var partido25 = new Partido(Caleyo,Getxokolate,'8-4',"15:00 - 15:30","Pista 2");
-var partido26 = new Partido(NDHL,Merli,'6-7',"17:30 - 18:00","Pista 2");
-var partido27 = new Partido(Nalgon,Fallen,'6-8',"18:00 - 18:30","Pista 2");
-var partido28 = new Partido(Getxokolate,NDHL,'5-6',"20:30 - 21:00","Pista 2");
 
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 var partido16 = new Partido(Parrales,Calientabanquillos,'7-3',"11:00 - 11:30","Pista 1"); 
-var partido17 = new Partido(Supernenas,Galacticos,'2-3',"12:00 - 12:30","Pista 1");
-var partido18 = new Partido(Corredoria,Parrales,'1-7',"15:00 - 15:30","Pista 1");
-var partido19 = new Partido(Supernenas,Calientabanquillos,'13-4',"20:30 - 21:00","Pista 1");
-var partido110 = new Partido(Galacticos,Corredoria,'2-5',"21:00 - 21:30","Pista 1");
+
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido29 = new Partido(Caleyo, NDHL,'5-2',"11:30 - 12:00","Pista 2");
-var partido210 = new Partido(Merli,Getxokolate,'9-7',"12:00 - 12:30","Pista 2");
-var partido211 = new Partido(Fallen,Getxokolate,'8-6',"13:30 - 14:00","Pista 2"); 
-var partido212 = new Partido(Getxokolate,Nalgon,'6-8',"15:00 - 15:30","Pista 2");
-var partido213 = new Partido(Fallen,Caleyo,'4-4',"16:00 - 16:30","Pista 2");
-var partido214 = new Partido(Caleyo,Nalgon,'8-6',"20:30 - 21:00","Pista 2");
-var partido215 = new Partido(Fallen,Merli,'5-2',"21:00 - 21:30","Pista 2");
+
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var partidoSemi1 = new PartidoFinal(Corredoria, Caleyo,'3-2', 'Semifinal: 12:00 - 12:30','Pista 1');
 var partidoSemi2 = new PartidoFinal(Fallen, Parrales,'6-5', 'Semifinal: 12:00 - 12:30','Pista 2');
@@ -210,8 +193,9 @@ var tercerCuarto = new PartidoFinal(Parrales,Caleyo,'4-2', 'Tercer y Cuarto: 14:
 var partidoFinal = new PartidoFinal(Corredoria,Fallen,'6-3', 'Final: 14:00 - 14:30','Pista 1');
 
 
-var ordenGrupo1 = [Corredoria,Galacticos,Calientabanquillos,Parrales,Supernenas];
-var ordenGrupo2 = [NDHL,Nalgon,Fallen,Getxokolate,Caleyo,Merli];
+var ordenGrupo1 = [Parrales,ENRR,Failteam,Traviesos,Merli,Getxokolate];
+var ordenGrupo2 = [Rusticos,Purys,Resaca,Black,Ladys];
+
 // Ordenar grupos después de actualizar resultados
 ordenarGrupos(ordenGrupo1);
 ordenarGrupos(ordenGrupo2);

@@ -157,48 +157,45 @@ function mensajePartido() {
 // Crear instancias de equipos
 
 /*GRUPO A----------------------------------------------------*/
-var Guerreros = new Equipo("Guerreros");
-var Chupipandi = new Equipo("Chupipandi");
-var Denok = new Equipo("Denok Batera");
-var Caballucos = new Equipo("Caballucus del Diablo");
+var Chopos = new Equipo("Los Chopos");
+var Patin = new Equipo("Ni Patín Ni Pa Mi");
+var Carniceras = new Equipo("Las Carniceras");
+var Celtic = new Equipo("Celtic");
+var Cantabrucos = new Equipo("Cantabrucos");
+var Ventolines = new Equipo("Ventolines");
+var Devasting = new Equipo("Devasting Players");
+
 /*GRUPO B----------------------------------------------------*/
-var Trentis = new Equipo("Trentis");
+var Colorinchis = new Equipo("Colorinchis");
 var Bartolos = new Equipo("Los Bartolos");
-var Tenis = new Equipo("Tenis de la Magdalena");
-var Morochas = new Equipo("Las Morochas");
-var Picheleiros = new Equipo("Picheleiros");
+var Calamares = new Equipo("Calamares en oferta");
+var Picapiedra = new Equipo("Los Picapiedra");
+var Vascos = new Equipo("Varserkexe Team");
+var Cachopas = new Equipo("Las Cachopas");
+
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 var partido11 = new Partido(Chupipandi,Denok,'4-3',"16:30 - 17:00","Pista 1");
-var partido12 = new Partido(Caballucos,Guerreros,'0-12',"19:30 - 20:00","Pista 1");
+
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido21 = new Partido(Bartolos,Tenis,'10-1',"12:00 - 12:30","Pista 1");
-var partido22 = new Partido(Trentis,Picheleiros,'0-14',"12:00 - 12:30","Pista 2"); 
-var partido23 = new Partido(Tenis,Trentis,'4-1',"16:30 - 17:00","Pista 2");
-var partido24 = new Partido(Morochas,Picheleiros,'0-7',"19:30 - 20:00","Pista 2");
+
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 var partido13 = new Partido(Denok,Caballucos,'9-2',"12:30 - 13:00","Pista 1"); 
-var partido14 = new Partido(Guerreros,Chupipandi,'7-4',"15:30 - 16:00","Pista 1");
-var partido15 = new Partido(Guerreros,Denok,'11-3',"18:00 - 18:30","Pista 1");
-var partido16 = new Partido(Chupipandi,Caballucos,'5-2',"20:00 - 20:30","Pista 1");
+
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partido25 = new Partido(Morochas,Bartolos,'6-8',"10:00 - 10:30","Pista 2"); 
-var partido26 = new Partido(Picheleiros,Bartolos,'8-3',"12:30 - 13:00","Pista 2");
-var partido27 = new Partido(Morochas,Tenis,'0-3',"15:30 - 16:00","Pista 2");
-var partido28 = new Partido(Picheleiros,Tenis,'10-1',"17:30 - 18:00","Pista 2");
-/**/var partido29 = new Partido(Bartolos,Trentis,'10-8',"17:30 - 18:00","Pista 1");
-var partido210 = new Partido(Trentis,Morochas,'0-5',"20:00 - 20:30","Pista 2");
+
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var partidoSemi1 = new PartidoFinal(Guerreros, Bartolos,'9-7', 'Semifinal: 10:30 - 11:00','Pista 1');
 var partidoSemi2 = new PartidoFinal(Picheleiros, Chupipandi,'9-2', 'Semifinal: 10:30 - 11:00','Pista 2');
 var tercerCuarto = new PartidoFinal(Chupipandi,Bartolos,'7-0', 'Tercer y Cuarto: 13:00 - 13:30','Pista 2');
 var partidoFinal = new PartidoFinal(Picheleiros,Guerreros,'3-1', 'Final: 13:00 - 13:30','Pista 1');
 
-
-var ordenGrupo1 = [Guerreros,Caballucos,Chupipandi,Denok];
-var ordenGrupo2 = [Trentis, Bartolos, Tenis, Morochas, Picheleiros];
+var ordenGrupo1 = [Chopos,Patin,Carniceras,Celtic,Cantabrucos,Ventolines,Devasting];
+var ordenGrupo2 = [Colorinchis,Bartolos,Calamares,Picapiedra,Vascos,Cachopas];
 // Ordenar grupos después de actualizar resultados
 ordenarGrupos(ordenGrupo1);
 ordenarGrupos(ordenGrupo2);

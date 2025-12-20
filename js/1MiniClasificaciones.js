@@ -155,25 +155,25 @@ function mensajePartido() {
 }
 
 // Crear instancias de equipos
-var Squad = new Equipo("Squad Busters");
-var Sticks = new Equipo("Sticks de Oro");
-var Canastu = new Equipo("Canastu");
+var Microbios = new Equipo("Microbios");
+var Sticks = new Equipo("Sticks Fighters");
+var Fantasticos = new Equipo("Los 4 Fantásticos");
+var Ruedas = new Equipo("Con Ruedas y a lo Loco");
+var Elfos = new Equipo("Los Elfos del Telecable");
+var Guerreros = new Equipo("Los Guerreros KPOP (M)");
 
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
-var partido11 = new Partido(Squad,Sticks,'7-2',"11:00 - 11:30","Pista 1"); 
-var partido12 = new Partido(Canastu,Squad,'1-9',"14:30 - 15:00","Pista 1");
-var partido13 = new Partido(Sticks,Canastu,'6-6',"17:30 - 18:00","Pista 1");
+//var partido11 = new Partido(Squad,Sticks,'7-2',"11:00 - 11:30","Pista 1"); 
+
 /*Partidos SABADO 28 Diciembre*/
-var partido14 = new Partido(Squad,Sticks,'12-2',"10:00 - 10:30","Pista 1"); 
-var partido15 = new Partido(Canastu,Squad,'1-13',"13:30 - 14:00","Pista 1");
-var partido16 = new Partido(Sticks,Canastu,'8-9',"16:00 - 16:30","Pista 1");
+//var partido14 = new Partido(Squad,Sticks,'12-2',"10:00 - 10:30","Pista 1"); 
+
 /*Partidos DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var partido17 = new Partido(Squad,Sticks,'10-5',"9:00 - 9:30","Pista 1"); 
-var partido18 = new Partido(Canastu,Squad,'1-11',"10:00 - 10:30","Pista 1");
-var partido19 = new Partido(Sticks,Canastu,'6-6',"11:00 - 11:30","Pista 1");
+//var partido17 = new Partido(Squad,Sticks,'10-5',"9:00 - 9:30","Pista 1"); 
+
 /*Grupos y su ordenación*/
-var ordenGrupo = [Squad,Canastu,Sticks];
+var ordenGrupo = [Microbios,Sticks,Fantasticos,Ruedas,Elfos,Guerreros];
 // Ordenar grupos después de actualizar resultados
 ordenarGrupos(ordenGrupo);
 
