@@ -256,6 +256,11 @@ function mostrarTablas() {
         grupoNombre.textContent = "Grupo Único";
         tablaClasificaciones.style.display = 'table';  // Cambiado a 'table' para ocultarla completamente si no hay datos
         tituloClasif.textContent = "Clasificación Grupo Único";
+        if(dia==='dia3'){
+            tituloClasif.textContent = "Premios a las 14:00"; // Configura el subtítulo
+            tbodyClasificacion.innerHTML = '';
+            tablaClasificaciones.style.visibility = 'hidden';
+        }
 
         llenarPartidos(partidos);
         llenarClasificacion();

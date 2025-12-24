@@ -266,7 +266,11 @@ function mostrarTablas() {
         grupoNombre.textContent = "Grupo Único";
         tablaClasificaciones.style.visibility = 'visible';
         tituloClasif.textContent = "Clasificación Grupo Único";
-
+        if(dia==='dia3'){
+            tituloClasif.textContent = "Premios a las 14:00"; // Configura el subtítulo
+            tbodyClasificacion.innerHTML = '';
+            tablaClasificaciones.style.visibility = 'hidden';
+        }
         llenarPartidos(partidos);
         llenarClasificacion();
     } else {

@@ -160,39 +160,72 @@ function mensajePartido() {
 var Chopos = new Equipo("Los Chopos");
 var Patin = new Equipo("Ni Patín Ni Pa Mi");
 var Carniceras = new Equipo("Las Carniceras");
-var Celtic = new Equipo("Celtic");
-var Cantabrucos = new Equipo("Cantabrucos");
+var Bartolos = new Equipo("Los Bartolos");
 var Ventolines = new Equipo("Ventolines");
-var Devasting = new Equipo("Devasting Players");
+var Cantabrucos = new Equipo("Cantabrucos");
 
 /*GRUPO B----------------------------------------------------*/
 var Colorinchis = new Equipo("Colorinchis");
-var Bartolos = new Equipo("Los Bartolos");
 var Calamares = new Equipo("Calamares en oferta");
-var Picapiedra = new Equipo("Los Picapiedra");
 var Vascos = new Equipo("Varserkexe Team");
-var Cachopas = new Equipo("Las Cachopas");
+var Devasting = new Equipo("Devasting Players");
+var Picapiedra = new Equipo("Los Picapiedra");
+var Celtic = new Equipo("Celtic");
+
 
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
-/*GRUPO A--------------------------------------------------------------------------------------*/
-var partido11 = new Partido(Chupipandi,Denok,'4-3',"16:30 - 17:00","Pista 1");
+// GRUPO A - VIERNES
+
+var partidoA1 = new Partido(Chopos, Patin, null, "10:00-10:30", "Pista Sara Roces");
+var partidoA2 = new Partido(Carniceras, Bartolos,null, "10:00-10:30", "Pista Marta Piquero");
+var partidoA3 = new Partido(Patin, Carniceras, null, "12:30-13:00", "Pista Sergio Villar");
+var partidoA4 = new Partido(Bartolos, Cantabrucos, null, "13:00-13:30", "Pista Sara Roces");
+var partidoA5 = new Partido(Cantabrucos, Ventolines, null, "14:30-15:00", "Pista Sara Roces");
+var partidoA6 = new Partido(Carniceras, Ventolines, null, "15:30-16:00", "Pista Sara Roces");
+var partidoA7 = new Partido(Chopos, Bartolos, null, "15:30-16:00", "Pista Patinalon");
+var partidoA8 = new Partido(Cantabrucos, Chopos, null, "18:00-18:30", "Pista Sara Roces");
+var partidoA9 = new Partido(Ventolines, Patin, null, "19:00-19:30", "Pista Sara Roces");
+var partidoA10 = new Partido(Chopos, Carniceras, null, "20:30-21:00", "Pista Marta Piquero");
+var partidoA11 = new Partido(Bartolos, Ventolines, null, "21:00-21:30", "Pista Sara Roces");
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partido21 = new Partido(Bartolos,Tenis,'10-1',"12:00 - 12:30","Pista 1");
+var partidoB1 = new Partido(Colorinchis, Calamares, null, "12:30-13:00", "Pista Sara Roces");
+var partidoB2 = new Partido(Picapiedra, Celtic, null, "12:30-13:00", "Pista Marta Piquero");
+var partidoB3 = new Partido(Vascos, Devasting, null, "12:30-13:00", "Pista Patinalon");
+var partidoB4 = new Partido(Celtic, Vascos, null, "15:30-16:00", "Pista Sara Roces");
+var partidoB5 = new Partido(Calamares, Devasting, null, "15:30-16:00", "Pista Patinalon");
+var partidoB6 = new Partido(Calamares, Picapiedra, null, "16:00-16:30", "Pista Sara Roces");
+var partidoB7 = new Partido(Colorinchis, Vascos, null, "18:00-18:30", "Pista Patinalon");
+var partidoB8 = new Partido(Devasting, Picapiedra, null, "18:30-19:00", "Pista Sara Roces");
+var partidoB9 = new Partido(Celtic, Calamares, null, "18:30-19:00", "Pista Patinalon");
+var partidoB10 = new Partido(Colorinchis, Devasting, null, "21:00-21:30", "Pista Sara Roces");
 
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partido13 = new Partido(Denok,Caballucos,'9-2',"12:30 - 13:00","Pista 1"); 
+// Partidos Grupo A - Sábado
+var partidoA_sab1 = new Partido(Ventolines, Chopos, null, "11:00-11:30", "Pista Sara Roces");
+var partidoA_sab2 = new Partido(Patin, Cantabrucos, null, "11:00-11:30", "Pista Marta Piquero");
+var partidoA_sab3 = new Partido(Patin, Bartolos, null, "13:30-14:00", "Pista Patinalon");
+var partidoA_sab4 = new Partido(Carniceras, Cantabrucos, null, "13:30-14:00", "Pista Patinalon");
 
-/*GRUPO B--------------------------------------------------------------------------------------*/
-var partido25 = new Partido(Morochas,Bartolos,'6-8',"10:00 - 10:30","Pista 2"); 
+// Partidos Grupo B - Sábado
+var partidoB_sab1 = new Partido(Colorinchis, Picapiedra, null, "10:30-11:00", "Pista Sara Roces");
+var partidoB_sab2 = new Partido(Devasting, Celtic, null, "10:30-11:00", "Pista Marta Piquero");
+var partidoB_sab3 = new Partido(Vascos, Calamares, null, "11:00-11:30", "Pista Sara Roces");
+var partidoB_sab4 = new Partido(Celtic, Colorinchis, null, "12:30-13:00", "Pista Patinalon");
+var partidoB_sab5 = new Partido(Picapiedra, Vascos, null, "13:30-14:00", "Pista Patinalon");
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var partidoSemi1 = new PartidoFinal(Guerreros, Bartolos,'9-7', 'Semifinal: 10:30 - 11:00','Pista 1');
-var partidoSemi2 = new PartidoFinal(Picheleiros, Chupipandi,'9-2', 'Semifinal: 10:30 - 11:00','Pista 2');
-var tercerCuarto = new PartidoFinal(Chupipandi,Bartolos,'7-0', 'Tercer y Cuarto: 13:00 - 13:30','Pista 2');
-var partidoFinal = new PartidoFinal(Picheleiros,Guerreros,'3-1', 'Final: 13:00 - 13:30','Pista 1');
+
+var Cuarto1 = new Partido(null,null,null,"Sábado Cuarto 1: 18:30-19:00","Pista Sara Roces"); 
+var Cuarto2 = new Partido(null,null,null,"Sábado Cuarto 2: 18:30-19:00","Pista Marta Piquero");
+var Cuarto3 = new Partido(null,null,null,"Sábado Cuarto 3: 19:00-19:30","Pista Sara Roces"); 
+var Cuarto4 = new Partido(null,null,null,"Sábado Cuarto 4: 19:00-19:30","Pista Marta Piquero");
+var Semi1 = new Partido(null,null,null,"Semi 1: 10:00-10:30","Pista Sara Roces"); 
+var Semi2 = new Partido(null,null,null,"Semi 2: 10:00-10:30","Pista Marta Piquero");
+var TercerCuarto = new Partido(null,null,null," TercerCuarto: 12:30-13:00","Pista Sara Roces");
+var Final = new Partido(null,null,null,"Final: 12:30-13:00","Pista Marta Piquero");
 
 var ordenGrupo1 = [Chopos,Patin,Carniceras,Celtic,Cantabrucos,Ventolines,Devasting];
 var ordenGrupo2 = [Colorinchis,Bartolos,Calamares,Picapiedra,Vascos,Cachopas];
@@ -213,15 +246,15 @@ function mostrarTablas() {
     // Mapear datos de partidos
     const partidosPorDia = {
         grupo1: {
-            dia1: [partido11, partido12],
-            dia2: [partido13, partido14, partido15, partido16],
+            dia1: [partidoA1, partidoA2, partidoA3, partidoA4, partidoA5, partidoA6, partidoA7, partidoA8, partidoA9, partidoA10, partidoA11],
+            dia2: [partidoA_sab1, partidoA_sab2, partidoA_sab3, partidoA_sab4],
         },
         grupo2: {
-            dia1: [partido21,partido22,partido23,partido24],
-            dia2: [partido25,partido26,partido27,partido28,partido29,partido210],
+            dia1: [partidoB1, partidoB2, partidoB3, partidoB4, partidoB5, partidoB6, partidoB7, partidoB8, partidoB9, partidoB10],
+            dia2: [partidoB_sab1, partidoB_sab2, partidoB_sab3, partidoB_sab4, partidoB_sab5],
         },
         finales: {
-            finales: [partidoSemi1, partidoSemi2,tercerCuarto,partidoFinal],
+            finales: [Cuarto1,Cuarto2,Cuarto3,Cuarto4,Semi1, Semi2, TercerCuarto, Final],
         },
     };
 
@@ -237,9 +270,9 @@ function mostrarTablas() {
         partidos.forEach(partido => {
             const fila = tbodyPartidos.insertRow();
             const datos = [
-                partido.equipo1.nombre,
+                partido.equipo1?.nombre || 'Sin definir',
                 partido.resultado || 'Sin jugar',
-                partido.equipo2.nombre,
+                partido.equipo2?.nombre || 'Sin definir',
                 partido.hora,
                 partido.pista,
             ];
@@ -290,7 +323,7 @@ function mostrarTablas() {
             case "finales":
                 grupoNombre.textContent = "Finales"; // Configura el título de la sección
                 tablaClasificaciones.style.visibility = 'hidden'; // Oculta la tabla de clasificaciones
-                tituloClasif.textContent = "Premios a las 14:30"; // Configura el subtítulo
+                tituloClasif.textContent = "Premios a las 14:00"; // Configura el subtítulo
             
                 // Accede directamente a la lista de partidos de finales
                 const partidosFinales = partidosPorDia.finales?.finales || []; // Asegura que se accede sin errores
