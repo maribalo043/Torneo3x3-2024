@@ -166,16 +166,39 @@ var Guerreros = new Equipo("Los Guerreros KPOP(G)");
 
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
-//var partido11 = new Partido(Colorinchis,Trastolillos,'17-1',"10:30 - 11:00","Pista 1"); 
+var g1 = new Partido(Delfines, Guerreros, null, "12:00-12:30", "Pista Sara Roces");
+var g2 = new Partido(Kinder, Minions, null, "12:00-12:30", "Pista Marta Piquero");
+var g3 = new Partido(Sun, Trasgos, null, "12:00-12:30", "Pista Sergio Villar");
 
+var g4 = new Partido(Sticks, Sun, null, "15:00-15:30", "Pista Sara Roces");
+var g5 = new Partido(Minions, Delfines, null, "15:00-15:30", "Pista Marta Piquero");
+var g6 = new Partido(Guerreros, Kinder, null, "15:00-15:30", "Pista Sergio Villar");
+
+var g7 = new Partido(Kinder, Trasgos, null, "17:00-17:30", "Pista Marta Piquero");
+var g8 = new Partido(Minions, Guerreros, null, "17:00-17:30", "Pista Sergio Villar");
+var g9 = new Partido(Delfines, Sticks, null, "17:00-17:30", "Pista Patinalon");
+
+var g10 = new Partido(Trasgos, Delfines, null, "19:00-19:30", "Pista Sara Roces");
+var g11 = new Partido(Guerreros, Sticks, null, "19:00-19:30", "Pista Marta Piquero");
+var g12 = new Partido(Sun, Kinder, null, "19:30-20:00", "Pista Sara Roces");
 /*Partidos SABADO 28 Diciembre*/
-//var partido17 = new Partido(Trastolillos,CorreRoller,'5-10',"13:00 - 13:30","Pista 1"); 
+var g13 = new Partido(Minions,Sticks, null, "09:00-09:30", "Pista Sara Roces");
+var g14 = new Partido(Trasgos, Guerreros, null, "09:00-09:30", "Pista Marta Piquero");
+var g15 = new Partido(Delfines, Sun, null, "09:30-10:00", "Pista Sara Roces");
+
+var g16 = new Partido(Sticks,Trasgos, null, "12:30-13:00", "Pista Patinalon");
+var g17 = new Partido(Kinder, Delfines, null, "13:00-13:30", "Pista Sara Roces");
+var g18 = new Partido(Sun, Minions, null, "13:00-13:30", "Pista Marta Piquero");
+
+var g19 = new Partido(Guerreros,Sun, null, "15:00-15:30", "Pista Sergio Villar");
+var g20 = new Partido(Sticks, Kinder, null, "15:00-15:30", "Pista Patinalon");
+var g21 = new Partido(Trasgos, Minions, null, "15:30-16:00", "Pista Sergio Villar");
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-/*var partidoSemi1 = new PartidoFinal(Colorinchis, Trastolillos,'12-2', 'Semifinal: 9:30 - 10:00','Pista 1');
-var partidoSemi2 = new PartidoFinal(Internationals, CorreRoller,'13-2', 'Semifinal: 9:30 - 10:00','Pista 2');
-var tercerCuarto = new PartidoFinal(Trastolillos,CorreRoller,'3-8', 'Tercer y Cuarto: 12:30 - 13:00','Pista 2');
-var partidoFinal = new PartidoFinal(Colorinchis,Internationals,'8-6', 'Final: 14:00 - 14:30','Pista 1');*/
+var Semi1 = new Partido(null,null,null,"Sábado 18:00-18:30","Pista Sara Roces"); 
+var Semi2 = new Partido(null,null,null,"Sábado 18:00-18:30","Pista Marta Piquero");
+var TercerCuarto = new Partido(null,null,null,"12:00-12:30","Pista Sara Roces");
+var Final = new Partido(null,null,null,"12:00-12:30","Pista Marta Piquero");
 
 var ordenGrupo = [Delfines,Kinder,Sun,Sticks,Trasgos,Minions,Guerreros];
 // Ordenar grupos después de actualizar resultados
@@ -191,9 +214,9 @@ function mostrarTablas() {
 
     // Datos de partidos por día
     const partidosPorDia = {
-        dia1: [partido11, partido12, partido13, partido14, partido15, partido16],
-        dia2: [partido17, partido18, partido19, partido110],
-        dia3: [partidoSemi1, partidoSemi2, tercerCuarto, partidoFinal],
+        dia1: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12],
+        dia2: [g12, g14, g15, g16, g17, g18, g19, g20, g21],
+        dia3: [Semi1, Semi2, TercerCuarto, Final],
     };
 
     // Función para rellenar partidos
@@ -202,9 +225,9 @@ function mostrarTablas() {
         partidos.forEach(partido => {
             const fila = tbodyPartidos.insertRow();
             const datos = [
-                partido.equipo1.nombre,
+                partido.equipo1?.nombre || 'Sin definir',
                 partido.resultado || 'Sin jugar',
-                partido.equipo2.nombre,
+                partido.equipo2?.nombre || 'Sin definir',
                 partido.hora,
                 partido.pista,
             ];
