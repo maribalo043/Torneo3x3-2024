@@ -160,8 +160,8 @@ function mensajePartido() {
 var Parrales = new Equipo("Hueverías Parrales");
 var ENRR = new Equipo("ENRR");
 var Failteam = new Equipo("Failteam");
+var Ladys = new Equipo("Ladys");
 var Traviesos = new Equipo("Los Traviesos");
-var Merli = new Equipo("Merli y los Merlas");
 var Getxokolate = new Equipo("Getxokolate");
 
 /*GRUPO B----------------------------------------------------*/
@@ -169,7 +169,7 @@ var Rusticos = new Equipo("Rústicos HC");
 var Purys = new Equipo("Purys");
 var Resaca = new Equipo("Resaca United");
 var Black = new Equipo("Black Ice");
-var Ladys = new Equipo("Ladys");
+var Merli = new Equipo("Merli y los Merlas");
 
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/

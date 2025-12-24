@@ -77,7 +77,6 @@ function ordenarGrupos(ArrayEquipos) {
 
 document.getElementById('enviar').addEventListener('click', mostrarTablas);
 //window.addEventListener('load',mensajePartido);
-document.addEventListener('DOMContentLoaded', startDigitalClock);
 document.getElementById('enviar').addEventListener('click', actualizarPartidos);
 
 
@@ -121,19 +120,6 @@ function actualizarPartidos() {
         }
     }
 }
-function updateDigitalClock() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-  
-    const digitalClock = `${hours}:${minutes}:${seconds}`;
-    document.getElementById('digital-clock').textContent = digitalClock;
-  }
-  function startDigitalClock() {
-    updateDigitalClock();
-    setInterval(updateDigitalClock, 1000);
-  }
 function mensajePartido() {
     // Crear el párrafo
     var tipo = document.createElement("p");
@@ -164,14 +150,32 @@ var Guerreros = new Equipo("Los Guerreros KPOP (M)");
 
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
-//var partido11 = new Partido(Squad,Sticks,'7-2',"11:00 - 11:30","Pista 1"); 
+var partido11 = new Partido(Microbios,Guerreros,null,"11:30-12:00","Pista Sara Roces"); 
+var partido12 = new Partido(Sticks,Elfos,null,"11:30-12:00","Pista Marta Piquero");
+var partido13 = new Partido(Fantasticos,Ruedas,null,"13:00-13:30","Pista Marta Piquero"); 
+
+var partido14 = new Partido(Sticks,Fantasticos,null,"14:30-15:00","Pista Sara Roces"); 
+var partido15 = new Partido(Guerreros,Ruedas,null,"14:30-15:00","Pista Marta Piquero");
+var partido16 = new Partido(Elfos,Microbios,null,"14:30-15:00","Pista Sergio Villar");
+
+var partido17 = new Partido(Microbios,Ruedas,null,"16:30-17:00","Pista Sara Roces");
+var partido18 = new Partido(Elfos,Fantasticos,null,"16:30-17:00","Pista Marta Piquero");
+var partido19 = new Partido(Guerreros,Sticks,null,"17:00-17:30","Pista Sara Roces");
 
 /*Partidos SABADO 28 Diciembre*/
-//var partido14 = new Partido(Squad,Sticks,'12-2',"10:00 - 10:30","Pista 1"); 
+var partido110 = new Partido(Fantasticos,Microbios,null,"09:30-10:00","Pista Marta Piquero"); 
+var partido111 = new Partido(Ruedas,Sticks,null,"10:00-10:30","Pista Marta Piquero");
+var partido112 = new Partido(Elfos,Guerreros,null,"10:00-10:30","Pista Sara Roces"); 
+
+var partido113 = new Partido(Microbios,Sticks,null,"12:30-13:00","Pista Sara Roces"); 
+var partido114 = new Partido(Fantasticos,Guerreros,null,"12:30-13:00","Pista Marta Piquero");
+var partido115 = new Partido(Ruedas,Elfos,null,"13:00-13:30","Pista Sergio Villar");
 
 /*Partidos DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-//var partido17 = new Partido(Squad,Sticks,'10-5',"9:00 - 9:30","Pista 1"); 
-
+var Semi1 = new Partido(null,null,null,"16:30-17:00","Pista Sara Roces"); 
+var Semi2 = new Partido(null,null,null,"16:30-17:00","Pista Marta Piquero");
+var TercerCuarto = new Partido(null,null,null,"11:30-12:00","Pista Sara Roces"); 
+var Final = new Partido(null,null,null,"11:30-12:00","Pista Marta Piquero"); 
 /*Grupos y su ordenación*/
 var ordenGrupo = [Microbios,Sticks,Fantasticos,Ruedas,Elfos,Guerreros];
 // Ordenar grupos después de actualizar resultados
@@ -187,29 +191,42 @@ function mostrarTablas() {
 
     // Datos de partidos por día
     const partidosPorDia = {
-        dia1: [partido11, partido12, partido13],
-        dia2: [partido14, partido15, partido16],
-        dia3: [partido17, partido18, partido19],
-    };
+    // VIERNES 27 DICIEMBRE (partidos 1 al 9)
+    dia1: [
+        partido11, partido12, partido13,partido14, partido15, partido16,partido17, partido18, partido19
+    ],
+
+    // SÁBADO 28 DICIEMBRE (partidos 10 al 15)
+    dia2: [
+        partido110, partido111, partido112,partido113, partido114, partido115
+    ],
+
+    // DOMINGO 29 DICIEMBRE (finales)
+    dia3: [
+        Semi1, Semi2,TercerCuarto, Final
+    ]
+};
+
 
     // Función para rellenar partidos
     const llenarPartidos = (partidos) => {
-        tbodyPartidos.innerHTML = '';
-        partidos.forEach(partido => {
-            const fila = tbodyPartidos.insertRow();
-            const datos = [
-                partido.equipo1.nombre,
-                partido.resultado || 'Sin jugar',
-                partido.equipo2.nombre,
-                partido.hora,
-                partido.pista,
-            ];
-            datos.forEach(dato => {
-                const celda = fila.insertCell();
-                celda.textContent = dato;
-            });
+    tbodyPartidos.innerHTML = '';
+    partidos.forEach(partido => {
+        const fila = tbodyPartidos.insertRow();
+        const datos = [
+            partido.equipo1?.nombre || 'Sin definir',
+            partido.resultado || 'Sin jugar',
+            partido.equipo2?.nombre || 'Sin definir',
+            partido.hora,
+            partido.pista,
+        ];
+        datos.forEach(dato => {
+            const celda = fila.insertCell();
+            celda.textContent = dato;
         });
-    };
+    });
+};
+
 
     // Función para rellenar clasificación
     const llenarClasificacion = () => {
