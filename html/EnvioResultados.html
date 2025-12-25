@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Firebase</title>
+<title>Login Torneo</title>
 <style>
     body {
         display:flex;
         justify-content:center;
         align-items:center;
         height:100vh;
-        font-family:Arial, sans-serif;
-        background:#f0f2f5;
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
     }
     .login-container {
         background:white;
@@ -19,7 +19,6 @@
         border-radius:12px;
         box-shadow:0 4px 15px rgba(0,0,0,0.2);
         text-align:center;
-        position: relative;
     }
     input {
         width:100%;
@@ -33,13 +32,13 @@
         position: relative;
     }
     .toggle-password {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        font-size: 18px;
-        color: #555;
+        position:absolute;
+        right:10px;
+        top:50%;
+        transform:translateY(-50%);
+        cursor:pointer;
+        font-size:18px;
+        color:#555;
     }
     button {
         width:100%;
@@ -63,58 +62,54 @@
 
 <div class="login-container">
     <h2>Acceso al torneo</h2>
-    <input type="email" id="email" placeholder="Correo electrónico">
+    <input type="email" id="email" placeholder="Correo electrónico" required>
     <div class="password-container">
-        <input type="password" id="password" placeholder="Contraseña">
+        <input type="password" id="password" placeholder="Contraseña" required>
         <span class="toggle-password" onclick="togglePassword()">👁️</span>
     </div>
     <button onclick="login()">Entrar</button>
-    <div class="error-message" id="error">Correo o contraseña incorrectos</div>
+    <div class="error-message" id="error"></div>
 </div>
 
-<!-- Firebase App y Auth -->
-<script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
-<!-- Firebase App (obligatorio) -->
+<!-- Firebase Scripts -->
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
 
 <script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
-    authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
-    projectId: "torneo-3x3-sara-roces",
-    storageBucket: "torneo-3x3-sara-roces.firebasestorage.app",
-    messagingSenderId: "425149115596",
-    appId: "1:425149115596:web:0231d2ec84af97b072a669",
-    measurementId: "G-4J28ZHSKCS"
-  };
-  // Inicializa Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+    // Configuración de Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
+        authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
+        projectId: "torneo-3x3-sara-roces",
+        storageBucket: "torneo-3x3-sara-roces.firebasestorage.app",
+        messagingSenderId: "425149115596",
+        appId: "1:425149115596:web:0231d2ec84af97b072a669",
+        measurementId: "G-4J28ZHSKCS"
+    };
 
-
-<script>
+    // Inicializa Firebase
+    firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
+
+    function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
 
     async function login() {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-        const errorMessage = document.getElementById('error');
+        const errorDiv = document.getElementById('error');
 
         try {
             await auth.signInWithEmailAndPassword(email, password);
-            window.location.href = "/html/FormularioResultados.html"; // Cambia esto a tu página principal
+            // Redirigir a la página principal del torneo
+            window.location.href = "index.html"; // Cambia por tu página real
         } catch (error) {
             console.error(error);
-            errorMessage.style.display = "block";
+            errorDiv.style.display = "block";
+            errorDiv.innerText = error.message; // Muestra error real de Firebase
         }
-    }
-
-    function togglePassword() {
-        const passwordInput = document.getElementById('password');
-        const type = passwordInput.type === "password" ? "text" : "password";
-        passwordInput.type = type;
     }
 </script>
 
