@@ -5,14 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login Torneo</title>
 
-<!-- 🔥 FIREBASE (SIEMPRE ARRIBA) -->
+<!-- 🔥 FIREBASE (ARRIBA) -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-
 
 <script>
-  // 🔥 Configuración Firebase
   const firebaseConfig = {
     apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
     authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
@@ -33,16 +30,15 @@
     justify-content:center;
     align-items:center;
     height:100vh;
-    font-family:Arial;
     background:#f0f2f5;
+    font-family:Arial;
   }
-  .login-container {
-    background:#fff;
-    padding:30px 40px;
+  .login {
+    background:white;
+    padding:30px;
     border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.2);
-    text-align:center;
     width:300px;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
   }
   input, button {
     width:100%;
@@ -52,8 +48,8 @@
   }
   button {
     background:#4a90e2;
-    color:white;
     border:none;
+    color:white;
     cursor:pointer;
   }
   button:hover { background:#357ab7; }
@@ -63,11 +59,11 @@
 
 <body>
 
-<div class="login-container">
+<div class="login">
   <h2>Acceso al torneo</h2>
 
   <form id="loginForm">
-    <input type="email" id="email" placeholder="Correo" required>
+    <input type="email" id="email" placeholder="Correo electrónico" required>
     <input type="password" id="password" placeholder="Contraseña" required>
     <button type="submit">Entrar</button>
   </form>
@@ -75,7 +71,7 @@
   <p id="error" class="error"></p>
 </div>
 
-<!-- 🔥 TU CÓDIGO (SIEMPRE DESPUÉS) -->
+<!-- 🔥 LÓGICA -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -85,15 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("loginForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = email.value;
-    const password = password.value;
+    const emailValue = document.getElementById("email").value;
+    const passwordValue = document.getElementById("password").value;
 
     try {
-      await auth.signInWithEmailAndPassword(email, password);
-      window.location.href = "envioresultados.html";
+      await auth.signInWithEmailAndPassword(emailValue, passwordValue);
+      window.location.href = "/FormularioResultados.html"; // 👉 RUTA DESTINO
     } catch (err) {
       errorDiv.style.display = "block";
-      errorDiv.innerText = err.message;
+      errorDiv.innerText = "Correo o contraseña incorrectos";
+      console.error(err);
     }
   });
 
