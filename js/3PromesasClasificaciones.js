@@ -218,14 +218,14 @@ var partidoB_sab5 = new Partido(Picapiedra, Vascos, null, "13:30-14:00", "Pista 
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 
-var Cuarto1 = new Partido(null,null,null,"Sábado Cuarto 1: 18:30-19:00","Pista Sara Roces"); 
-var Cuarto2 = new Partido(null,null,null,"Sábado Cuarto 2: 18:30-19:00","Pista Marta Piquero");
-var Cuarto3 = new Partido(null,null,null,"Sábado Cuarto 3: 19:00-19:30","Pista Sara Roces"); 
-var Cuarto4 = new Partido(null,null,null,"Sábado Cuarto 4: 19:00-19:30","Pista Marta Piquero");
-var Semi1 = new Partido(null,null,null,"Semi 1: 10:00-10:30","Pista Sara Roces"); 
-var Semi2 = new Partido(null,null,null,"Semi 2: 10:00-10:30","Pista Marta Piquero");
-var TercerCuarto = new Partido(null,null,null," TercerCuarto: 12:30-13:00","Pista Sara Roces");
-var Final = new Partido(null,null,null,"Final: 12:30-13:00","Pista Marta Piquero");
+var Cuarto1 = new PartidoFinal(null,null,null,"Sábado Cuarto 1: 18:30-19:00","Pista Sara Roces"); 
+var Cuarto2 = new PartidoFinal(null,null,null,"Sábado Cuarto 2: 18:30-19:00","Pista Marta Piquero");
+var Cuarto3 = new PartidoFinal(null,null,null,"Sábado Cuarto 3: 19:00-19:30","Pista Sara Roces"); 
+var Cuarto4 = new PartidoFinal(null,null,null,"Sábado Cuarto 4: 19:00-19:30","Pista Marta Piquero");
+var Semi1 = new PartidoFinal(null,null,null,"Semi 1: 10:00-10:30","Pista Sara Roces"); 
+var Semi2 = new PartidoFinal(null,null,null,"Semi 2: 10:00-10:30","Pista Marta Piquero");
+var TercerCuarto = new PartidoFinal(null,null,null," TercerCuarto: 12:30-13:00","Pista Sara Roces");
+var Final = new PartidoFinal(null,null,null,"Final: 12:30-13:00","Pista Marta Piquero");
 
 var ordenGrupo1 = [Chopos,Patin,Carniceras,Celtic,Cantabrucos,Ventolines,Devasting];
 var ordenGrupo2 = [Colorinchis,Bartolos,Calamares,Picapiedra,Vascos,Cachopas];

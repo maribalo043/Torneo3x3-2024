@@ -172,10 +172,10 @@ var partido114 = new Partido(Fantasticos,Guerreros,null,"12:30-13:00","Pista Mar
 var partido115 = new Partido(Ruedas,Elfos,null,"13:00-13:30","Pista Sergio Villar");
 
 /*Partidos DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var Semi1 = new Partido(null,null,null,"16:30-17:00","Pista Sara Roces"); 
-var Semi2 = new Partido(null,null,null,"16:30-17:00","Pista Marta Piquero");
-var TercerCuarto = new Partido(null,null,null,"11:30-12:00","Pista Sara Roces"); 
-var Final = new Partido(null,null,null,"11:30-12:00","Pista Marta Piquero"); 
+var Semi1 = new PartidoFinal(null,null,null,"16:30-17:00","Pista Sara Roces"); 
+var Semi2 = new PartidoFinal(null,null,null,"16:30-17:00","Pista Marta Piquero");
+var TercerCuarto = new PartidoFinal(null,null,null,"11:30-12:00","Pista Sara Roces"); 
+var Final = new PartidoFinal(null,null,null,"11:30-12:00","Pista Marta Piquero"); 
 /*Grupos y su ordenación*/
 var ordenGrupo = [Microbios,Sticks,Fantasticos,Ruedas,Elfos,Guerreros];
 // Ordenar grupos después de actualizar resultados

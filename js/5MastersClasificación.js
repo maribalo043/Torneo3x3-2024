@@ -174,27 +174,50 @@ var Merli = new Equipo("Merli y los Merlas");
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partido11 = new Partido(Corredoria,Supernenas,'3-1',"9:00 - 9:30","Pista 1"); 
+var partidoA11 = new Partido(ENRR, Parrales, null, '10:30-11:00', 'Pista Sara Roces');
+var partidoA12 = new Partido(Traviesos, Ladys, null, '10:30-11:00', 'Pista Marta Piquero');
+var partidoA13 = new Partido(Failteam, Getxokolate, null, '13:00-13:30', 'Pista Sergio Villar');
+var partidoA14 = new Partido(Parrales, Failteam, null, '13:30-14:00', 'Pista Patinalon');
+var partidoA15 = new Partido(Getxokolate, Ladys, null, '14:00-14:30', 'Pista Sergio Villar');
+var partidoA16 = new Partido(ENRR, Traviesos, null, '14:00-14:30', 'Pista Patinalon');
+var partidoA17 = new Partido(Failteam, Traviesos, null, '19:30-20:00', 'Pista Sara Roces');
+var partidoA18 = new Partido(Ladys, ENRR, null, '19:30-20:00', 'Pista Marta Piquero');
+var partidoA19 = new Partido(Parrales, Getxokolate, null, '20:00-20:30', 'Pista Sara Roces');
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partido21 = new Partido(Merli,Nalgon,'7-5',"9:00 - 9:30","Pista 2");
-
+var partidoB11 = new Partido(Rusticos, Merli, null, '11:00-11:30', 'Pista Sara Roces');
+var partidoB12 = new Partido(Resaca, Black, null, '11:00-11:30', 'Pista Marta Piquero');
+var partidoB13 = new Partido(Black, Purys, null, '13:00-13:30', 'Pista Sergio Villar');
+var partidoB14 = new Partido(Merli, Resaca, null, '13:30-14:00', 'Pista Sergio Villar');
+var partidoB15 = new Partido(Purys, Rusticos, null, '15:00-15:30', 'Pista Patinalon');
+var partidoB16 = new Partido(Purys, Resaca, null, '20:00-20:30', 'Pista Sara Roces');
+var partidoB17 = new Partido(Rusticos, Black, null, '20:30-21:00', 'Pista Sara Roces');
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partido16 = new Partido(Parrales,Calientabanquillos,'7-3',"11:00 - 11:30","Pista 1"); 
+var partidoA21 = new Partido(Traviesos, Parrales, null, '12:00-12:30', 'Pista Sara Roces');
+var partidoA22 = new Partido(Ladys, Failteam, null, '12:00-12:30', 'Pista Marta Piquero');
+var partidoA23 = new Partido(ENRR, Failteam, null, '14:00-14:30', 'Pista Pista Patinalon');
+var partidoA24 = new Partido(Traviesos, Getxokolate, null, '14:00-14:30', 'Pista Marta Piquero');
+var partidoA25 = new Partido(Parrales, Ladys, null, '14:00-14:30', 'Sergio Villar');
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partido29 = new Partido(Caleyo, NDHL,'5-2',"11:30 - 12:00","Pista 2");
+var partidoB21 = new Partido(Getxokolate, ENRR, null, '11:30-12:00', 'Pista Sergio Villar');
+var partidoB22 = new Partido(Merli, Purys, null, '14:00-14:30', 'Pista Sara Roces');
+var partidoB23 = new Partido(Resaca, Rusticos, null, '15:30-16:00', 'Pista Sara Roces');
+var partidoB24 = new Partido(Black, Merli, null, '15:30-16:00', 'Pista Marta Piquero');
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var partidoSemi1 = new PartidoFinal(Corredoria, Caleyo,'3-2', 'Semifinal: 12:00 - 12:30','Pista 1');
-var partidoSemi2 = new PartidoFinal(Fallen, Parrales,'6-5', 'Semifinal: 12:00 - 12:30','Pista 2');
-var tercerCuarto = new PartidoFinal(Parrales,Caleyo,'4-2', 'Tercer y Cuarto: 14:00 - 14:30','Pista 2');
-var partidoFinal = new PartidoFinal(Corredoria,Fallen,'6-3', 'Final: 14:00 - 14:30','Pista 1');
+var Cuarto1 = new PartidoFinal(null,null,null,"Sábado Cuarto 1: 20:30-21:00","Pista Sara Roces"); 
+var Cuarto2 = new PartidoFinal(null,null,null,"Sábado Cuarto 2: 20:30-21:00","Pista Marta Piquero");
+var Cuarto3 = new PartidoFinal(null,null,null,"Sábado Cuarto 3: 21:00-21:30","Pista Sara Roces"); 
+var Cuarto4 = new PartidoFinal(null,null,null,"Sábado Cuarto 4: 21:00-21:30","Pista Marta Piquero");
+var Semi1 = new PartidoFinal(null,null,null,"Semi 1: 11:00-11:30","Pista Sara Roces"); 
+var Semi2 = new PartidoFinal(null,null,null,"Semi 2: 11:00-11:30","Pista Marta Piquero");
+var TercerCuarto = new PartidoFinal(null,null,null," TercerCuarto: 13:30-14:00","Pista Sara Roces");
+var Final = new PartidoFinal(null,null,null,"Final: 13:30-14:00","Pista Marta Piquero");
 
-
-var ordenGrupo1 = [Parrales,ENRR,Failteam,Traviesos,Merli,Getxokolate];
-var ordenGrupo2 = [Rusticos,Purys,Resaca,Black,Ladys];
+var ordenGrupo1 = [Parrales,ENRR,Failteam,Ladys,Traviesos,Getxokolate];
+var ordenGrupo2 = [Rusticos,Purys,Resaca,Black,Merli];
 
 // Ordenar grupos después de actualizar resultados
 ordenarGrupos(ordenGrupo1);
@@ -212,18 +235,19 @@ function mostrarTablas() {
 
     // Mapear datos de partidos
     const partidosPorDia = {
-        grupo1: {
-            dia1: [partido11, partido12, partido13, partido14, partido15],
-            dia2: [partido16, partido17, partido18, partido19, partido110],
-        },
-        grupo2: {
-            dia1: [partido21,partido22,partido23,partido24,partido25,partido26,partido27,partido28],
-            dia2: [partido29,partido210,partido211,partido212,partido213,partido214,partido215],
-        },
-        finales: {
-            finales: [partidoSemi1, partidoSemi2,tercerCuarto,partidoFinal],
-        },
-    };
+    grupo1: { // Grupo A
+        dia1: [partidoA11, partidoA12, partidoA13, partidoA14, partidoA15, partidoA16, partidoA17, partidoA18, partidoA19],
+        dia2: [partidoA21, partidoA22, partidoA23, partidoA24, partidoA25]
+    },
+    grupo2: { // Grupo B
+        dia1: [partidoB11, partidoB12, partidoB13, partidoB14, partidoB15, partidoB16, partidoB17],
+        dia2: [partidoB21, partidoB22, partidoB23, partidoB24]
+    },
+    finales: { // Fase Final
+        finales: [Cuarto1, Cuarto2, Cuarto3, Cuarto4, Semi1, Semi2, TercerCuarto, Final]
+    }
+};
+
 
     // Mapear datos de clasificación
     const clasificacionPorGrupo = {
@@ -237,9 +261,9 @@ function mostrarTablas() {
         partidos.forEach(partido => {
             const fila = tbodyPartidos.insertRow();
             const datos = [
-                partido.equipo1.nombre,
-                partido.resultado,
-                partido.equipo2.nombre,
+                partido.equipo1?.nombre || 'Sin definir',
+                partido.resultado || 'Sin jugar',
+                partido.equipo2?.nombre || 'Sin definir',
                 partido.hora,
                 partido.pista,
             ];
@@ -290,7 +314,7 @@ function mostrarTablas() {
             case "finales":
                 grupoNombre.textContent = "Finales"; // Configura el título de la sección
                 tablaClasificaciones.style.visibility = 'hidden'; // Oculta la tabla de clasificaciones
-                tituloClasif.textContent = "Premios a las 14:30"; // Configura el subtítulo
+                tituloClasif.textContent = "Premios a las 14:00"; // Configura el subtítulo
             
                 // Accede directamente a la lista de partidos de finales
                 const partidosFinales = partidosPorDia.finales?.finales || []; // Asegura que se accede sin errores
