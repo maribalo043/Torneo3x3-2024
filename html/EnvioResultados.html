@@ -3,67 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prueba Firebase</title>
-</head>
-<body>
-<h2>Login de prueba Firebase</h2>
+<title>Login Torneo</title>
 
-<form id="loginForm">
-  <input type="email" id="email" placeholder="Correo electrónico" required><br><br>
-  <input type="password" id="password" placeholder="Contraseña" required><br><br>
-  <button type="submit">Entrar</button>
-</form>
-
-<div id="status"></div>
-
-<!-- Firebase Scripts -->
+<!-- 🔥 FIREBASE (SIEMPRE ARRIBA) -->
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
 
 <script>
-  // Configuración de Firebase
+  // 🔥 Configuración Firebase
   const firebaseConfig = {
-      apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
-      authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
-      projectId: "torneo-3x3-sara-roces",
-      storageBucket: "torneo-3x3-sara-roces.firebasestorage.app",
-      messagingSenderId: "425149115596",
-      appId: "1:425149115596:web:0231d2ec84af97b072a669",
-      measurementId: "G-4J28ZHSKCS"
+    apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
+    authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
+    projectId: "torneo-3x3-sara-roces",
+    storageBucket: "torneo-3x3-sara-roces.firebasestorage.app",
+    messagingSenderId: "425149115596",
+    appId: "1:425149115596:web:0231d2ec84af97b072a669"
   };
 
-  // Inicializa Firebase solo si no está inicializado
   if (!firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
   }
+</script>
+
+<style>
+  body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+    background:#f0f2f5;
+  }
+  .login-container {
+    background:#fff;
+    padding:30px 40px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+    text-align:center;
+    width:300px;
+  }
+  input, button {
+    width:100%;
+    padding:10px;
+    margin-bottom:12px;
+    font-size:16px;
+  }
+  button {
+    background:#4a90e2;
+    color:white;
+    border:none;
+    cursor:pointer;
+  }
+  button:hover { background:#357ab7; }
+  .error { color:red; display:none; }
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+  <h2>Acceso al torneo</h2>
+
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Correo" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p id="error" class="error"></p>
+</div>
+
+<!-- 🔥 TU CÓDIGO (SIEMPRE DESPUÉS) -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
   const auth = firebase.auth();
-  const statusDiv = document.getElementById('status');
+  const errorDiv = document.getElementById("error");
 
-  // Detecta cambios en el estado de autenticación
-  auth.onAuthStateChanged(user => {
-      if (user) {
-          statusDiv.innerText = "Usuario logueado: " + user.email;
-          console.log("Usuario logueado:", user.email);
-      } else {
-          statusDiv.innerText = "No hay usuario logueado";
-          console.log("No hay usuario logueado");
-      }
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = email.value;
+    const password = password.value;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      window.location.href = "envioresultados.html";
+    } catch (err) {
+      errorDiv.style.display = "block";
+      errorDiv.innerText = err.message;
+    }
   });
 
-  // Manejar login
-  document.getElementById('loginForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      try {
-          await auth.signInWithEmailAndPassword(email, password);
-      } catch (error) {
-          alert("Error: " + error.message);
-          console.error(error);
-      }
-  });
+});
 </script>
 
 </body>
