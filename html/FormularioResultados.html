@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrar partido</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+    .form-container {
+        background:white;
+        padding:30px 40px;
+        border-radius:12px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.2);
+        width: 300px;
+    }
+    h2 { text-align:center; margin-bottom:20px; }
+    label {
+        display:block;
+        margin-top:10px;
+        margin-bottom:5px;
+        font-weight:bold;
+    }
+    input, select {
+        width:100%;
+        padding:10px;
+        margin-bottom:10px;
+        border-radius:6px;
+        border:1px solid #ccc;
+        font-size:16px;
+    }
+    button {
+        width:100%;
+        padding:10px;
+        background:#4a90e2;
+        color:white;
+        border:none;
+        border-radius:6px;
+        font-size:16px;
+        cursor:pointer;
+        margin-top:10px;
+    }
+    button:hover { background:#357ab7; }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registrar partido</h2>
+    <!-- Formulario Netlify -->
+    <form name="partidos" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="partidos">
+        
+        <label for="categoria">Categoría</label>
+        <select id="categoria" name="categoria" required>
+            <option value="">--Selecciona categoría--</option>
+            <option value="Mini">Mini</option>
+            <option value="Guajes">Guajes</option>
+            <option value="Promesas">Promesas</option>
+            <option value="Estrellas">Estrellas</option>
+            <option value="Ok Masters">OK Masters</option>
+        </select>
+
+        <label for="equipoLocal">Equipo local</label>
+        <input type="text" id="equipoLocal" name="equipoLocal" placeholder="Nombre del equipo local" required>
+
+        <label for="equipoVisitante">Equipo visitante</label>
+        <input type="text" id="equipoVisitante" name="equipoVisitante" placeholder="Nombre del equipo visitante" required>
+
+        <label for="resultado">Resultado</label>
+        <input type="text" id="resultado" name="resultado" placeholder="Ej: 3-2" required>
+
+        <button type="submit">Guardar partido</button>
+    </form>
+</div>
+
+</body>
+</html>
