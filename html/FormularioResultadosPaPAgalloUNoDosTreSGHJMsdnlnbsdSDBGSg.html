@@ -1,85 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registrar partido</title>
-<style>
-  body { font-family: Arial, sans-serif; background: #f0f2f5; display:flex; justify-content:center; align-items:center; height:100vh; }
-  .form-container { background:white; padding:30px 40px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2); width: 300px; }
-  h2 { text-align:center; margin-bottom:20px; }
-  label { display:block; margin-top:10px; margin-bottom:5px; font-weight:bold; }
-  input, select { width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc; font-size:16px; }
-  button { width:100%; padding:10px; background:#4a90e2; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer; margin-top:10px; }
-  button:hover { background:#357ab7; }
-</style>
 
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){ 
-      emailjs.init("YOUR_PUBLIC_KEY"); // Reemplaza con tu Public Key de EmailJS
-  })();
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar partido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #357ab7;
+        }
+    </style>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("-SPAIa9c48638ZPZE"); // Reemplaza con tu Public Key de EmailJS
+        })();
+    </script>
 </head>
+
 <body>
 
-<div class="form-container">
-    <h2>Registrar partido</h2>
-    <form id="resultadoForm">
-      <label>Categoría</label>
-      <select id="categoria" name="categoria" required>
-        <option value="">Selecciona categoría</option>
-        <option value="Sub12">Sub12</option>
-        <option value="Sub14">Sub14</option>
-        <option value="Sub16">Sub16</option>
-      </select>
+    <div class="form-container">
+        <h2>Registrar partido</h2>
+        <form id="resultadoForm">
+            <label>Categoría</label>
+            <select id="categoria" name="categoria" required>
+                <option value="" disabled selected>Seleccione una categoría</option>
+                <option value="Mini">Mini</option>
+                <option value="Guajes">Guajes</option>
+                <option value="Promesas">Promesas</option>
+                <option value="Estrellas">Estrellas</option>
+                <option value="OK Masters">OK Masters</option>
+            </select>
+            </select>
 
-      <label>Equipo Local</label>
-      <input type="text" id="local" name="local" required>
+            <label>Equipo Local</label>
+            <input type="text" id="local" name="local" required>
 
-      <label>Equipo Visitante</label>
-      <input type="text" id="visitante" name="visitante" required>
+            <label>Equipo Visitante</label>
+            <input type="text" id="visitante" name="visitante" required>
 
-      <label>Resultado</label>
-      <input type="text" id="resultado" name="resultado" placeholder="Ej: 3-2" required>
+            <label>Resultado</label>
+            <input type="text" id="resultado" name="resultado" placeholder="Ej: 3-2" required>
 
-      <button type="submit">Enviar</button>
-    </form>
-</div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
-<script>
-document.getElementById("resultadoForm").addEventListener("submit", function(e){
-    e.preventDefault();
+    <script>
+        document.getElementById("resultadoForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-    const categoria = document.getElementById("categoria").value;
-    const local = document.getElementById("local").value;
-    const visitante = document.getElementById("visitante").value;
-    const resultado = document.getElementById("resultado").value;
+            const categoria = document.getElementById("categoria").value;
+            const local = document.getElementById("local").value;
+            const visitante = document.getElementById("visitante").value;
+            const resultado = document.getElementById("resultado").value;
 
-    // Construir el asunto dinámico
-    const asunto = `${categoria} => ${local} - ${resultado} - ${visitante}`;
+            // Construir el asunto dinámico
+            const asunto = `${categoria} => ${local} - ${resultado} - ${visitante}`;
 
-    // Enviar con EmailJS usando tu Service ID
-    emailjs.send(
-        "service_366v94n",     // ✅ Tu Service ID
-        "template_3bjpwna",    // Reemplaza con tu Template ID
-        {
-            categoria: categoria,
-            local: local,
-            visitante: visitante,
-            resultado: resultado,
-            asunto: asunto
-        }
-    ).then(function(response){
-        alert("Formulario enviado correctamente ✅");
-        e.target.reset();
-    }, function(error){
-        console.error("Error al enviar: ", error);
-        alert("Error al enviar ❌");
-    });
-});
-</script>
+            // Enviar con EmailJS usando tu Service ID
+            emailjs.send(
+                "service_366v94n",     // ✅ Tu Service ID
+                "template_3bjpwna",    // Reemplaza con tu Template ID
+                {
+                    categoria: categoria,
+                    local: local,
+                    visitante: visitante,
+                    resultado: resultado,
+                    asunto: asunto
+                }
+            ).then(function (response) {
+                alert("Formulario enviado correctamente ✅");
+                e.target.reset();
+            }, function (error) {
+                console.error("Error al enviar: ", error);
+                alert("Error al enviar ❌");
+            });
+        });
+    </script>
 
 </body>
+
 </html>
