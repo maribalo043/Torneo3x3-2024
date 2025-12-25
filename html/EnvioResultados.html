@@ -3,38 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Torneo</title>
-<style>
-    body { display:flex; justify-content:center; align-items:center; height:100vh; font-family:Arial; background:#f0f2f5; }
-    .login-container { background:white; padding:30px 40px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2); width:300px; text-align:center; }
-    input { width:100%; padding:10px; margin-bottom:15px; border-radius:6px; border:1px solid #ccc; font-size:16px; }
-    .password-container { position: relative; }
-    .toggle-password { position:absolute; right:10px; top:50%; transform:translateY(-50%); cursor:pointer; font-size:18px; color:#555; }
-    button { width:100%; padding:10px; background:#4a90e2; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer; }
-    button:hover { background:#357ab7; }
-    .error-message { color:red; margin-top:10px; display:none; }
-</style>
+<title>Prueba Firebase</title>
 </head>
 <body>
+<h2>Login de prueba Firebase</h2>
 
-<div class="login-container">
-    <h2>Acceso al torneo</h2>
-    <form id="loginForm">
-        <input type="email" id="email" placeholder="Correo electrónico" required>
-        <div class="password-container">
-            <input type="password" id="password" placeholder="Contraseña" required>
-            <span class="toggle-password" id="togglePassword">👁️</span>
-        </div>
-        <button type="submit">Entrar</button>
-        <div class="error-message" id="error"></div>
-    </form>
-</div>
+<form id="loginForm">
+  <input type="email" id="email" placeholder="Correo electrónico" required><br><br>
+  <input type="password" id="password" placeholder="Contraseña" required><br><br>
+  <button type="submit">Entrar</button>
+</form>
+
+<div id="status"></div>
 
 <!-- Firebase Scripts -->
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
 
 <script>
+  // Configuración de Firebase
   const firebaseConfig = {
       apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
       authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
@@ -45,27 +32,36 @@
       measurementId: "G-4J28ZHSKCS"
   };
 
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
+  // Inicializa Firebase solo si no está inicializado
+  if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+  }
 
-  document.getElementById('togglePassword').addEventListener('click', () => {
-      const passwordInput = document.getElementById('password');
-      passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+  const auth = firebase.auth();
+  const statusDiv = document.getElementById('status');
+
+  // Detecta cambios en el estado de autenticación
+  auth.onAuthStateChanged(user => {
+      if (user) {
+          statusDiv.innerText = "Usuario logueado: " + user.email;
+          console.log("Usuario logueado:", user.email);
+      } else {
+          statusDiv.innerText = "No hay usuario logueado";
+          console.log("No hay usuario logueado");
+      }
   });
 
+  // Manejar login
   document.getElementById('loginForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
-      const errorDiv = document.getElementById('error');
 
       try {
           await auth.signInWithEmailAndPassword(email, password);
-          window.location.href = "FormularioResultados.html";
       } catch (error) {
+          alert("Error: " + error.message);
           console.error(error);
-          errorDiv.style.display = "block";
-          errorDiv.innerText = error.message;
       }
   });
 </script>
