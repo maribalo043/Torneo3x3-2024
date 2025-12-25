@@ -62,25 +62,23 @@
 
 <div class="login-container">
     <h2>Acceso al torneo</h2>
-    <input type="email" id="email" placeholder="Correo electrónico" required>
-    <div class="password-container">
-        <input type="password" id="password" placeholder="Contraseña" required>
-        <span class="toggle-password" onclick="togglePassword()">👁️</span>
-    </div>
-    <button onclick="login()">Entrar</button>
-    <div class="error-message" id="error"></div>
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <span class="toggle-password" id="togglePassword">👁️</span>
+        </div>
+        <button type="submit">Entrar</button>
+        <div class="error-message" id="error"></div>
+    </form>
 </div>
 
 <!-- Firebase Scripts -->
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
 
-<!-- Firebase Scripts -->
-<script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
-
-<!-- Inicialización -->
 <script>
+  // Configuración de Firebase
   const firebaseConfig = {
       apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
       authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
@@ -93,33 +91,31 @@
 
   // Inicializa Firebase
   firebase.initializeApp(firebaseConfig);
-
-  // Inicializa auth después de inicializar Firebase
   const auth = firebase.auth();
 
-  // Función para mostrar/ocultar contraseña
-  function togglePassword() {
+  // Mostrar/Ocultar contraseña
+  document.getElementById('togglePassword').addEventListener('click', () => {
       const passwordInput = document.getElementById('password');
-      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-  }
+      passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+  });
 
-  // Función de login
-  async function login() {
+  // Manejar el submit
+  document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault(); // Evita recargar la página
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const errorDiv = document.getElementById('error');
 
       try {
           await auth.signInWithEmailAndPassword(email, password);
-          window.location.href = "pagina-principal.html";
+          window.location.href = "pagina-principal.html"; // Cambia por tu página
       } catch (error) {
           console.error(error);
           errorDiv.style.display = "block";
           errorDiv.innerText = error.message;
       }
-  }
+  });
 </script>
-
 
 </body>
 </html>
