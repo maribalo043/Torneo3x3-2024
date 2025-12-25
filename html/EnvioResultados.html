@@ -75,43 +75,51 @@
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
 
+<!-- Firebase Scripts -->
+<script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
+
+<!-- Inicialización -->
 <script>
-    // Configuración de Firebase
-    const firebaseConfig = {
-        apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
-        authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
-        projectId: "torneo-3x3-sara-roces",
-        storageBucket: "torneo-3x3-sara-roces.firebasestorage.app",
-        messagingSenderId: "425149115596",
-        appId: "1:425149115596:web:0231d2ec84af97b072a669",
-        measurementId: "G-4J28ZHSKCS"
-    };
+  const firebaseConfig = {
+      apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
+      authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
+      projectId: "torneo-3x3-sara-roces",
+      storageBucket: "torneo-3x3-sara-roces.firebasestorage.app",
+      messagingSenderId: "425149115596",
+      appId: "1:425149115596:web:0231d2ec84af97b072a669",
+      measurementId: "G-4J28ZHSKCS"
+  };
 
-    // Inicializa Firebase
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
+  // Inicializa Firebase
+  firebase.initializeApp(firebaseConfig);
 
-    function togglePassword() {
-        const passwordInput = document.getElementById('password');
-        passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-    }
+  // Inicializa auth después de inicializar Firebase
+  const auth = firebase.auth();
 
-    async function login() {
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const errorDiv = document.getElementById('error');
+  // Función para mostrar/ocultar contraseña
+  function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+  }
 
-        try {
-            await auth.signInWithEmailAndPassword(email, password);
-            // Redirigir a la página principal del torneo
-            window.location.href = "index.html"; // Cambia por tu página real
-        } catch (error) {
-            console.error(error);
-            errorDiv.style.display = "block";
-            errorDiv.innerText = error.message; // Muestra error real de Firebase
-        }
-    }
+  // Función de login
+  async function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const errorDiv = document.getElementById('error');
+
+      try {
+          await auth.signInWithEmailAndPassword(email, password);
+          window.location.href = "pagina-principal.html";
+      } catch (error) {
+          console.error(error);
+          errorDiv.style.display = "block";
+          errorDiv.innerText = error.message;
+      }
+  }
 </script>
+
 
 </body>
 </html>
