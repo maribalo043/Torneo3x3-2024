@@ -75,21 +75,26 @@
 <!-- Firebase App y Auth -->
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
+<!-- Firebase App (obligatorio) -->
+<script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.21.0/firebase-auth-compat.js"></script>
 
 <script>
-    // Configuración de Firebase
-    const firebaseConfig = {
-        apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
-        authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
-        projectId: "torneo-3x3-sara-roces",
-        storageBucket: "torneo-3x3-sara-roces.firebasestorage.app",
-        messagingSenderId: "425149115596",
-        appId: "1:425149115596:web:0231d2ec84af97b072a669",
-        measurementId: "G-4J28ZHSKCS"
-    };
+  const firebaseConfig = {
+    apiKey: "AIzaSyBoydNR1cXmBofeMnNgEQ1ozBPC2sA_I1k",
+    authDomain: "torneo-3x3-sara-roces.firebaseapp.com",
+    projectId: "torneo-3x3-sara-roces",
+    storageBucket: "torneo-3x3-sara-roces.firebasestorage.app",
+    messagingSenderId: "425149115596",
+    appId: "1:425149115596:web:0231d2ec84af97b072a669",
+    measurementId: "G-4J28ZHSKCS"
+  };
+  // Inicializa Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 
-    // Inicializa Firebase
-    firebase.initializeApp(firebaseConfig);
+
+<script>
     const auth = firebase.auth();
 
     async function login() {
