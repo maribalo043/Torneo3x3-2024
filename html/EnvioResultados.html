@@ -19,6 +19,7 @@
         border-radius:12px;
         box-shadow:0 4px 15px rgba(0,0,0,0.2);
         text-align:center;
+        width: 300px;
     }
     input {
         width:100%;
@@ -99,7 +100,7 @@
       passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
   });
 
-  // Manejar el submit
+  // Manejar el submit del login
   document.getElementById('loginForm').addEventListener('submit', async (e) => {
       e.preventDefault(); // Evita recargar la página
       const email = document.getElementById('email').value;
@@ -108,11 +109,12 @@
 
       try {
           await auth.signInWithEmailAndPassword(email, password);
-          window.location.href = "FormularioResultados.html"; // Cambia por tu página
+          // Redirige al formulario de resultados
+          window.location.href = "FormularioResultados.html";
       } catch (error) {
           console.error(error);
           errorDiv.style.display = "block";
-          errorDiv.innerText = error.message;
+          errorDiv.innerText = error.message; // Muestra error real de Firebase
       }
   });
 </script>
