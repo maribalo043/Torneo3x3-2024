@@ -54,30 +54,43 @@
 <div class="form-container">
     <h2>Registrar partido</h2>
     <!-- Formulario Netlify -->
-    <form name="partidos" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="partidos">
-        
-        <label for="categoria">Categoría</label>
-        <select id="categoria" name="categoria" required>
-            <option value="">--Selecciona categoría--</option>
-            <option value="Mini">Mini</option>
-            <option value="Guajes">Guajes</option>
-            <option value="Promesas">Promesas</option>
-            <option value="Estrellas">Estrellas</option>
-            <option value="Ok Masters">OK Masters</option>
-        </select>
+    <form name="ResultadosTorneo" netlify id="resultadoForm">
+  <label>Categoría</label>
+  <select id="categoria" name="categoria" required>
+    <option value="">Selecciona categoría</option>
+    <option value="Sub12">Sub12</option>
+    <option value="Sub14">Sub14</option>
+    <option value="Sub16">Sub16</option>
+  </select>
 
-        <label for="equipoLocal">Equipo local</label>
-        <input type="text" id="equipoLocal" name="equipoLocal" placeholder="Nombre del equipo local" required>
+  <label>Equipo Local</label>
+  <input type="text" id="local" name="local" required>
 
-        <label for="equipoVisitante">Equipo visitante</label>
-        <input type="text" id="equipoVisitante" name="equipoVisitante" placeholder="Nombre del equipo visitante" required>
+  <label>Equipo Visitante</label>
+  <input type="text" id="visitante" name="visitante" required>
 
-        <label for="resultado">Resultado</label>
-        <input type="text" id="resultado" name="resultado" placeholder="Ej: 3-2" required>
+  <label>Resultado</label>
+  <input type="text" id="resultado" name="resultado" placeholder="Ej: 3-2" required>
 
-        <button type="submit">Guardar partido</button>
-    </form>
+  <!-- Campo oculto que será el título del envío -->
+  <input type="hidden" id="tituloEnvio" name="titulo-envio">
+
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+document.getElementById("resultadoForm").addEventListener("submit", e => {
+    // Antes de enviar, construimos el título dinámico
+    const categoria = document.getElementById("categoria").value;
+    const local = document.getElementById("local").value;
+    const visitante = document.getElementById("visitante").value;
+    const resultado = document.getElementById("resultado").value;
+
+    // Formato: Categoría - Local Resultado Visitante
+    document.getElementById("tituloEnvio").value = `${categoria} - ${local} ${resultado} ${visitante}`;
+});
+</script>
+
 </div>
 
 </body>
