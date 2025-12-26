@@ -183,7 +183,7 @@ var partidoA3 = new Partido(Patin, Carniceras, '5-1', "12:30-13:00", "Pista Serg
 var partidoA4 = new Partido(Bartolos, Cantabrucos, '3-2', "13:00-13:30", "Pista Sara Roces");
 var partidoA5 = new Partido(Cantabrucos, Ventolines, null, "14:30-15:00", "Pista Sara Roces");
 var partidoA6 = new Partido(Carniceras, Ventolines, '2-4', "15:30-16:00", "Pista Sara Roces");
-var partidoA7 = new Partido(Chopos, Bartolos, null, "15:30-16:00", "Pista Patinalon");
+var partidoA7 = new Partido(Chopos, Bartolos, , "15:30-16:00", "Pista Patinalon");
 var partidoA8 = new Partido(Cantabrucos, Chopos, null, "18:00-18:30", "Pista Sara Roces");
 var partidoA9 = new Partido(Ventolines, Patin, null, "19:00-19:30", "Pista Sara Roces");
 var partidoA10 = new Partido(Chopos, Carniceras, null, "20:30-21:00", "Pista Marta Piquero");
@@ -192,7 +192,7 @@ var partidoA11 = new Partido(Bartolos, Ventolines, null, "21:00-21:30", "Pista S
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partidoB1 = new Partido(Colorinchis, Calamares, "5-5", "12:30-13:00", "Pista Sara Roces");
 var partidoB2 = new Partido(Picapiedra, Celtic, '7-0', "12:30-13:00", "Pista Marta Piquero");
-var partidoB3 = new Partido(Vascos, Devasting, null, "12:30-13:00", "Pista Patinalon");
+var partidoB3 = new Partido(Vascos, Devasting, '1-5', "12:30-13:00", "Pista Patinalon");
 var partidoB4 = new Partido(Celtic, Vascos, null, "15:30-16:00", "Pista Sara Roces");
 var partidoB5 = new Partido(Calamares, Devasting, '1-4', "15:30-16:00", "Pista Patinalon");
 var partidoB6 = new Partido(Calamares, Picapiedra, '1-3', "16:00-16:30", "Pista Sara Roces");
