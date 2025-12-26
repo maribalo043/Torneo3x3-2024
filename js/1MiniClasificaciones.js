@@ -154,11 +154,11 @@ var partido11 = new Partido(Microbios,Guerreros, '',"11:30-12:00","Pista Sara Ro
 var partido12 = new Partido(Sticks,Elfos,'9-6',"11:30-12:00","Pista Marta Piquero");
 var partido13 = new Partido(Fantasticos,Ruedas,'20-0',"13:00-13:30","Pista Marta Piquero"); 
 
-var partido14 = new Partido(Sticks,Fantasticos,null,"14:30-15:00","Pista Sara Roces"); 
+var partido14 = new Partido(Sticks,Fantasticos,'6-12',"14:30-15:00","Pista Sara Roces"); 
 var partido15 = new Partido(Guerreros,Ruedas,null,"14:30-15:00","Pista Marta Piquero");
 var partido16 = new Partido(Elfos,Microbios,'2-8',"14:30-15:00","Pista Sergio Villar");
 
-var partido17 = new Partido(Microbios,Ruedas,null,"16:30-17:00","Pista Sara Roces");
+var partido17 = new Partido(Microbios,Ruedas,'8-2',"16:30-17:00","Pista Sara Roces");
 var partido18 = new Partido(Elfos,Fantasticos,null,"16:30-17:00","Pista Marta Piquero");
 var partido19 = new Partido(Guerreros,Sticks,null,"17:00-17:30","Pista Sara Roces");
 
