@@ -191,7 +191,7 @@ var partidoA11 = new Partido(Bartolos, Ventolines, null, "21:00-21:30", "Pista S
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partidoB1 = new Partido(Colorinchis, Calamares, "5-5", "12:30-13:00", "Pista Sara Roces");
-var partidoB2 = new Partido(Picapiedra, Celtic, null, "12:30-13:00", "Pista Marta Piquero");
+var partidoB2 = new Partido(Picapiedra, Celtic, '7-0', "12:30-13:00", "Pista Marta Piquero");
 var partidoB3 = new Partido(Vascos, Devasting, null, "12:30-13:00", "Pista Patinalon");
 var partidoB4 = new Partido(Celtic, Vascos, null, "15:30-16:00", "Pista Sara Roces");
 var partidoB5 = new Partido(Calamares, Devasting, null, "15:30-16:00", "Pista Patinalon");
