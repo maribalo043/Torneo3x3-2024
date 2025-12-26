@@ -184,7 +184,7 @@ var rayos = new Equipo("Los Rayo Mcqueen");
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 // GRUPO A - DÍA 1
-var partidoA11 = new Partido(Zampabollos, Chikis, '7-0', '09:00-09:30', 'Pista Sara Roces');
+var partidoA11 = new Partido(Zampabollos, Chikis, '0-7', '09:00-09:30', 'Pista Sara Roces');
 var partidoA12 = new Partido(Galacticas, Noclos, '9-2', '09:00-09:30', 'Pista Marta Piquero');
 var partidoA13 = new Partido(Chikis, Galacticas, null, '16:00-16:30', 'Pista Sergio Villar');
 var partidoA14 = new Partido(Noclos, Batera, null, '16:00-16:30', 'Pista Patinalon');
