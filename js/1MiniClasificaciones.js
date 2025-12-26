@@ -156,7 +156,7 @@ var partido13 = new Partido(Fantasticos,Ruedas,'20-0',"13:00-13:30","Pista Marta
 
 var partido14 = new Partido(Sticks,Fantasticos,null,"14:30-15:00","Pista Sara Roces"); 
 var partido15 = new Partido(Guerreros,Ruedas,null,"14:30-15:00","Pista Marta Piquero");
-var partido16 = new Partido(Elfos,Microbios,null,"14:30-15:00","Pista Sergio Villar");
+var partido16 = new Partido(Elfos,Microbios,'2-8',"14:30-15:00","Pista Sergio Villar");
 
 var partido17 = new Partido(Microbios,Ruedas,null,"16:30-17:00","Pista Sara Roces");
 var partido18 = new Partido(Elfos,Fantasticos,null,"16:30-17:00","Pista Marta Piquero");
