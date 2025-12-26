@@ -174,9 +174,9 @@ var g4 = new Partido(Sticks, Sun, '0-6', "15:00-15:30", "Pista Sara Roces");
 var g5 = new Partido(Minions, Delfines, null, "15:00-15:30", "Pista Marta Piquero");
 var g6 = new Partido(Guerreros, Kinder, '8-0', "15:00-15:30", "Pista Sergio Villar");
 
-var g7 = new Partido(Kinder, Trasgos, null, "17:00-17:30", "Pista Marta Piquero");
-var g8 = new Partido(Minions, Guerreros, null, "17:00-17:30", "Pista Sergio Villar");
-var g9 = new Partido(Delfines, Sticks, null, "17:00-17:30", "Pista Patinalon");
+var g7 = new Partido(Kinder, Trasgos, '2-6', "17:00-17:30", "Pista Marta Piquero");
+var g8 = new Partido(Minions, Guerreros, '6-6', "17:00-17:30", "Pista Sergio Villar");
+var g9 = new Partido(Delfines, Sticks, '8-2', "17:00-17:30", "Pista Patinalon");
 
 var g10 = new Partido(Trasgos, Delfines, null, "19:00-19:30", "Pista Sara Roces");
 var g11 = new Partido(Guerreros, Sticks, null, "19:00-19:30", "Pista Marta Piquero");
