@@ -178,7 +178,7 @@ var Celtic = new Equipo("Celtic");
 // GRUPO A - VIERNES
 
 var partidoA1 = new Partido(Chopos, Patin, "8-0", "10:00-10:30", "Pista Sara Roces");
-var partidoA2 = new Partido(Carniceras, Bartolos,null, "10:00-10:30", "Pista Marta Piquero");
+var partidoA2 = new Partido(Carniceras, Bartolos,'0-8', "10:00-10:30", "Pista Marta Piquero");
 var partidoA3 = new Partido(Patin, Carniceras, '5-1', "12:30-13:00", "Pista Sergio Villar");
 var partidoA4 = new Partido(Bartolos, Cantabrucos, '3-2', "13:00-13:30", "Pista Sara Roces");
 var partidoA5 = new Partido(Cantabrucos, Ventolines, null, "14:30-15:00", "Pista Sara Roces");
