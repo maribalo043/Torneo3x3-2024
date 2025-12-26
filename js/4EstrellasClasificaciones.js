@@ -184,32 +184,32 @@ var rayos = new Equipo("Los Rayo Mcqueen");
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 // GRUPO A - DÍA 1
-var partidoA11 = new Partido(Zampabollos, Chikis, null, '09:00-09:30', 'Pista Sara Roces');
-var partidoA12 = new Partido(Galacticas, Noclos, null, '09:00-09:30', 'Pista Marta Piquero');
-var partidoA13 = new Partido(Chikis, Galacticas, null, '16:00-16:30', 'Pista Sergio Villar');
-var partidoA14 = new Partido(Noclos, Batera, null, '16:00-16:30', 'Pista Patinalon');
+var partidoA11 = new Partido(Zampabollos, Chikis, '0-7', '09:00-09:30', 'Pista Sara Roces');
+var partidoA12 = new Partido(Galacticas, Noclos, '9-2', '09:00-09:30', 'Pista Marta Piquero');
+var partidoA13 = new Partido(Chikis, Galacticas, '4-0', '16:00-16:30', 'Pista Sergio Villar');
+var partidoA14 = new Partido(Noclos, Batera, '0-6', '16:00-16:30', 'Pista Patinalon');
 var partidoA15 = new Partido(Batera, Zampabollos, null, '18:30-19:00', 'Pista Sara Roces');
 var partidoA16 = new Partido(Chikis, Noclos, null, '18:30-19:00', 'Pista Marta Piquero');
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
 // GRUPO B - DÍA 1
-var partidoB11 = new Partido(Cafe, Cuenca, null, '09:30-10:00', 'Pista Sara Roces');
-var partidoB12 = new Partido(Krilin, Prisa, null, '14:00-14:30', 'Pista Marta Piquero');
+var partidoB11 = new Partido(Cafe, Cuenca,  '4-5', '09:30-10:00', 'Pista Sara Roces');
+var partidoB12 = new Partido(Krilin, Prisa, '1-0', '14:00-14:30', 'Pista Marta Piquero');
 var partidoB13 = new Partido(Cuenca, Jotake, null, '16:30-17:00', 'Pista Sergio Villar');
 var partidoB14 = new Partido(Prisa, Cafe, null, '16:30-17:00', 'Pista Patinalon');
 var partidoB15 = new Partido(Jotake, Prisa, null, '17:30-18:00', 'Pista Sergio Villar');
 var partidoB16 = new Partido(Cafe, Krilin, null, '17:30-18:00', 'Pista Patinalon');
 /*GRUPO C--------------------------------------------------------------------------------------*/
 // GRUPO C - DÍA 1
-var partidoC11 = new Partido(Ruedas, Aurrera, null, '13:30-14:00', 'Pista Sara Roces');
+var partidoC11 = new Partido(Ruedas, Aurrera, '4-3', '13:30-14:00', 'Pista Sara Roces');
 var partidoC12 = new Partido(Chikis2, Estrellados, null, '13:30-14:00', 'Pista Marta Piquero');
-var partidoC13 = new Partido(Cachopas, Ruedas, null, '16:00-16:30', 'Pista Marta Piquero');
+var partidoC13 = new Partido(Cachopas, Ruedas, '9-1', '16:00-16:30', 'Pista Marta Piquero');
 var partidoC14 = new Partido(Aurrera, Chikis2, null, '18:00-18:30', 'Pista Sara Roces');
 var partidoC15 = new Partido(Estrellados, Ruedas, null, '18:00-18:30', 'Pista Marta Piquero');
 var partidoC16 = new Partido(Cachopas, Aurrera, null, '19:00-19:30', 'Pista Patinalon');
 /*GRUPO D--------------------------------------------------------------------------------------*/
-var partidoD11 = new Partido(Kiwitines, rayos, null, "09:30-10:00", "Pista Marta Piquero");
-var partidoD12 = new Partido(Rayo, Gudariak, null, "14:00-14:30", "Pista Sara Roces");
+var partidoD11 = new Partido(Kiwitines, rayos,  '0-13', "09:30-10:00", "Pista Marta Piquero");
+var partidoD12 = new Partido(Rayo, Gudariak, '6-2', "14:00-14:30", "Pista Sara Roces");
 var partidoD13 = new Partido(rayos, Rayo, null, "17:30-18:00", "Pista Sara Roces");
 var partidoD14 = new Partido(Gudariak, Kiwitines, null, "17:30-18:00", "Pista Marta Piquero");
 

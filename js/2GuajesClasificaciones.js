@@ -166,9 +166,9 @@ var Guerreros = new Equipo("Los Guerreros KPOP(G)");
 
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
-var g1 = new Partido(Delfines, Guerreros, null, "12:00-12:30", "Pista Sara Roces");
-var g2 = new Partido(Kinder, Minions, null, "12:00-12:30", "Pista Marta Piquero");
-var g3 = new Partido(Sun, Trasgos, null, "12:00-12:30", "Pista Sergio Villar");
+var g1 = new Partido(Delfines, Guerreros, '1-4', "12:00-12:30", "Pista Sara Roces");
+var g2 = new Partido(Kinder, Minions, '3-9', "12:00-12:30", "Pista Marta Piquero");
+var g3 = new Partido(Sun, Trasgos, '10-8', "12:00-12:30", "Pista Sergio Villar");
 
 var g4 = new Partido(Sticks, Sun, null, "15:00-15:30", "Pista Sara Roces");
 var g5 = new Partido(Minions, Delfines, null, "15:00-15:30", "Pista Marta Piquero");
