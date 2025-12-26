@@ -171,16 +171,18 @@ var g2 = new Partido(Kinder, Minions, '3-9', "12:00-12:30", "Pista Marta Piquero
 var g3 = new Partido(Sun, Trasgos, '10-8', "12:00-12:30", "Pista Sergio Villar");
 
 var g4 = new Partido(Sticks, Sun, '0-6', "15:00-15:30", "Pista Sara Roces");
-var g5 = new Partido(Minions, Delfines, null, "15:00-15:30", "Pista Marta Piquero");
+var g5 = new Partido(Minions, Delfines, '10-8', "15:00-15:30", "Pista Marta Piquero");
 var g6 = new Partido(Guerreros, Kinder, '8-0', "15:00-15:30", "Pista Sergio Villar");
 
 var g7 = new Partido(Kinder, Trasgos, '2-6', "17:00-17:30", "Pista Marta Piquero");
 var g8 = new Partido(Minions, Guerreros, '6-6', "17:00-17:30", "Pista Sergio Villar");
 var g9 = new Partido(Delfines, Sticks, '8-2', "17:00-17:30", "Pista Patinalon");
 
-var g10 = new Partido(Trasgos, Delfines, null, "19:00-19:30", "Pista Sara Roces");
-var g11 = new Partido(Guerreros, Sticks, null, "19:00-19:30", "Pista Marta Piquero");
-var g12 = new Partido(Sun, Kinder, null, "19:30-20:00", "Pista Sara Roces");
+var g10 = new Partido(Trasgos, Delfines, '6-2', "19:00-19:30", "Pista Sara Roces");
+var g11 = new Partido(Guerreros, Sticks, '10-0', "19:00-19:30", "Pista Marta Piquero");
+var g12 = new Partido(Sun, Kinder, '6-2', "19:30-20:00", "Pista Sara Roces");
+
+
 /*Partidos SABADO 28 Diciembre*/
 var g13 = new Partido(Minions,Sticks, null, "09:00-09:30", "Pista Sara Roces");
 var g14 = new Partido(Trasgos, Guerreros, null, "09:00-09:30", "Pista Marta Piquero");
