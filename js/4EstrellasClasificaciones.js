@@ -195,8 +195,8 @@ var partidoA16 = new Partido(Chikis, Noclos, null, '18:30-19:00', 'Pista Marta P
 // GRUPO B - DÍA 1
 var partidoB11 = new Partido(Cafe, Cuenca,  '4-5', '09:30-10:00', 'Pista Sara Roces');
 var partidoB12 = new Partido(Krilin, Prisa, '1-0', '14:00-14:30', 'Pista Marta Piquero');
-var partidoB13 = new Partido(Cuenca, Jotake, '7-2, '16:30-17:00', 'Pista Sergio Villar');
-var partidoB14 = new Partido(Prisa, Cafe, null, '16:30-17:00', 'Pista Patinalon');
+var partidoB13 = new Partido(Cuenca, Jotake, '7-2', '16:30-17:00', 'Pista Sergio Villar');
+var partidoB14 = new Partido(Prisa, Cafe, '15-1', '16:30-17:00', 'Pista Patinalon');
 var partidoB15 = new Partido(Jotake, Prisa, null, '17:30-18:00', 'Pista Sergio Villar');
 var partidoB16 = new Partido(Cafe, Krilin, null, '17:30-18:00', 'Pista Patinalon');
 /*GRUPO C--------------------------------------------------------------------------------------*/
