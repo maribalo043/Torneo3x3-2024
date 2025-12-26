@@ -202,7 +202,7 @@ var partidoB16 = new Partido(Cafe, Krilin, null, '17:30-18:00', 'Pista Patinalon
 /*GRUPO C--------------------------------------------------------------------------------------*/
 // GRUPO C - DÍA 1
 var partidoC11 = new Partido(Ruedas, Aurrera, '4-3', '13:30-14:00', 'Pista Sara Roces');
-var partidoC12 = new Partido(Chikis2, Estrellados, null, '13:30-14:00', 'Pista Marta Piquero');
+var partidoC12 = new Partido(Chikis2, Estrellados, '6-3', '13:30-14:00', 'Pista Marta Piquero');
 var partidoC13 = new Partido(Cachopas, Ruedas, '9-1', '16:00-16:30', 'Pista Marta Piquero');
 var partidoC14 = new Partido(Aurrera, Chikis2, null, '18:00-18:30', 'Pista Sara Roces');
 var partidoC15 = new Partido(Estrellados, Ruedas, null, '18:00-18:30', 'Pista Marta Piquero');
