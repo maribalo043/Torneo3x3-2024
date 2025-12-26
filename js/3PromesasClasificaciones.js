@@ -177,7 +177,7 @@ var Celtic = new Equipo("Celtic");
 /*Partidos VIERNES 27 Diciembre*/
 // GRUPO A - VIERNES
 
-var partidoA1 = new Partido(Chopos, Patin, null, "10:00-10:30", "Pista Sara Roces");
+var partidoA1 = new Partido(Chopos, Patin, "8-0", "10:00-10:30", "Pista Sara Roces");
 var partidoA2 = new Partido(Carniceras, Bartolos,null, "10:00-10:30", "Pista Marta Piquero");
 var partidoA3 = new Partido(Patin, Carniceras, null, "12:30-13:00", "Pista Sergio Villar");
 var partidoA4 = new Partido(Bartolos, Cantabrucos, null, "13:00-13:30", "Pista Sara Roces");
@@ -190,7 +190,7 @@ var partidoA10 = new Partido(Chopos, Carniceras, null, "20:30-21:00", "Pista Mar
 var partidoA11 = new Partido(Bartolos, Ventolines, null, "21:00-21:30", "Pista Sara Roces");
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partidoB1 = new Partido(Colorinchis, Calamares, null, "12:30-13:00", "Pista Sara Roces");
+var partidoB1 = new Partido(Colorinchis, Calamares, "5-5", "12:30-13:00", "Pista Sara Roces");
 var partidoB2 = new Partido(Picapiedra, Celtic, null, "12:30-13:00", "Pista Marta Piquero");
 var partidoB3 = new Partido(Vascos, Devasting, null, "12:30-13:00", "Pista Patinalon");
 var partidoB4 = new Partido(Celtic, Vascos, null, "15:30-16:00", "Pista Sara Roces");
