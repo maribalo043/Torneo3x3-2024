@@ -194,8 +194,8 @@ var partidoB16 = new Partido(Purys, Resaca, '4-6', '20:00-20:30', 'Pista Sara Ro
 var partidoB17 = new Partido(Rusticos, Black, '10-4', '20:30-21:00', 'Pista Sara Roces');
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partidoA21 = new Partido(Traviesos, Parrales, null, '12:00-12:30', 'Pista Sara Roces');
-var partidoA22 = new Partido(Ladys, Failteam, null, '12:00-12:30', 'Pista Marta Piquero');
+var partidoA21 = new Partido(Traviesos, Parrales, '4-6', '12:00-12:30', 'Pista Sara Roces');
+var partidoA22 = new Partido(Ladys, Failteam, '2-4', '12:00-12:30', 'Pista Marta Piquero');
 var partidoA23 = new Partido(ENRR, Failteam, null, '14:00-14:30', 'Pista Pista Patinalon');
 var partidoA24 = new Partido(Traviesos, Getxokolate, null, '14:00-14:30', 'Pista Marta Piquero');
 var partidoA25 = new Partido(Parrales, Ladys, null, '14:00-14:30', 'Sergio Villar');
