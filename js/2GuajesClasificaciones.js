@@ -192,8 +192,8 @@ var g16 = new Partido(Sticks,Trasgos, '5-12', "12:30-13:00", "Pista Patinalon");
 var g17 = new Partido(Kinder, Delfines, '3-5', "13:00-13:30", "Pista Sara Roces");
 var g18 = new Partido(Sun, Minions, '6-7', "13:00-13:30", "Pista Marta Piquero");
 
-var g19 = new Partido(Guerreros,Sun, null, "15:00-15:30", "Pista Sergio Villar");
-var g20 = new Partido(Sticks, Kinder, null, "15:00-15:30", "Pista Patinalon");
+var g19 = new Partido(Guerreros,Sun, '8-5', "15:00-15:30", "Pista Sergio Villar");
+var g20 = new Partido(Sticks, Kinder, '0-2', "15:00-15:30", "Pista Patinalon");
 var g21 = new Partido(Trasgos, Minions, null, "15:30-16:00", "Pista Sergio Villar");
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
