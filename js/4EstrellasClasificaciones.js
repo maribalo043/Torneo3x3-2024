@@ -242,14 +242,14 @@ var partidoD22 = new Partido(Rayo, Kiwitines, '5-3', '14:30-15:00', 'Pista Patin
 
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var PlayIn1 = new PartidoFinal(Galacticas,Cuenca,null,'Sábado 17:00-17:30','Pista Sara Roces');
+var PlayIn1 = new PartidoFinal(Galacticas,Cuenca,'3-4','Sábado 17:00-17:30','Pista Sara Roces');
 var PlayIn2 = new PartidoFinal(Batera,Prisa,null,'Sábado 17:00-17:30','Pista Marta Piquero');
 var PlayIn3 = new PartidoFinal(Estrellados,Gudariak,null,'Sábado 17:30-18:00','Pista Sara Roces');
 var PlayIn4 = new PartidoFinal(Cachopas,Rayo,null,'Sábado 17:30-18:00','Pista Marta Piquero');
 var Cuarto1 = new PartidoFinal(Chikis,null,null,'Sábado 19:30-20:00','Pista Sara Roces');
 var Cuarto2 = new PartidoFinal(Krilin,null,null,'Sábado 19:30-20:00','Pista Marta Piquero');
 var Cuarto3 = new PartidoFinal(Chikis2,null,null,'Sábado 20:00-20:30','Pista Sara Roces');
-var Cuarto4 = new PartidoFinal(rayos,null,null,'Sábado 20:00-20:30','Pista Marta Piquero');
+var Cuarto4 = new PartidoFinal(rayos,Cuenca,null,'Sábado 20:00-20:30','Pista Marta Piquero');
 var Semi1 = new PartidoFinal(null,null,null,'10:30-11:00','Pista Sara Roces');
 var Semi2 = new PartidoFinal(null,null,null,'10:30-11:00','Pista Marta Piquero');
 var TercerCuarto = new PartidoFinal(null,null,null,'13:00-13:30','Pista Marta Piquero');
