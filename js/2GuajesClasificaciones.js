@@ -217,7 +217,7 @@ function mostrarTablas() {
     // Datos de partidos por día
     const partidosPorDia = {
         dia1: [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12],
-        dia2: [g12, g14, g15, g16, g17, g18, g19, g20, g21],
+        dia2: [g12, g13, g14, g15, g16, g17, g18, g19, g20, g21],
         dia3: [Semi1, Semi2, TercerCuarto, Final],
     };
 
