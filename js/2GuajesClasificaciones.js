@@ -194,7 +194,7 @@ var g18 = new Partido(Sun, Minions, '6-7', "13:00-13:30", "Pista Marta Piquero")
 
 var g19 = new Partido(Guerreros,Sun, '8-5', "15:00-15:30", "Pista Sergio Villar");
 var g20 = new Partido(Sticks, Kinder, '0-2', "15:00-15:30", "Pista Patinalon");
-var g21 = new Partido(Trasgos, Minions, '5-8, "15:30-16:00", "Pista Sergio Villar");
+var g21 = new Partido(Trasgos, Minions, '5-8', "15:30-16:00", "Pista Sergio Villar");
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var Semi1 = new PartidoFinal(null,null,null,"Sábado 18:00-18:30","Pista Sara Roces"); 
