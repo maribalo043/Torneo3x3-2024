@@ -18,7 +18,7 @@ function actualizarResultados(golesAFavor, golesEnContra, ganado, perdido) {
         this.partidosGanados++;
     } else if (perdido) {
         this.partidosPerdidos++;
-    } else {f
+    } else {
         this.puntos += 1;
         this.partidosEmpatados++;
     }
@@ -157,7 +157,7 @@ function mensajePartido() {
 // Crear instancias de equipos
 var Delfines = new Equipo("Delfines en Patines");
 var Kinder = new Equipo("Las Kinder Buenas");
-var Sun = new Equipo("sun And Sea HC");
+var Sun = new Equipo("Sun And Sea HC");
 var Sticks = new Equipo("Los Sticks de Oro");
 var Trasgos = new Equipo("Los Trasgos");
 var Minions = new Equipo("Los Minions");
