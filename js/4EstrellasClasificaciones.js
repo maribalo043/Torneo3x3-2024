@@ -224,7 +224,7 @@ var partidoA23 = new Partido(Zampabollos, Galacticas, null, '14:30-15:00', 'Pist
 var partidoA24 = new Partido(Batera, Chikis, null, '15:00-15:30', 'Pista Sara Roces');
 /*GRUPO B--------------------------------------------------------------------------------------*/
 // Día 2 - Grupo B
-var partidoB21 = new Partido(Jotake, Krilin, null, '11:30-12:00', 'Pista Sara Roces');
+var partidoB21 = new Partido(Jotake, Krilin, '0-8', '11:30-12:00', 'Pista Sara Roces');
 var partidoB22 = new Partido(Cuenca, Prisa, '1-8', '11:30-12:00', 'Pista Marta Piquero');
 var partidoB23 = new Partido(Cafe, Jotake, null, '14:30-15:00', 'Pista Marta Piquero');
 var partidoB24 = new Partido(Krilin, Cuenca, null, '15:00-15:30', 'Pista Marta Piquero');
