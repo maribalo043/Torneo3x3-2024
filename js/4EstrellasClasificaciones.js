@@ -237,8 +237,8 @@ var partidoC24 = new Partido(Cachopas, Chikis2, '5-10', '13:30-14:00', 'Pista Se
 
 /*GRUPO D--------------------------------------------------------------------------------------*/
 // Día 2 - Grupo D
-var partidoD21 = new Partido(Gudariak, rayos, null, '14:30-15:00', 'Pista Sergio Villar');
-var partidoD22 = new Partido(Rayo, Kiwitines, null, '14:30-15:00', 'Pista Patinalon');
+var partidoD21 = new Partido(Gudariak, rayos, '3-12', '14:30-15:00', 'Pista Sergio Villar');
+var partidoD22 = new Partido(Rayo, Kiwitines, '5-3', '14:30-15:00', 'Pista Patinalon');
 
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
