@@ -172,8 +172,8 @@ var partido114 = new Partido(Fantasticos,Guerreros,'14-0',"12:30-13:00","Pista M
 var partido115 = new Partido(Ruedas,Elfos,'2-11',"13:00-13:30","Pista Sergio Villar");
 
 /*Partidos DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
-var Semi1 = new PartidoFinal(Fantasticos,Microbios,null,"16:30-17:00","Pista Sara Roces"); 
-var Semi2 = new PartidoFinal(Sticks,Elfos,null,"16:30-17:00","Pista Marta Piquero");
+var Semi1 = new PartidoFinal(Fantasticos,Elfos,null,"16:30-17:00","Pista Sara Roces"); 
+var Semi2 = new PartidoFinal(Sticks,Microbios,null,"16:30-17:00","Pista Marta Piquero");
 var TercerCuarto = new PartidoFinal(null,null,null,"11:30-12:00","Pista Sara Roces"); 
 var Final = new PartidoFinal(null,null,null,"11:30-12:00","Pista Marta Piquero"); 
 /*Grupos y su ordenación*/
