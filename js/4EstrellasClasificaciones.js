@@ -218,7 +218,7 @@ var partidoD14 = new Partido(Gudariak, Kiwitines, '8-5', "17:30-18:00", "Pista M
 /*GRUPO A--------------------------------------------------------------------------------------*/
 // GRUPO A - DÍA 2
 // Día 2 - Grupo A
-var partidoA21 = new Partido(Noclos, Zampabollos, '2-7', '11:30-12:00', 'Pista Patinalon');
+var partidoA21 = new Partido(Noclos, Zampabollos, '7-2', '11:30-12:00', 'Pista Patinalon');
 var partidoA22 = new Partido(Galacticas, Batera, '8-3', '12:00-12:30', 'Pista Sergio Villar');
 var partidoA23 = new Partido(Zampabollos, Galacticas, null, '14:30-15:00', 'Pista Sara Roces');
 var partidoA24 = new Partido(Batera, Chikis, null, '15:00-15:30', 'Pista Sara Roces');
