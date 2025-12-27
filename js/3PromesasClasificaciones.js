@@ -212,7 +212,7 @@ var partidoA_sab4 = new Partido(Carniceras, Cantabrucos, null, "13:30-14:00", "P
 // Partidos Grupo B - Sábado
 var partidoB_sab1 = new Partido(Colorinchis, Picapiedra, '5-2', "10:30-11:00", "Pista Sara Roces");
 var partidoB_sab2 = new Partido(Devasting, Celtic, '8-4', "10:30-11:00", "Pista Marta Piquero");
-var partidoB_sab3 = new Partido(Vascos, Calamares, null, "11:00-11:30", "Pista Sara Roces");
+var partidoB_sab3 = new Partido(Vascos, Calamares, '3-3', "11:00-11:30", "Pista Sara Roces");
 var partidoB_sab4 = new Partido(Celtic, Colorinchis, null, "12:30-13:00", "Pista Patinalon");
 var partidoB_sab5 = new Partido(Picapiedra, Vascos, null, "13:30-14:00", "Pista Patinalon");
 
