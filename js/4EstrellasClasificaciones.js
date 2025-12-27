@@ -233,7 +233,7 @@ var partidoB24 = new Partido(Krilin, Cuenca, null, '15:00-15:30', 'Pista Marta P
 var partidoC21 = new Partido(Estrellados, Aurrera, '6-1', '11:00-11:30', 'Pista Marta Piquero');
 var partidoC22 = new Partido(Chikis2, Ruedas, '8-2', '12:00-12:30', 'Pista Patinalon');
 var partidoC23 = new Partido(Cachopas, Estrellados, '2-3', '13:00-13:30', 'Pista Patinalon');
-var partidoC24 = new Partido(Cachopas, Chikis2, null, '13:30-14:00', 'Pista Sergio Villar');
+var partidoC24 = new Partido(Cachopas, Chikis2, '5-10', '13:30-14:00', 'Pista Sergio Villar');
 
 /*GRUPO D--------------------------------------------------------------------------------------*/
 // Día 2 - Grupo D
