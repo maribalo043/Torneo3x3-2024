@@ -227,8 +227,8 @@ var Semi2 = new PartidoFinal(null,null,null,"Semi 2: 10:00-10:30","Pista Marta P
 var TercerCuarto = new PartidoFinal(null,null,null," TercerCuarto: 12:30-13:00","Pista Sara Roces");
 var Final = new PartidoFinal(null,null,null,"Final: 12:30-13:00","Pista Marta Piquero");
 
-var ordenGrupo1 = [Chopos,Patin,Carniceras,Cantabrucos,Ventolines,Devasting];
-var ordenGrupo2 = [Colorinchis,Bartolos,Calamares,Picapiedra,Vascos,Celtic];
+var ordenGrupo1 = [Chopos,Patin,Carniceras,Cantabrucos,Ventolines,Bartolos];
+var ordenGrupo2 = [Colorinchis,Devasting,Calamares,Picapiedra,Vascos,Celtic];
 
 // Ordenar grupos después de actualizar resultados
 ordenarGrupos(ordenGrupo1);
