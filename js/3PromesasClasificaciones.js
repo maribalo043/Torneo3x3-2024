@@ -204,8 +204,8 @@ var partidoB10 = new Partido(Colorinchis, Devasting, '7-8', "21:00-21:30", "Pist
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 // Partidos Grupo A - Sábado
-var partidoA_sab1 = new Partido(Ventolines, Chopos, null, "11:00-11:30", "Pista Sara Roces");
-var partidoA_sab2 = new Partido(Patin, Cantabrucos, null, "11:00-11:30", "Pista Marta Piquero");
+var partidoA_sab1 = new Partido(Ventolines, Chopos, '0-14', "11:00-11:30", "Pista Sara Roces");
+var partidoA_sab2 = new Partido(Patin, Cantabrucos, '2-4', "11:00-11:30", "Pista Marta Piquero");
 var partidoA_sab3 = new Partido(Patin, Bartolos, null, "13:30-14:00", "Pista Patinalon");
 var partidoA_sab4 = new Partido(Carniceras, Cantabrucos, null, "13:30-14:00", "Pista Patinalon");
 
