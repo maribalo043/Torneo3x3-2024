@@ -197,12 +197,12 @@ var partidoB17 = new Partido(Rusticos, Black, '10-4', '20:30-21:00', 'Pista Sara
 var partidoA21 = new Partido(Traviesos, Parrales, '4-6', '12:00-12:30', 'Pista Sara Roces');
 var partidoA22 = new Partido(Ladys, Failteam, '2-4', '12:00-12:30', 'Pista Marta Piquero');
 var partidoA23 = new Partido(ENRR, Failteam, null, '14:00-14:30', 'Pista Pista Patinalon');
-var partidoA24 = new Partido(Traviesos, Getxokolate, null, '14:00-14:30', 'Pista Marta Piquero');
+var partidoA24 = new Partido(Traviesos, Getxokolate, '8-4', '14:00-14:30', 'Pista Marta Piquero');
 var partidoA25 = new Partido(Parrales, Ladys, null, '14:00-14:30', 'Sergio Villar');
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partidoB21 = new Partido(Getxokolate, ENRR, '4-4', '11:30-12:00', 'Pista Sergio Villar');
-var partidoB22 = new Partido(Merli, Purys, null, '14:00-14:30', 'Pista Sara Roces');
+var partidoB22 = new Partido(Merli, Purys, '7-7', '14:00-14:30', 'Pista Sara Roces');
 var partidoB23 = new Partido(Resaca, Rusticos, null, '15:30-16:00', 'Pista Sara Roces');
 var partidoB24 = new Partido(Black, Merli, null, '15:30-16:00', 'Pista Marta Piquero');
 
