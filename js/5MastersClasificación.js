@@ -203,8 +203,8 @@ var partidoA25 = new Partido(Parrales, Ladys, '4-4', '14:00-14:30', 'Sergio Vill
 /*GRUPO B--------------------------------------------------------------------------------------*/
 var partidoB21 = new Partido(Getxokolate, ENRR, '4-4', '11:30-12:00', 'Pista Sergio Villar');
 var partidoB22 = new Partido(Merli, Purys, '7-7', '14:00-14:30', 'Pista Sara Roces');
-var partidoB23 = new Partido(Resaca, Rusticos, null, '15:30-16:00', 'Pista Sara Roces');
-var partidoB24 = new Partido(Black, Merli, null, '15:30-16:00', 'Pista Marta Piquero');
+var partidoB23 = new Partido(Resaca, Rusticos, '5-5', '15:30-16:00', 'Pista Sara Roces');
+var partidoB24 = new Partido(Black, Merli, '5-10', '15:30-16:00', 'Pista Marta Piquero');
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var Cuarto1 = new PartidoFinal(null,null,null,"Sábado Cuarto 1: 20:30-21:00","Pista Sara Roces"); 
