@@ -220,13 +220,13 @@ var partidoD14 = new Partido(Gudariak, Kiwitines, '8-5', "17:30-18:00", "Pista M
 // Día 2 - Grupo A
 var partidoA21 = new Partido(Noclos, Zampabollos, '7-2', '11:30-12:00', 'Pista Patinalon');
 var partidoA22 = new Partido(Galacticas, Batera, '8-3', '12:00-12:30', 'Pista Sergio Villar');
-var partidoA23 = new Partido(Zampabollos, Galacticas, null, '14:30-15:00', 'Pista Sara Roces');
+var partidoA23 = new Partido(Zampabollos, Galacticas, '0-4', '14:30-15:00', 'Pista Sara Roces');
 var partidoA24 = new Partido(Batera, Chikis, null, '15:00-15:30', 'Pista Sara Roces');
 /*GRUPO B--------------------------------------------------------------------------------------*/
 // Día 2 - Grupo B
 var partidoB21 = new Partido(Jotake, Krilin, '0-8', '11:30-12:00', 'Pista Sara Roces');
 var partidoB22 = new Partido(Cuenca, Prisa, '1-8', '11:30-12:00', 'Pista Marta Piquero');
-var partidoB23 = new Partido(Cafe, Jotake, null, '14:30-15:00', 'Pista Marta Piquero');
+var partidoB23 = new Partido(Cafe, Jotake, '5-3', '14:30-15:00', 'Pista Marta Piquero');
 var partidoB24 = new Partido(Krilin, Cuenca, null, '15:00-15:30', 'Pista Marta Piquero');
 /*GRUPO C--------------------------------------------------------------------------------------*/
 // Día 2 - Grupo C
