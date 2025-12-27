@@ -167,8 +167,8 @@ var partido110 = new Partido(Fantasticos,Microbios,'14-0',"09:30-10:00","Pista M
 var partido111 = new Partido(Ruedas,Sticks,'2-10',"10:00-10:30","Pista Marta Piquero");
 var partido112 = new Partido(Elfos,Guerreros,'6-2',"10:00-10:30","Pista Sara Roces"); 
 
-var partido113 = new Partido(Microbios,Sticks,null,"12:30-13:00","Pista Sara Roces"); 
-var partido114 = new Partido(Fantasticos,Guerreros,null,"12:30-13:00","Pista Marta Piquero");
+var partido113 = new Partido(Microbios,Sticks,'1-9',"12:30-13:00","Pista Sara Roces"); 
+var partido114 = new Partido(Fantasticos,Guerreros,'14-0',"12:30-13:00","Pista Marta Piquero");
 var partido115 = new Partido(Ruedas,Elfos,null,"13:00-13:30","Pista Sergio Villar");
 
 /*Partidos DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
