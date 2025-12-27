@@ -174,24 +174,24 @@ var Merli = new Equipo("Merli y los Merlas");
 // Crear instancias de partidos después de crear instancias de equipos
 /*Partidos VIERNES 27 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
-var partidoA11 = new Partido(ENRR, Parrales, "1-6", '10:30-11:00', 'Pista Sara Roces');
+var partidoA11 = new Partido(ENRR, Parrales, '1-6', '10:30-11:00', 'Pista Sara Roces');
 var partidoA12 = new Partido(Traviesos, Ladys, '2-1', '10:30-11:00', 'Pista Marta Piquero');
 var partidoA13 = new Partido(Failteam, Getxokolate, '6-9', '13:00-13:30', 'Pista Sergio Villar');
 var partidoA14 = new Partido(Parrales, Failteam, '4-7', '13:30-14:00', 'Pista Patinalon');
 var partidoA15 = new Partido(Getxokolate, Ladys, '4-5', '14:00-14:30', 'Pista Sergio Villar');
 var partidoA16 = new Partido(ENRR, Traviesos, '1-3', '14:00-14:30', 'Pista Patinalon');
-var partidoA17 = new Partido(Failteam, Traviesos, null, '19:30-20:00', 'Pista Sara Roces');
-var partidoA18 = new Partido(Ladys, ENRR, null, '19:30-20:00', 'Pista Marta Piquero');
-var partidoA19 = new Partido(Parrales, Getxokolate, null, '20:00-20:30', 'Pista Sara Roces');
+var partidoA17 = new Partido(Failteam, Traviesos, '4-2', '19:30-20:00', 'Pista Sara Roces');
+var partidoA18 = new Partido(Ladys, ENRR, '7-1', '19:30-20:00', 'Pista Marta Piquero');
+var partidoA19 = new Partido(Parrales, Getxokolate, '5-1', '20:00-20:30', 'Pista Sara Roces');
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partidoB11 = new Partido(Rusticos, Merli, "4-8", '11:00-11:30', 'Pista Sara Roces');
+var partidoB11 = new Partido(Rusticos, Merli, '4-8', '11:00-11:30', 'Pista Sara Roces');
 var partidoB12 = new Partido(Resaca, Black, '6-2', '11:00-11:30', 'Pista Marta Piquero');
 var partidoB13 = new Partido(Black, Purys, '5-3', '13:00-13:30', 'Pista Sergio Villar');
 var partidoB14 = new Partido(Merli, Resaca, '4-6', '13:30-14:00', 'Pista Sergio Villar');
 var partidoB15 = new Partido(Purys, Rusticos, '3-11', '15:00-15:30', 'Pista Patinalon');
-var partidoB16 = new Partido(Purys, Resaca, null, '20:00-20:30', 'Pista Sara Roces');
-var partidoB17 = new Partido(Rusticos, Black, null, '20:30-21:00', 'Pista Sara Roces');
+var partidoB16 = new Partido(Purys, Resaca, '4-6', '20:00-20:30', 'Pista Sara Roces');
+var partidoB17 = new Partido(Rusticos, Black, '10-4', '20:30-21:00', 'Pista Sara Roces');
 /*Partidos SABADO 28 Diciembre*/
 /*GRUPO A--------------------------------------------------------------------------------------*/
 var partidoA21 = new Partido(Traviesos, Parrales, null, '12:00-12:30', 'Pista Sara Roces');
