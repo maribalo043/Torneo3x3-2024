@@ -164,8 +164,8 @@ var partido19 = new Partido(Guerreros,Sticks,'6-10',"17:00-17:30","Pista Sara Ro
 
 /*Partidos SABADO 28 Diciembre*/
 var partido110 = new Partido(Fantasticos,Microbios,'14-0',"09:30-10:00","Pista Marta Piquero"); 
-var partido111 = new Partido(Ruedas,Sticks,null,"10:00-10:30","Pista Marta Piquero");
-var partido112 = new Partido(Elfos,Guerreros,null,"10:00-10:30","Pista Sara Roces"); 
+var partido111 = new Partido(Ruedas,Sticks,'2-10',"10:00-10:30","Pista Marta Piquero");
+var partido112 = new Partido(Elfos,Guerreros,'6-2',"10:00-10:30","Pista Sara Roces"); 
 
 var partido113 = new Partido(Microbios,Sticks,null,"12:30-13:00","Pista Sara Roces"); 
 var partido114 = new Partido(Fantasticos,Guerreros,null,"12:30-13:00","Pista Marta Piquero");
