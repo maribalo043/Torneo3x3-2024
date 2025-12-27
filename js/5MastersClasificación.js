@@ -201,7 +201,7 @@ var partidoA24 = new Partido(Traviesos, Getxokolate, null, '14:00-14:30', 'Pista
 var partidoA25 = new Partido(Parrales, Ladys, null, '14:00-14:30', 'Sergio Villar');
 
 /*GRUPO B--------------------------------------------------------------------------------------*/
-var partidoB21 = new Partido(Getxokolate, ENRR, null, '11:30-12:00', 'Pista Sergio Villar');
+var partidoB21 = new Partido(Getxokolate, ENRR, '4-4', '11:30-12:00', 'Pista Sergio Villar');
 var partidoB22 = new Partido(Merli, Purys, null, '14:00-14:30', 'Pista Sara Roces');
 var partidoB23 = new Partido(Resaca, Rusticos, null, '15:30-16:00', 'Pista Sara Roces');
 var partidoB24 = new Partido(Black, Merli, null, '15:30-16:00', 'Pista Marta Piquero');
