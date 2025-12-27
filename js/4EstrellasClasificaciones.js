@@ -225,12 +225,12 @@ var partidoA24 = new Partido(Batera, Chikis, null, '15:00-15:30', 'Pista Sara Ro
 /*GRUPO B--------------------------------------------------------------------------------------*/
 // Día 2 - Grupo B
 var partidoB21 = new Partido(Jotake, Krilin, null, '11:30-12:00', 'Pista Sara Roces');
-var partidoB22 = new Partido(Cuenca, Prisa, null, '11:30-12:00', 'Pista Marta Piquero');
+var partidoB22 = new Partido(Cuenca, Prisa, '1-8', '11:30-12:00', 'Pista Marta Piquero');
 var partidoB23 = new Partido(Cafe, Jotake, null, '14:30-15:00', 'Pista Marta Piquero');
 var partidoB24 = new Partido(Krilin, Cuenca, null, '15:00-15:30', 'Pista Marta Piquero');
 /*GRUPO C--------------------------------------------------------------------------------------*/
 // Día 2 - Grupo C
-var partidoC21 = new Partido(Estrellados, Aurrera, null, '11:00-11:30', 'Pista Marta Piquero');
+var partidoC21 = new Partido(Estrellados, Aurrera, '6-1', '11:00-11:30', 'Pista Marta Piquero');
 var partidoC22 = new Partido(Chikis2, Ruedas, null, '12:00-12:30', 'Pista Patinalon');
 var partidoC23 = new Partido(Cachopas, Estrellados, null, '13:00-13:30', 'Pista Patinalon');
 var partidoC24 = new Partido(Cachopas, Chikis2, null, '13:30-14:00', 'Pista Sergio Villar');
