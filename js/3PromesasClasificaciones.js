@@ -222,10 +222,10 @@ var Cuarto1 = new PartidoFinal(Chopos,Calamares,'8-0',"Sábado Cuarto 1: 18:30-1
 var Cuarto2 = new PartidoFinal(Devasting,Cantabrucos,'4-2',"Sábado Cuarto 2: 18:30-19:00","Pista Marta Piquero");
 var Cuarto3 = new PartidoFinal(Bartolos,Colorinchis,'7-4',"Sábado Cuarto 3: 19:00-19:30","Pista Sara Roces"); 
 var Cuarto4 = new PartidoFinal(Picapiedra,Patin,'2-1',"Sábado Cuarto 4: 19:00-19:30","Pista Marta Piquero");
-var Semi1 = new PartidoFinal(Chopos,Devasting,null,"Semi 1: 10:00-10:30","Pista Sara Roces"); 
-var Semi2 = new PartidoFinal(Bartolos,Picapiedra,null,"Semi 2: 10:00-10:30","Pista Marta Piquero");
-var TercerCuarto = new PartidoFinal(null,null,null," TercerCuarto: 12:30-13:00","Pista Sara Roces");
-var Final = new PartidoFinal(null,null,null,"Final: 12:30-13:00","Pista Marta Piquero");
+var Semi1 = new PartidoFinal(Chopos,Devasting,'7-2',"Semi 1: 10:00-10:30","Pista Sara Roces"); 
+var Semi2 = new PartidoFinal(Bartolos,Picapiedra,'7-0',"Semi 2: 10:00-10:30","Pista Marta Piquero");
+var TercerCuarto = new PartidoFinal(Devasting,Picapiedra,null," TercerCuarto: 12:30-13:00","Pista Marta Piquero");
+var Final = new PartidoFinal(Chopos,Bartolos,null,"Final: 12:30-13:00","Pista Sara Roces");
 
 var ordenGrupo1 = [Chopos,Patin,Carniceras,Cantabrucos,Ventolines,Bartolos];
 var ordenGrupo2 = [Colorinchis,Devasting,Calamares,Picapiedra,Vascos,Celtic];
