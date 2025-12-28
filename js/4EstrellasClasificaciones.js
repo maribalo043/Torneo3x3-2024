@@ -243,15 +243,15 @@ var partidoD22 = new Partido(Rayo, Kiwitines, '5-3', '14:30-15:00', 'Pista Patin
 
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var PlayIn1 = new PartidoFinal(Galacticas,Cuenca,'3-4','Sábado 17:00-17:30','Pista Sara Roces');
-var PlayIn2 = new PartidoFinal(Batera,Prisa,null,'Sábado 17:00-17:30','Pista Marta Piquero');
-var PlayIn3 = new PartidoFinal(Estrellados,Gudariak,null,'Sábado 17:30-18:00','Pista Sara Roces');
+var PlayIn2 = new PartidoFinal(Batera,Prisa,'1-8','Sábado 17:00-17:30','Pista Marta Piquero');
+var PlayIn3 = new PartidoFinal(Estrellados,Gudariak,'7-4','Sábado 17:30-18:00','Pista Sara Roces');
 var PlayIn4 = new PartidoFinal(Cachopas,Rayo,'1-2','Sábado 17:30-18:00','Pista Marta Piquero');
-var Cuarto1 = new PartidoFinal(Chikis,Rayo,null,'Sábado 19:30-20:00','Pista Sara Roces');
-var Cuarto2 = new PartidoFinal(Krilin,null,null,'Sábado 19:30-20:00','Pista Marta Piquero');
-var Cuarto3 = new PartidoFinal(Chikis2,null,null,'Sábado 20:00-20:30','Pista Sara Roces');
-var Cuarto4 = new PartidoFinal(rayos,Cuenca,null,'Sábado 20:00-20:30','Pista Marta Piquero');
-var Semi1 = new PartidoFinal(null,null,null,'10:30-11:00','Pista Sara Roces');
-var Semi2 = new PartidoFinal(null,null,null,'10:30-11:00','Pista Marta Piquero');
+var Cuarto1 = new PartidoFinal(Chikis,Rayo,'2-0','Sábado 19:30-20:00','Pista Sara Roces');
+var Cuarto2 = new PartidoFinal(Krilin,Estrellados,'7-2','Sábado 19:30-20:00','Pista Marta Piquero');
+var Cuarto3 = new PartidoFinal(Chikis2,Prisa,'3-1','Sábado 20:00-20:30','Pista Sara Roces');
+var Cuarto4 = new PartidoFinal(rayos,Cuenca,'6-3','Sábado 20:00-20:30','Pista Marta Piquero');
+var Semi1 = new PartidoFinal(Chikis,Krilin,null,'10:30-11:00','Pista Sara Roces');
+var Semi2 = new PartidoFinal(Chikis2,rayos,null,'10:30-11:00','Pista Marta Piquero');
 var TercerCuarto = new PartidoFinal(null,null,null,'13:00-13:30','Pista Marta Piquero');
 var Final = new PartidoFinal(null,null,null,'13:00-13:30','Pista Sara Roces');
 
