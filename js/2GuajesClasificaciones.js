@@ -199,8 +199,8 @@ var g21 = new Partido(Trasgos, Minions, '5-8', "15:30-16:00", "Pista Sergio Vill
 /*Finales DOMINGO 29 Diciembre--------------------------------------------------------------------------------------*/
 var Semi1 = new PartidoFinal(Guerreros,Trasgos,'4-5',"Sábado 18:00-18:30","Pista Sara Roces"); 
 var Semi2 = new PartidoFinal(Minions,Sun,'5-14',"Sábado 18:00-18:30","Pista Marta Piquero");
-var TercerCuarto = new PartidoFinal(Guerreros,Minions,null,"12:00-12:30","Pista Sara Roces");
-var Final = new PartidoFinal(Trasgos,Sun,null,"12:00-12:30","Pista Marta Piquero");
+var TercerCuarto = new PartidoFinal(Guerreros,Minions,'0-9',"12:00-12:30","Pista Sara Roces");
+var Final = new PartidoFinal(Trasgos,Sun,'4-8',"12:00-12:30","Pista Marta Piquero");
 
 var ordenGrupo = [Delfines,Kinder,Sun,Sticks,Trasgos,Minions,Guerreros];
 // Ordenar grupos después de actualizar resultados
