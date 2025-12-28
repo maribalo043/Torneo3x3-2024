@@ -211,8 +211,8 @@ var Cuarto1 = new PartidoFinal(Failteam,Black,'9-3',"Sábado Cuarto 1: 20:30-21:
 var Cuarto2 = new PartidoFinal(Merli,Traviesos,'8-6',"Sábado Cuarto 2: 20:30-21:00","Pista Marta Piquero");
 var Cuarto3 = new PartidoFinal(Parrales,Rusticos,'5-4',"Sábado Cuarto 3: 21:00-21:30","Pista Sara Roces"); 
 var Cuarto4 = new PartidoFinal(Resaca,Ladys,'3-1',"Sábado Cuarto 4: 21:00-21:30","Pista Marta Piquero");
-var Semi1 = new PartidoFinal(Failteam,Merli,null,"Semi 1: 11:00-11:30","Pista Sara Roces"); 
-var Semi2 = new PartidoFinal(Parrales,Resaca,null,"Semi 2: 11:00-11:30","Pista Marta Piquero");
+var Semi1 = new PartidoFinal(Failteam,Merli,'4-5',"Semi 1: 11:00-11:30","Pista Sara Roces"); 
+var Semi2 = new PartidoFinal(Parrales,Resaca,'1-4',"Semi 2: 11:00-11:30","Pista Marta Piquero");
 var TercerCuarto = new PartidoFinal(Failteam,Parrales,null," TercerCuarto: 13:30-14:00","Pista Sara Roces");
 var Final = new PartidoFinal(Merli,Resaca,null,"Final: 13:30-14:00","Pista Marta Piquero");
 
