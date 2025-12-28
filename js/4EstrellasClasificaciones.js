@@ -252,8 +252,8 @@ var Cuarto3 = new PartidoFinal(Chikis2,Prisa,'3-1','Sábado 20:00-20:30','Pista 
 var Cuarto4 = new PartidoFinal(rayos,Cuenca,'6-3','Sábado 20:00-20:30','Pista Marta Piquero');
 var Semi1 = new PartidoFinal(Chikis,Krilin,null,'10:30-11:00','Pista Sara Roces');
 var Semi2 = new PartidoFinal(Chikis2,rayos,null,'10:30-11:00','Pista Marta Piquero');
-var TercerCuarto = new PartidoFinal(null,null,null,'13:00-13:30','Pista Marta Piquero');
-var Final = new PartidoFinal(null,null,null,'13:00-13:30','Pista Sara Roces');
+var TercerCuarto = new PartidoFinal(Chikis,rayos,null,'13:00-13:30','Pista Marta Piquero');
+var Final = new PartidoFinal(Chikis2,Krilin,null,'13:00-13:30','Pista Sara Roces');
 
 var ordenGrupo1 = [Zampabollos, Chikis, Galacticas, Noclos, Batera];
 var ordenGrupo2 = [Cafe, Cuenca, Krilin, Prisa, Jotake];
